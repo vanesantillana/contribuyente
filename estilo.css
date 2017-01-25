@@ -1,8 +1,8 @@
 .base{
-	background-color: black;
+	background-color: red;
 }
-.sec1{background-color: red;}
-.sec2{background-color: blue;}
+.sec1{background-color: blue;}
+.sec2{background-color: black;}
 .sec3{background-color: yellow;}
 .sec4{background-color: green;}
 .sec5{background-color: pink;}
