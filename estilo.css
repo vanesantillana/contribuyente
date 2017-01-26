@@ -10,43 +10,11 @@
 .sec2{background-color: blue;}
 
 .sec5{background-color: pink;}
-
-.tutoriales{
+.banner img{
+	width: 100%;
+	height: 200px;
 }
-
-.noticias{
-
-}
-
-.posts{
-
-}
-
-.videos{
-
-}
-
-.tutoriales .tuto img{
-	width: 100px;
-	float: left; 
-}
-
-.tutoriales .tuto .info{	 
-	float: left;
-}
-
-.clase1{
-	background-color: blue;
-}
-
-.clase1 img{
-	width: 100px;
-}
-
-.clase2{
-	background-color: red;
-	font-size: 10px;
-}
-.clase2 h3{
-	font-size: 13px;
+.tutorial img{
+	width: 100%;
+	
 }
