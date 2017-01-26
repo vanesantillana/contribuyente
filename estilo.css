@@ -1,8 +1,52 @@
 .base{
 	background-color: black;
 }
+
+.cuerpo{
+	background-color: white;
+}
+
 .sec1{background-color: red;}
 .sec2{background-color: blue;}
-.sec3{background-color: yellow;}
-.sec4{background-color: green;}
+
 .sec5{background-color: pink;}
+
+.tutoriales{
+}
+
+.noticias{
+
+}
+
+.posts{
+
+}
+
+.videos{
+
+}
+
+.tutoriales .tuto img{
+	width: 100px;
+	float: left; 
+}
+
+.tutoriales .tuto .info{	 
+	float: left;
+}
+
+.clase1{
+	background-color: blue;
+}
+
+.clase1 img{
+	width: 100px;
+}
+
+.clase2{
+	background-color: red;
+	font-size: 10px;
+}
+.clase2 h3{
+	font-size: 13px;
+}
