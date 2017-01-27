@@ -1,3 +1,6 @@
+<?php
+if (!isset($_POST['email'])) {
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -229,10 +232,22 @@
 	      <img src="img/ttttt.png" alt="" class="">
 	    </div>
 	    <div class="publicacion">
-	      <h2 class="">publicaciones recientes</h2>
+	      <h2 class="">Suscribete</h2>
 	      <div class="row">
 		<div class="col-md-12">
-		  <h2>App</h2>
+		
+<form action='<?=$_SERVER['PHP_SELF']?>' method='post' name='sentMessage' id='contactForm' novalidate>
+        <label class='contact-p1'>Correo electronico:</label>
+	    <input type='' class='form-control' name='email' id='email' required data-validation-required-message='No ingresaste tu correo.'>
+	    <p class='help-block'></p>
+	<div id='success'></div>
+	<!-- For success/fail messages -->
+	<button type='submit' class='btn btn-primary'>Enviar mensaje</button>
+      </div>
+      <div class='clearfix'></div>	
+    </form> 
+
+
 		</div>
 		<div class="col-md-12">
 		  <h2>App</h2>
@@ -280,3 +295,21 @@
     </div>
   </body>
 </html>
+
+
+<?php
+}else{
+$mensaje="Hola Te has suscrito a el buencontribuyente.com";
+$destino= $_POST['email'];
+$remitente = "multiviralbeta@gmail.com";
+$asunto = "Asunto: Subscripcion";
+mail($destino,$asunto,$mensaje,"FROM: $remitente");
+?>
+<?php
+   echo "<script>";
+   echo "alert('Mensaje enviado con exito');";
+   echo "window.location = 'index.php';";
+   echo "</script>";  
+   }
+?>
+
