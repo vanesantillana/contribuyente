@@ -1,4 +1,17 @@
 <?php
+	$archivo = "contador.txt";
+$contador = 0;
+
+$fp = fopen($archivo,"r");
+$contador = fgets($fp, 26);
+fclose($fp);
+
+$contador=$contador+1;
+
+$fp = fopen($archivo,"w+");
+fwrite($fp, $contador, 26);
+fclose($fp);
+ 
 if (!isset($_POST['email'])) {
 ?>
 <!DOCTYPE html>
@@ -232,25 +245,23 @@ if (!isset($_POST['email'])) {
 	      <img src="img/ttttt.png" alt="" class="">
 	    </div>
 	    <div class="publicacion">
-	      <h2 class="">Suscribete</h2>
-	      <div class="row">
+	      
 		<div class="col-md-12">
-		
-<form action='<?=$_SERVER['PHP_SELF']?>' method='post' name='sentMessage' id='contactForm' novalidate>
-        <label class='contact-p1'>Correo electronico:</label>
-	    <input type='' class='form-control' name='email' id='email' required data-validation-required-message='No ingresaste tu correo.'>
-	    <p class='help-block'></p>
-	<div id='success'></div>
-	<!-- For success/fail messages -->
-	<button type='submit' class='btn btn-primary'>Enviar mensaje</button>
-      </div>
-      <div class='clearfix'></div>	
+		<h2 class="">Unete</h2>  
+			<form action='<?=$_SERVER['PHP_SELF']?>' method='post' name='sentMessage' id='contactForm' novalidate>
+	        <label class=''>Correo electronico:</label>
+		    <input type='' class='form-control' name='email' id='email' required data-validation-required-message='No ingresaste tu correo.'>
+		    <p class='help-block'></p>
+			<button type='submit' class='btn btn-primary'>Suscribirse</button>
+	  
+      	
     </form> 
 
 
 		</div>
 		<div class="col-md-12">
-		  <h2>App</h2>
+		  <h2>Indicadores</h2>
+		  <!-- DolarWeb IndMin Start --><div id="IndicadoresMin"><h2><a href="http://dolar.wilkinsonpc.com.co/">Dolar Hoy Colombia</a></h2></div><script type="text/javascript" src="http://dolar.wilkinsonpc.com.co/widgets/gratis/indicadores-economicos-min.js?ancho=170&alto=85&fondo=transparent&fsize=10&ffamily=sans-serif&fcolor=000000"></script><!-- DolarWeb IndMin End -->
 		</div>
 		<div class="col-md-12">
 			<h2>Formatos</h2>		             
@@ -290,6 +301,11 @@ if (!isset($_POST['email'])) {
 	  <li><a href="#">Contacto</a></li>
 	</ul>
 
+      </div>
+      <div class="col-md-6">
+      <?php
+      	echo "<p>Visitante: $contador </p>";
+      	?>
       </div>
       
     </div>
