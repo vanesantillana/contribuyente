@@ -261,7 +261,7 @@ if (!isset($_POST['email'])) {
 		</div>
 		<div class="col-md-12">
 		  <h2>Indicadores</h2>
-		  <!-- DolarWeb IndMin Start --><div id="IndicadoresMin"><h2><a href="http://dolar.wilkinsonpc.com.co/">Dolar Hoy Colombia</a></h2></div><script type="text/javascript" src="http://dolar.wilkinsonpc.com.co/widgets/gratis/indicadores-economicos-min.js?ancho=170&alto=85&fondo=transparent&fsize=10&ffamily=sans-serif&fcolor=000000"></script><!-- DolarWeb IndMin End -->
+		  <!-- DolarWeb IndMin Start --><div id="IndicadoresMin"><h2><a href="http://dolar.wilkinsonpc.com.co/">Dolar Hoy Peru</a></h2></div><script type="text/javascript" src="http://dolar.wilkinsonpc.com.co/widgets/gratis/indicadores-economicos-min.js?ancho=170&alto=85&fondo=transparent&fsize=10&ffamily=sans-serif&fcolor=000000"></script><!-- DolarWeb IndMin End -->
 		</div>
 		<div class="col-md-12">
 			<h2>Formatos</h2>		             
@@ -279,7 +279,9 @@ if (!isset($_POST['email'])) {
 		            <td><a target="_blank" href="pdf/revista.pdf">Revista Veritas</a></td>
 		        </tr>
 		    </tbody>
-		    </table>		
+		    </table>
+		    <iframe src="pdf/revista.pdf" style="width:100%; height:375px;" frameborder="0"></iframe>
+		    		
 		</div>
 		<div class="col-md-12">
 		  <h2>Conversor</h2>
