@@ -14,16 +14,25 @@
 
 .tutorial a{
 	font-weight: 700;
-color: #222222;
-margin-bottom: 10px;
-display: inline-block;
+	color: #222222;
+	margin-bottom: 10px;
+	display: inline-block;
 
 }
 
-.tutorial .info{
+.posts a{
+	font-weight: 700;
+	color: #222222;
+	margin-bottom: 10px;
+	display: inline-block;
+	font-size: 23px;
+	text-transform: uppercase;
+}
+
+.info{
 	content: '\f007';
-font-family: fontawesome;
-color: #bbb;
+	font-family: fontawesome;
+	color: #bbb;
 }
 
 .sec1{
@@ -49,11 +58,11 @@ color: #bbb;
 	background-color: #0b5394;
 	padding: 10px;
 	color: #FFF;
-font-weight: 700;
-font-size: 15px;
-text-transform: uppercase;
-display: inline-block;
-margin-bottom: 0px;
+	font-weight: 700;
+	font-size: 15px;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-bottom: 0px;
 
 }
 
@@ -72,3 +81,15 @@ border-bottom: 3px solid #0b5394;
 	height: 90%;
 }
 
+.posts .rthumbc {
+	padding-top: 10px;
+	height: 240px;
+}
+
+
+
+.videos .rthumbc {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	height: 240px;
+}
