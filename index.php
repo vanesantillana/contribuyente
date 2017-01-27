@@ -50,7 +50,7 @@ if (!isset($_POST['email'])) {
 	  <div class="col-sm-3 col-md-12">
 	    <form class="navbar-form" role="search">
 	      <div class="input-group">
-		<input type="text" class="form-control" placeholder="Search" name="q">
+		<input type="text" class="form-control" placeholder="Buscar" name="q">
 		<div class="input-group-btn">
 		  <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
 		</div>
@@ -276,7 +276,7 @@ if (!isset($_POST['email'])) {
 		            <td><a target="_blank" href="pdf/factura.pdf">Modelo de Factura</a></td>
 		        </tr>
 		        <tr>
-		            <td><a target="_blank" href="pdf/revista.pdf">Revista Veritas</a></td>
+		            <td><a target="_blank" href="pdf/honorarios.pdf">Recibo por Honorarios</a></td>
 		        </tr>
 		    </tbody>
 		    </table>
@@ -286,7 +286,6 @@ if (!isset($_POST['email'])) {
 		<div class="col-md-12">
 		  <h2>Conversor</h2>
 		  <iframe id="tmccc" src="http://themoneyconverter.com/ES/CurrencyConverter.aspx?tab=0&amp;from=PEN&amp;to=USD&amp;bg=ffffff" style="width:350px; height:400px; border: none;" scrolling="no" marginwidth="0" marginheight="0"></iframe>
-		</div>
 	      </div>
 	    </div>					
 	  </div>
