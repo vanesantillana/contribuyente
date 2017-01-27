@@ -1,8 +1,23 @@
 .base{
-	background-color: black;
+	/*background-color: blue;*/
+	background-image: url("imagenes/fondo1.jpg");
 }
-.sec1{background-color: red;}
-.sec2{background-color: blue;}
+.sec1{
+	/*background-color: blue;*/
+	background-image: url("imagenes/cropped-technology_header.png");
+}
+.sec2{background-color: black;}
 .sec3{background-color: yellow;}
 .sec4{background-color: green;}
-.sec5{background-color: pink;}
+
+.sec5 {
+    background-color: #3c3d41;
+	padding: 60px 40px;
+	color: rgba(255,255,255,1.00);
+	margin-bottom: 20px;
+	border-bottom-right-radius: 6px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 6px;
+}
+
+
