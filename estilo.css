@@ -11,6 +11,21 @@
 	width: 100%;
 	
 }
+
+.tutorial a{
+	font-weight: 700;
+color: #222222;
+margin-bottom: 10px;
+display: inline-block;
+
+}
+
+.tutorial .info{
+	content: '\f007';
+font-family: fontawesome;
+color: #bbb;
+}
+
 .sec1{
 	/*background-color: blue;*/
 	background-image: url("imagenes/cropped-technology_header.png");
@@ -46,4 +61,18 @@ margin-bottom: 0px;
     border-radius: 2px 2px 0 0;
  margin-bottom: 15px;
 border-bottom: 3px solid #0b5394;
+}
+
+.rthumbc {
+	width: 120px;
+	height: 60px;
+	display: table-cell;
+	vertical-align: middle;
+	margin-top: 20px;
+}
+
+.recent-thumb {
+    width: 100px;
+    height: 60px;
+    display: block;
 }
