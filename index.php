@@ -290,7 +290,7 @@ if (!isset($_POST['email'])) {
 	    </div>					
 	  </div>
 	</div>
-      </div>
+     
       
 
       <div class="col-md-12 sec5">
@@ -320,6 +320,7 @@ if (!isset($_POST['email'])) {
       </div>
       
     </div>
+    
   </body>
 </html>
 
