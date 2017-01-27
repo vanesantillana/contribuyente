@@ -299,8 +299,8 @@ if (!isset($_POST['email'])) {
 	  <li><a href="#">Publicaciones</a></li>
 	  <li><a href="#">Noticias</a></li>
 	  <li><a href="#">Contacto</a></li>
-	</ul>
-
+		</ul>
+		
       </div>
       <div class="col-md-6">
       <?php
