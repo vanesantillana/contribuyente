@@ -12,14 +12,16 @@ if (!isset($_POST['email'])) {
   <body>
     <div  class="container-fluid base">
       <div class="col-md-12 sec1">
-	<img src="imagenes/BUENCONTRI.png" class="estilo_bootstrap" />
-	<ul class="nav navbar-nav navbar-right">
-	  <div class="col-sm-3 col-md-12">
-	    <div id="TT_RiJAbBdBd2dBd8hA7AzDjDzzDWl1LAdFLtEtEZyIKEjI3omIm">Pronóstico de Tutiempo.net</div>
-	    <!--<script type="text/javascript" src="http://www.tutiempo.net/widget/eltiempo_RiJAbBdBd2dBd8hA7AzDjDzzDWl1LAdFLtEtEZyIKEjI3omIm"></script>-->
-	  </div>
-	</ul>
-        
+		 <hr style="visibility: hidden;">
+
+		<img src="imagenes/BUENCONTRI.png" class="estilo_bootstrap" />
+		<ul class="nav navbar-nav navbar-right">
+		  <div class="col-sm-3 col-md-12">
+		    <div id="TT_RiJAbBdBd2dBd8hA7AzDjDzzDWl1LAdFLtEtEZyIKEjI3omIm">Pronóstico de Tutiempo.net</div>
+		    <script type="text/javascript" src="http://www.tutiempo.net/widget/eltiempo_RiJAbBdBd2dBd8hA7AzDjDzzDWl1LAdFLtEtEZyIKEjI3omIm"></script>
+		  </div>
+		</ul>
+        <hr style="visibility: hidden;">
       </div>
       
       <div class="col-md-12 sec2">
@@ -223,6 +225,7 @@ if (!isset($_POST['email'])) {
 	    </div>
 	  </div>
 	</div>
+
 	<div class="col-md-4 banner">
 	  <div class="row">
 	    <div class="col-md-12 rthumbc">
@@ -250,7 +253,26 @@ if (!isset($_POST['email'])) {
 		  <h2>App</h2>
 		</div>
 		<div class="col-md-12">
-		  <h2>App</h2>
+			<h2>Formatos</h2>		             
+		  	<table class="table ">
+		    <thead>
+		        <tr>
+		        	<th>PDF descargables:</th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		        <tr>
+		            <td><a target="_blank" href="pdf/factura.pdf">Modelo de Factura</a></td>
+		        </tr>
+		        <tr>
+		            <td><a target="_blank" href="pdf/revista.pdf">Revista Veritas</a></td>
+		        </tr>
+		    </tbody>
+		    </table>		
+		</div>
+		<div class="col-md-12">
+		  <h2>Conversor</h2>
+		  <iframe id="tmccc" src="http://themoneyconverter.com/ES/CurrencyConverter.aspx?tab=0&amp;from=PEN&amp;to=USD&amp;bg=ffffff" style="width:350px; height:400px; border: none;" scrolling="no" marginwidth="0" marginheight="0"></iframe>
 		</div>
 	      </div>
 	    </div>					
