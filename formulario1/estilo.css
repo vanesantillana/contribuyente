@@ -1,0 +1,75 @@
+body {
+  position: relative;
+  width: 21cm;  
+  height: 29.7cm; 
+  margin: 0 auto; 
+  color: #001028;
+  background: #FFFFFF; 
+  font-family: Arial, sans-serif; 
+  font-size: 12px; 
+  font-family: Arial;
+}
+
+h2 {
+  border-top: 2px solid  #030303;
+  border-bottom: 2px solid  #030303;
+  color: #030303;
+  font-size: 1.5em;
+  line-height: 1.4em;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+h4 {
+  border-top: 2px solid  #030303;
+  border-bottom: 2px solid  #030303;
+  color: #030303;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  font-weight: normal;
+  text-align: left;
+  margin: 0 0 20px 0;
+}
+
+h5 {
+  border-radius: 14px 14px 14px 14px;
+-moz-border-radius: 14px 14px 14px 14px;
+-webkit-border-radius: 14px 14px 14px 14px;
+  border: 2px solid  #030303;
+  color: #030303;
+  font-size: 0.7em;
+  line-height: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+h1 {
+  color: #030303;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+h3 {
+  border-top: 2px solid  #030303;
+  border-bottom: 2px solid  #030303;
+  color: #030303;
+  font-size: 1.3em;
+  line-height: 1.4em;
+  font-weight: bold;
+  text-align: left;
+  margin: 0 0 20px 0;
+}
+
+td {
+  color: #030303;
+  font-size: 1.2em;
+  font-weight: bolder;
+  text-align: left;
+}
+tr {
+  color: #030303;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: left;
+}
