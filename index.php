@@ -20,6 +20,10 @@ if (!isset($_POST['email'])) {
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="estilo.css">	
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>El buen contribuyente</title>
   </head>
   <body>
@@ -261,10 +265,12 @@ if (!isset($_POST['email'])) {
 		</div>
 		<div class="col-md-12">
 		  <h2>Indicadores</h2>
-		  <!-- DolarWeb IndMin Start --><div id="IndicadoresMin"><h2><a href="http://dolar.wilkinsonpc.com.co/">Dolar Hoy Peru</a></h2></div><script type="text/javascript" src="http://dolar.wilkinsonpc.com.co/widgets/gratis/indicadores-economicos-min.js?ancho=170&alto=85&fondo=transparent&fsize=10&ffamily=sans-serif&fcolor=000000"></script><!-- DolarWeb IndMin End -->
+		  <!-- DolarWeb IndMin Start -->
+		  <div id="IndicadoresMin"><h2><a href="http://dolar.wilkinsonpc.com.co/">Dolar Hoy Peru</a></h2></div><script type="text/javascript" src="http://dolar.wilkinsonpc.com.co/widgets/gratis/indicadores-economicos-min.js?ancho=170&alto=85&fondo=transparent&fsize=10&ffamily=sans-serif&fcolor=000000"></script><!-- DolarWeb IndMin End -->
 		</div>
 		<div class="col-md-12">
-			<h2>Formatos</h2>		             
+			<h2>Formatos</h2>		
+			<!--            
 		  	<table class="table ">
 		    <thead>
 		        <tr>
@@ -281,7 +287,103 @@ if (!isset($_POST['email'])) {
 		    </tbody>
 		    </table>
 		    <iframe src="pdf/revista.pdf" style="width:100%; height:375px;" frameborder="0"></iframe>
-		    		
+		    -->
+		    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">Guía Pago Fácil Nuevo Régimen Único Simplificado</button>
+			  <!-- Modal -->
+			<div class="modal fade" id="myModal" role="dialog">
+			    <div class="modal-dialog">
+
+			      <div class="modal-content">
+			        <div class="modal-header">
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			          <h4 class="modal-title" style="color:#0b5394"><strong>Guía Pago Fácil Nuevo Régimen Único Simplificado</strong></h4>
+			        </div>
+			        <div class="modal-body">
+			          <div class="row">
+					      <div class="col-md-6">
+					     	<form>
+							    <div class="form-group row">
+							      <label for="inputRuc" class="col-sm-4 col-form-label">RUC:</label>
+							      <div class="col-sm-8">
+							        <input type="email" class="form-control" id="inputEmail3" placeholder="XXXXXXXXXXX">
+							      </div>
+							    </div>
+							    <div class="form-group row">
+							      <label for="inputMes" class="col-sm-4 col-form-label">Mes:</label>
+							      <div class="col-sm-8">
+							        <input type="password" class="form-control" id="inputPassword3" placeholder="01">
+							      </div>
+							    </div> 
+							    <div class="form-group row">
+							      <label for="inputAño" class="col-sm-4 col-form-label">Año:</label>
+							      <div class="col-sm-8">
+							        <input type="password" class="form-control" id="inputPassword3" placeholder="2017">
+							      </div>
+							    </div>
+							    <div class="form-group row">
+							      <label for="exampleSelect1" class="col-sm-4 col-form-label">Categoría:</label>
+							      <div class="col-sm-8">
+							        <select class="form-control" id="exampleSelect1">
+								      <option>1</option>
+								      <option>2</option>
+								      <option>3</option>
+								      <option>4</option>
+								      <option>5</option>
+								    </select>
+							      </div>
+							    </div> 
+							    <div class="form-group row">
+							      <label for="inputAño" class="col-sm-4 col-form-label">Percepciones:</label>
+							      <div class="col-sm-8">
+							        <input type="password" class="form-control" id="inputPassword3" placeholder="0.00">
+							      </div>
+							    </div>  
+							    <div class="form-group row">
+							      <label for="inputAño" class="col-sm-4 col-form-label">Importe:</label>
+							      <div class="col-sm-8">
+							        <input type="password" class="form-control" id="inputPassword3" placeholder="20.00">
+							      </div>
+							    </div> 
+						    </form>
+					      </div>
+					      <div class="col-md-6">
+					      	<p>¿Es la primera vez que declara para este período?</p>
+					      	<div class="form-group row">
+						      	<label class="custom-control custom-radio">
+						      	<div class="col-sm-6">
+								  <input id="radio1" name="radio" type="radio" class="custom-control-input">
+								  <span class="custom-control-indicator"></span>
+								  <span class="custom-control-description">Si</span>
+								</div>
+								</label>
+								<label class="custom-control custom-radio">
+								<div class="col-sm-6">
+								  <input id="radio2" name="radio" type="radio" class="custom-control-input">
+								  <span class="custom-control-indicator"></span>
+								  <span class="custom-control-description">No</span>
+								</div>
+								</label>
+							</div>
+							<p>De haber marcado NO, deberá proporcionar la información de la Compensación de las Percepciones de IGV y/o de los pagos efectuados en la declaración original que se está rectificando.</p>
+							<div class="form-group row">
+							    <label for="inputAño" class="col-sm-5 col-form-label">Compensación:</label>
+							    <div class="col-sm-7">
+							        <input type="password" class="form-control" id="inputPassword3" placeholder="0.00">
+							    </div>
+							</div> 
+					      	
+					      </div>
+					      
+					  </div>
+			        </div>
+			        <div class="modal-footer">
+			          <button type="button" class="btn btn-default" data-dismiss="modal">Generar PDF</button>
+			        </div>
+			      </div>
+			      
+			    </div>
+			</div>
+
 		</div>
 		<div class="col-md-12">
 		  <h2>Conversor</h2>
