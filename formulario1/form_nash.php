@@ -1,6 +1,6 @@
 <?php  
 
-include("mpdf/mpdf.php");
+include("../lib/mpdf.php");
    $mpdf = new mPDF();
    
    $html = '
