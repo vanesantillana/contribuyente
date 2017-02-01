@@ -2,7 +2,13 @@
 
 include("../lib/mpdf.php");
    $mpdf = new mPDF();
-   
+   $ruc = '12345678922 - nash vent';
+   $pt = '01-2017';
+   $tib = '30000.00';
+   $categoria = '1';
+   $monto = '0.00';
+   $pagar = '20.00';
+
    $html = '
 <!DOCTYPE html>
 <html lang="en">
@@ -24,49 +30,71 @@ include("../lib/mpdf.php");
       </td>
     </tr>
     <tr>
-      <td colspan="2"><hr><h3>EN  CASO  DE  RECTIFICATORIA: SÓLO PODRÁ RECTIFICAR LA CATEGORÍA Y/O EL TOTAL INGRESOS BRUTOS DEL MES, PARA LO CUAL DEBERÁ LLENAR TODOS LOS DATOS DE ESTA GUÍA</h3><hr></td>
+      <td colspan="2"><hr><h3>EN  CASO  DE  RECTIFICATORIA: SÓLO PODRÁ RECTIFICAR LA CATEGORÍA Y/O EL TOTAL INGRESOS BRUTOS DEL MES, PARA LO CUAL DEBERÁ LLENAR TODOS LOS DATOS DE ESTA GUÍA</h3></td>
     </tr>
   </table>
-
+  <hr>
   <table width="100%" border="0">
   <tr>
    <th align="leaf">NÚMERO DE RUC:</th>
-   <td colspan="2">12345678900 - NASH VENT</td>
+   <td colspan="2">';
+   	$html .= $ruc;
+   	$html .= '</td>
   </tr>
   <tr>
    <th align="leaf">PERÍODO TRIBUTARIO:</th>
-   <td>01-2017</td>
+   <td>';
+
+   	$html .= $pt;
+    $html .= '</td>
    <td rowspan="5">
-      <hr><center>
-       ¿ES LA PRIMERA VEZ QUE DECLARA PARA ESTE PERÍODO?
-       <p><b><big><big>SI / NO</big></big> </b></p>
-       De haber marcado NO, deberá proporcionar la información de la Compensación  de  las  Percepciones  de  IGV  y/o  de  los  pagos<br> efectuados  en  la  declaración  original  que  se  está  rectificando.
-        <p><b><big>COMPENSACIÓN  Y/O PAGOS EFECTUADOS:</big></b></p>
-        <p><b><big><big>S/ 0.00</big></big></b></p>
-        <u>IMPORTANTE:</u> Si está presentando una declaración rectificatoria, NO OLVIDE consignar los montos compensados y/o los pagos<br> efectuados en la declaración original.
-      </center>
-      <hr>
+      <table width="100%" border="1" cellspacing=0 cellpadding=0>
+        <tr>
+          <th align="right">
+          <center>
+           ¿ES LA PRIMERA VEZ QUE DECLARA PARA ESTE PERÍODO?
+           <p><b><big><big>';
+   	$html .= 'SI / NO';
+   	$html .= '</big></big> </b></p>
+           De haber marcado NO, deberá proporcionar la información de la Compensación  de  las  Percepciones  de  IGV  y/o  de  los  pagos efectuados  en  la  declaración  original  que  se  está  rectificando.
+            <p><b><big>COMPENSACIÓN  Y/O PAGOS EFECTUADOS:</big></b></p>
+            <p><b><big><big>S/ ';
+   	$html .= '0.00';
+   	$html .= '</big></big></b></p>
+            <u>IMPORTANTE:</u> Si está presentando una declaración rectificatoria, NO OLVIDE consignar los montos compensados y/o los pagos efectuados en la declaración original.
+          </center>
+          </th>
+        </tr>
+      </table>      
    </td>
   </tr>
   <tr>
   <th align="leaf">TOTAL INGRESOS BRUTOS DEL MES:</th>
-   <td>S/ 30000.00</td>
+   <td>S/';
+   	$html .= $tib; 
+   	$html .= '</td>
   </tr>
   <tr>
    <th align="leaf">CATEGORÍA:</th>
-   <td>1</td>
+   <td>';
+   	$html .= $categoria;
+    $html .= '</td>
   </tr>
   <tr>
    <th align="leaf">MONTO A COMPENSAR POR PERCEPCIONES: </th>
-   <td>S/ 0.00</td>
+   <td>S/ ';
+   	$html .= $monto;
+    $html .= '</td>
   </tr>
   <tr>
    <th align="leaf">IMPORTE A PAGAR:</th>
-   <td>S/ 20.00</td>
+   <td>S/ ';
+   $html .= $pagar;
+   $html .= '</td>
   </tr>
   </table>
 
-  <hr style="visibility: hidden;">
+  <hr>
   <h4>
     <u>IMPORTANTE:</u><br>
     (1)Este importe se obtendrá de la suma de los comprobantes de pago emitidos durante el período tributario a declarar.<br>
@@ -77,7 +105,7 @@ include("../lib/mpdf.php");
 </body>
 </html>
 ';
-$mpdf->writeHTML($html);
-$mpdf->Output();
+	$mpdf->writeHTML($html);
+	$mpdf->Output();
 
 ?>
