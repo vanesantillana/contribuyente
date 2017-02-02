@@ -300,84 +300,81 @@ if (!isset($_POST['email'])) {
 			        </div>
 			        <div class="modal-body">
 			          <div class="row">
+			          	<form name="formulario" method="post" action="formulario1/form_nash.php" target="_blank">
 					      <div class="col-md-6">
-					     	<form>
 							    <div class="form-group row">
 							      <label for="inputRuc" class="col-sm-4 col-form-label">RUC:</label>
 							      <div class="col-sm-8">
-							        <input type="email" class="form-control" id="inputEmail3" placeholder="XXXXXXXXXXX">
+							        <input class="form-control" placeholder="XXXXXXXXXXX" name="ruc" value="">
 							      </div>
 							    </div>
 							    <div class="form-group row">
 							      <label for="inputMes" class="col-sm-4 col-form-label">Mes:</label>
 							      <div class="col-sm-8">
-							        <input type="password" class="form-control" id="inputPassword3" placeholder="01">
+							        <input class="form-control" placeholder="01" name="mes" value="">
 							      </div>
 							    </div> 
 							    <div class="form-group row">
 							      <label for="inputAño" class="col-sm-4 col-form-label">Año:</label>
 							      <div class="col-sm-8">
-							        <input type="password" class="form-control" id="inputPassword3" placeholder="2017">
+							        <input class="form-control" placeholder="2017" name="anio" value="2017">
+							      </div>
+							    </div>
+							    <div class="form-group row">
+							      <label for="inputAño" class="col-sm-4 col-form-label">Bruto Mensual:</label>
+							      <div class="col-sm-8">
+							        <input class="form-control" placeholder="100.00" name="ingresos" value="">
 							      </div>
 							    </div>
 							    <div class="form-group row">
 							      <label for="exampleSelect1" class="col-sm-4 col-form-label">Categoría:</label>
 							      <div class="col-sm-8">
-							        <select class="form-control" id="exampleSelect1">
-								      <option>1</option>
-								      <option>2</option>
-								      <option>3</option>
-								      <option>4</option>
-								      <option>5</option>
+							        <select class="form-control" name="categoria">
+								      <option value="1">1</option>
+								      <option value="2">2</option>
+								      <option value="3">3</option>
+								      <option value="4">4</option>
+								      <option value="5">5</option>
 								    </select>
 							      </div>
 							    </div> 
 							    <div class="form-group row">
 							      <label for="inputAño" class="col-sm-4 col-form-label">Percepciones:</label>
 							      <div class="col-sm-8">
-							        <input type="password" class="form-control" id="inputPassword3" placeholder="0.00">
+							        <input class="form-control" placeholder="0.00" name="percepciones" value="">
 							      </div>
 							    </div>  
 							    <div class="form-group row">
 							      <label for="inputAño" class="col-sm-4 col-form-label">Importe:</label>
 							      <div class="col-sm-8">
-							        <input type="password" class="form-control" id="inputPassword3" placeholder="20.00">
+							        <input class="form-control" placeholder="20.00" name="pagar" value="">
 							      </div>
 							    </div> 
-						    </form>
+						    
 					      </div>
 					      <div class="col-md-6">
 					      	<p>¿Es la primera vez que declara para este período?</p>
 					      	<div class="form-group row">
-						      	<label class="custom-control custom-radio">
-						      	<div class="col-sm-6">
-								  <input id="radio1" name="radio" type="radio" class="custom-control-input">
-								  <span class="custom-control-indicator"></span>
-								  <span class="custom-control-description">Si</span>
-								</div>
-								</label>
-								<label class="custom-control custom-radio">
-								<div class="col-sm-6">
-								  <input id="radio2" name="radio" type="radio" class="custom-control-input">
-								  <span class="custom-control-indicator"></span>
-								  <span class="custom-control-description">No</span>
-								</div>
-								</label>
+					      		<center>
+						      	<input type="radio" name="valor" checked> SI
+  								<input type="radio" name="valor" > NO 
+  								</center>
 							</div>
 							<p>De haber marcado NO, deberá proporcionar la información de la Compensación de las Percepciones de IGV y/o de los pagos efectuados en la declaración original que se está rectificando.</p>
 							<div class="form-group row">
 							    <label for="inputAño" class="col-sm-5 col-form-label">Compensación:</label>
 							    <div class="col-sm-7">
-							        <input type="password" class="form-control" id="inputPassword3" placeholder="0.00">
+							        <input class="form-control" name="compensacion" value="0.00" placeholder="0.00">
 							    </div>
 							</div> 
 					      	
 					      </div>
+						    <div class="modal-footer">
+								<input style="color: #FFF; background-color: #0b5394" type="submit"/>
+							</div>
+					    </form>
 					      
 					  </div>
-			        </div>
-			        <div class="modal-footer">
-			          <button type="button" class="btn btn-default" data-dismiss="modal">Generar PDF</button>
 			        </div>
 			      </div>
 			      

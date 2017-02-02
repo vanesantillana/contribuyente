@@ -2,19 +2,31 @@
 
 include("../lib/mpdf.php");
    $mpdf = new mPDF();
-   $ruc = '12345678922 - nash vent';
-   $pt = '01-2017';
-   $tib = '30000.00';
-   $categoria = '1';
-   $monto = '0.00';
-   $pagar = '20.00';
+   $ruc = $_POST['ruc'];
+   $mes = $_POST['mes'];
+   $valor = $_POST['valor'];
+   $anio = $_POST['anio'];
+   $ingresos = $_POST['ingresos'];
+   $categoria = $_POST['categoria'];
+   $percepciones = $_POST['percepciones'];
+   $pagar = $_POST['pagar'];
+   $compensacion = $_POST['compensacion'];
+
+   if ($valor == TRUE ){
+      $valor = 'SI';
+      $compensacion = '0.00';
+   }
+   else{
+      $valor = 'NO';
+   }
+
 
    $html = '
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Formulario1</title>
+    <title>Guía PAGO FÁCIL</title>
     <link rel="stylesheet" href="estilo.css" media="all" />
   </head>
   <body>
@@ -45,7 +57,9 @@ include("../lib/mpdf.php");
    <th align="leaf">PERÍODO TRIBUTARIO:</th>
    <td>';
 
-   	$html .= $pt;
+   	$html .= $mes;
+   	$html .= '-';
+   	$html .= $anio;
     $html .= '</td>
    <td rowspan="5">
       <table width="100%" border="1" cellspacing=0 cellpadding=0>
@@ -54,12 +68,12 @@ include("../lib/mpdf.php");
           <center>
            ¿ES LA PRIMERA VEZ QUE DECLARA PARA ESTE PERÍODO?
            <p><b><big><big>';
-   	$html .= 'SI / NO';
+   	$html .= $valor;
    	$html .= '</big></big> </b></p>
            De haber marcado NO, deberá proporcionar la información de la Compensación  de  las  Percepciones  de  IGV  y/o  de  los  pagos efectuados  en  la  declaración  original  que  se  está  rectificando.
             <p><b><big>COMPENSACIÓN  Y/O PAGOS EFECTUADOS:</big></b></p>
             <p><b><big><big>S/ ';
-   	$html .= '0.00';
+   	$html .= $compensacion;
    	$html .= '</big></big></b></p>
             <u>IMPORTANTE:</u> Si está presentando una declaración rectificatoria, NO OLVIDE consignar los montos compensados y/o los pagos efectuados en la declaración original.
           </center>
@@ -71,7 +85,7 @@ include("../lib/mpdf.php");
   <tr>
   <th align="leaf">TOTAL INGRESOS BRUTOS DEL MES:</th>
    <td>S/';
-   	$html .= $tib; 
+   	$html .= $ingresos; 
    	$html .= '</td>
   </tr>
   <tr>
@@ -83,7 +97,7 @@ include("../lib/mpdf.php");
   <tr>
    <th align="leaf">MONTO A COMPENSAR POR PERCEPCIONES: </th>
    <td>S/ ';
-   	$html .= $monto;
+   	$html .= $percepciones;
     $html .= '</td>
   </tr>
   <tr>
