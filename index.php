@@ -88,7 +88,7 @@ if (!isset($_POST['email'])) {
       </div>
       <div class="container-fluid principal">
 	<div class="col-md-8 banner">
-	  <img src="img/ttttt.png" alt="" class="">
+	  <img src="imagenes/ttttt.png" alt="" class="">
 	  <div class="tutorial ">
 	    <div class="box-title">
 	      
@@ -98,7 +98,7 @@ if (!isset($_POST['email'])) {
 	      <div class="col-md-6">
 		<div class="row">
 		  <div class="col-md-4 rthumbc">
-		    <img src="img/ttttt.png" alt="">
+		    <img src="imagenes/ttttt.png" alt="">
 		  </div>
 		  <div class="col-md-6">
 		    <a href="">Carreras técnicas pagan más que las universitarias con mayor presencia en el mercado</a>
@@ -111,7 +111,7 @@ if (!isset($_POST['email'])) {
 	      <div class="col-md-6">
 	        <div class="row">
 		  <div class="col-md-4 rthumbc">
-		    <img src="img/ttttt.png" alt="">
+		    <img src="imagenes/ttttt.png" alt="">
 		  </div>
 		  <div class="col-md-6">
 		    <a href="">Carreras técnicas pagan más que las universitarias con mayor presencia en el mercado</a>
@@ -123,7 +123,7 @@ if (!isset($_POST['email'])) {
 	      <div class="col-md-6">
 	        <div class="row">
 		  <div class="col-md-4 rthumbc">
-		    <img src="img/ttttt.png" alt="">
+		    <img src="imagenes/ttttt.png" alt="">
 		  </div>
 		  <div class="col-md-6">
 		    <a href="">Carreras técnicas pagan más que las universitarias con mayor presencia en el mercado</a>
@@ -264,7 +264,7 @@ if (!isset($_POST['email'])) {
 	<div class="col-md-4 banner">
 	  <div class="row">
 	    <div class="col-md-12 rthumbc">
-	      <img src="img/ttttt.png" alt="" class="">
+	      <img src="imagenes/ttttt.png" alt="" class="">
 	    </div>
 	    <div class="publicacion">
 			  
