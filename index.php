@@ -296,9 +296,19 @@ if (!isset($_POST['email'])) {
 							    <div class="form-group row">
 							      <label for="inputRuc" class="col-sm-4 col-form-label">RUC:</label>
 							      <div class="col-sm-8">
-							        <input class="form-control" placeholder="XXXXXXXXXXX" name="ruc" value="">
+							        <input class="form-control" placeholder="XXXXXXXXXXX" name="ruc" id="ruc" value="">
 							      </div>
 							    </div>
+							    <iframe src="http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image" width="100" height="60" align="center">
+								</iframe>
+								<div class="form-group row">
+							      <label for="inputCodigo" class="col-sm-4 col-form-label">Ingresa imagen:</label>
+							      <div class="col-sm-8">
+							        <input class="form-control"  name="codigo" id="codigo" value="">
+							      </div>
+							    </div>
+
+
 							    <div class="form-group row">
 							      <label for="inputMes" class="col-sm-4 col-form-label">Mes:</label>
 							      <div class="col-sm-8">
