@@ -40,7 +40,7 @@ if (!isset($_POST['email'])) {
 	      <div class="modal-content">
 	        <div class="modal-header">
 	          <button type="button" class="close" data-dismiss="modal">&times;</button>
-	          <h3 class="modal-title" style="color:#0b5394"><strong>Suscribete a El Buen Contribuyente</strong></h3>
+	          <h3 class="modal-title" style="color:#0b5394" align="center"><strong>¡Suscríbete aquí!</strong></h3>
 			</div>
 			<div class="modal-body">
 				<form action='<?=$_SERVER['PHP_SELF']?>' method='post' name='sentMessage' id='contactForm' novalidate>
@@ -287,11 +287,11 @@ if (!isset($_POST['email'])) {
 			      <div class="modal-content">
 			        <div class="modal-header">
 			          <button type="button" class="close" data-dismiss="modal">&times;</button>
-			          <h4 class="modal-title" style="color:#0b5394"><strong>Guía Pago Fácil Nuevo Régimen Único Simplificado</strong></h4>
+			          <h4 class="modal-title" style="color:#0b5394" align="center"><strong>Guía Pago Fácil Nuevo Régimen Único Simplificado</strong></h4>
 			        </div>
 			        <div class="modal-body">
 			          <div class="row">
-			          	<form name="formulario" method="post" action="formulario1/form_nash.php" target="_blank">
+			          	<form name="formulario" method="post" action="formulario1/formulario.php" target="_blank">
 					      <div class="col-md-6">
 							    <div class="form-group row">
 							      <label for="inputRuc" class="col-sm-4 col-form-label">RUC:</label>
