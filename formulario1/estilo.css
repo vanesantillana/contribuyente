@@ -23,3 +23,20 @@ h5 {
   margin: 0 0 20px 0;
 }
 
+hr {
+  border: 1;
+  color: #030303;
+}
+
+td{
+  font-size: large;
+}
+h2{
+  font-size: 1.2em;
+}
+h1{
+  font-size: 1.5em;
+}
+h3{
+  font-size: 0.8em;
+}
