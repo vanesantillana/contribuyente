@@ -185,7 +185,7 @@ if (!isset($_POST['email'])) {
 	      <div class="col-md-12">
 	    	<div class="row">
 		  <div class="col-md-6 rthumbc">
-		    <img src="img/ttttt.png" alt="" class="">
+		    <img src="imagenes/ttttt.png" alt="" class="">
 		  </div>
 		  <div class="col-md-6">
 		    <a class="">titulo de publicacion</a>
@@ -198,7 +198,7 @@ if (!isset($_POST['email'])) {
 	      <div class="col-md-12">
 	    	<div class="row">
 		  <div class="col-md-6 rthumbc">
-		    <img src="img/ttttt.png" alt="" class="">
+		    <img src="imagenes/ttttt.png" alt="" class="">
 		  </div>
 		  <div class="col-md-6">
 
@@ -213,7 +213,7 @@ if (!isset($_POST['email'])) {
 	      <div class="col-md-12">
 	    	<div class="row">
 		  <div class="col-md-6 rthumbc">
-		    <img src="img/ttttt.png" alt="" class="">
+		    <img src="imagenes/ttttt.png" alt="" class="">
 		  </div>
 		  <div class="col-md-6">
 
@@ -228,7 +228,7 @@ if (!isset($_POST['email'])) {
 	      <div class="col-md-12">
 	    	<div class="row">
 		  <div class="col-md-6 rthumbc">
-		    <img src="img/ttttt.png" alt="" class="">
+		    <img src="imagenes/ttttt.png" alt="" class="">
 		  </div>
 		  <div class="col-md-6">
 		      <a class="">titulo de publicacion</a>
@@ -249,13 +249,13 @@ if (!isset($_POST['email'])) {
 	    </div>
 	    <div class="row">
 	      <div class="col-md-4 rthumbc">
-		<img src="img/ttttt.png" alt="" class="">
+		<img src="imagenes/ttttt.png" alt="" class="">
 	      </div>
 	      <div class="col-md-4 rthumbc">
-		<img src="img/ttttt.png" alt="" class="">
+		<img src="imagenes/ttttt.png" alt="" class="">
 	      </div>
 	      <div class="col-md-4 rthumbc">
-		<img src="img/ttttt.png" alt="" class="">
+		<img src="imagenes/ttttt.png" alt="" class="">
 	      </div>	      				
 	    </div>
 	  </div>
