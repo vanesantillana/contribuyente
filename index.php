@@ -25,8 +25,37 @@ if (!isset($_POST['email'])) {
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>El buen contribuyente</title>
+    <script type="text/javascript">
+    	$(window).on('load',function(){
+        	$('#myModal0').modal('show');
+    });
+	</script>
   </head>
   <body>
+  	<div class="container">
+  	  <div class="modal fade" id="myModal0" role="dialog">
+	    <div class="modal-dialog">
+	    
+	      <!-- Modal content-->
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h3 class="modal-title" style="color:#0b5394"><strong>Suscribete a El Buen Contribuyente</strong></h3>
+			</div>
+			<div class="modal-body">
+				<form action='<?=$_SERVER['PHP_SELF']?>' method='post' name='sentMessage' id='contactForm' novalidate>
+				<label class=''>Correo electronico:</label>
+				<input type='' class='form-control' name='email' placeholder='ejemplo@ejemplo.com' id='email' required data-validation-required-message='No ingresaste tu correo.'>
+				<p class='help-block'></p>
+			</div>
+			<div class="modal-footer">
+				<button type='submit' class='btn btn-primary'>Suscribirse</button>
+			</div>
+	      </div>
+	      
+	    </div>
+	  </div>
+	</div>
     <div  class="container-fluid base">
       <div class="col-md-12 sec1">
 		 <hr style="visibility: hidden;">
@@ -51,28 +80,8 @@ if (!isset($_POST['email'])) {
 	</ul>
 
 	<ul class="nav navbar-right">
-	  	<div class="col-sm-1 col-md-12">
-	    	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">Suscribete</button>
-			<div class="modal fade" id="myModal1" role="dialog">
-			    <div class="modal-dialog">
-			      <div class="modal-content">
-			        <div class="modal-header">
-			        	<button type="button" class="close" data-dismiss="modal">&times;</button>
-			          	<h4 class="modal-title" style="color:#0b5394"><strong>Suscribete</strong></h4>
-					</div>
-				  	<div class="modal-body">
-				      	<form action='<?=$_SERVER['PHP_SELF']?>' method='post' name='sentMessage' id='contactForm' novalidate>
-				        <label class=''>Correo electronico:</label>
-					    <input type='' class='form-control' name='email' id='email' required data-validation-required-message='No ingresaste tu correo.'>
-					    <p class='help-block'></p>
-						
-					</div>
-					<div class="modal-footer">
-						<button type='submit' class='btn btn-primary'>Suscribirse</button>
-					</div>
-			    </div>
-			  </div>
-			</div>
+	  	<div class="col-sm-3 col-md-12">
+	    	<button type="button" style="background-color:#0b5394" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal0">Suscribete</button>
     	</div>
 	</ul>
 
@@ -270,24 +279,6 @@ if (!isset($_POST['email'])) {
 		</div>
 		<div class="col-md-12">
 			<h2>Formatos</h2>		
-			<!--            
-		  	<table class="table ">
-		    <thead>
-		        <tr>
-		        	<th>PDF descargables:</th>
-		        </tr>
-		    </thead>
-		    <tbody>
-		        <tr>
-		            <td><a target="_blank" href="pdf/factura.pdf">Modelo de Factura</a></td>
-		        </tr>
-		        <tr>
-		            <td><a target="_blank" href="pdf/honorarios.pdf">Recibo por Honorarios</a></td>
-		        </tr>
-		    </tbody>
-		    </table>
-		    <iframe src="pdf/revista.pdf" style="width:100%; height:375px;" frameborder="0"></iframe>
-		    -->
 		    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">Guía Pago Fácil Nuevo Régimen Único Simplificado</button>
 			  <!-- Modal -->
 			<div class="modal fade" id="myModal" role="dialog">
