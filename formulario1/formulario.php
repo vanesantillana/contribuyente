@@ -11,7 +11,8 @@ include("../lib/mpdf.php");
    $percepciones = $_POST['percepciones'];
    $pagar = $_POST['pagar'];
    $compensacion = $_POST['compensacion'];
-
+    $codigo=$_POST['codigo'];
+    $url_final= "http://www.sunat.gob.pe/cl-ti-itmrconsruc/jcrS00Alias?accion=consPorRuc&nroRuc=$ruc&codigo=$codigo&tipdoc=1";
    if ($valor == TRUE ){
       $valor = 'SI';
       $compensacion = '0.00';
@@ -48,9 +49,14 @@ include("../lib/mpdf.php");
   <hr>
   <table width="100%" border="0">
   <tr>
-   <th align="leaf">NÚMERO DE RUC:</th>
-   <td colspan="2">';
-   	$html .= $ruc;
+   <td colspan="2">
+   <div width=20><iframe src="';
+    $html .=$url_final;
+    $html .= '" width="335" height="40" frameborder="no" Scrolling="no" style="margin-left: 0px; margin-top: -10px;" >
+</iframe> </div>';
+
+
+   	
    	$html .= '</td>
   </tr>
   <tr>
@@ -119,7 +125,8 @@ include("../lib/mpdf.php");
 </body>
 </html>
 ';
-	$mpdf->writeHTML($html);
-	$mpdf->Output();
+  echo $html;
 
+  //$mpdf->writeHTML($html);
+  //$mpdf->Output();
 ?>
