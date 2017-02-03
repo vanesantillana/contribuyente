@@ -1,5 +1,5 @@
  <?php 
-/*	$url="http://www.sunat.gob.pe/cl-ti-itmrconsruc/FrameCriterioBusquedaMovil.jsp";
+	$url="http://www.sunat.gob.pe/cl-ti-itmrconsruc/FrameCriterioBusquedaMovil.jsp";
     function codigo_fuente($url){
     $url = file($url);
     $codigo = '';
@@ -8,9 +8,8 @@
     }
     return $codigo;
 }
-*/
 ?>
-<!--
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,17 +35,12 @@
 
     <script>
         function valor(){
-                var z=parent.document.getElementById('nuevo').src;
-                console.log(z);
-                
+            var z=parent.document.getElementById('nuevo').src;
+            console.log(z);
+                var ifrm = document.getElementById('nuevo');
+                ifrm.style.width = '400px'; // set width
+                var doc = ifrm.contentDocument? ifrm.contentDocument: ifrm.contentWindow.document;
             }
 
     </script>
-</html>-->
-
-<html>
-<body>
-    <iframe src="http://www.sunat.gob.pe/cl-ti-itmrconsruc/FrameCriterioBusquedaMovil.jsp" id="myFrame" name="myFrame"></iframe>
-    <input type="button" onclick="javascript:alert(document.getElementsByName('myFrame')[0].contentWindow.document)">
-</body>
 </html>
