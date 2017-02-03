@@ -50,24 +50,33 @@ if (!isset($_POST['email'])) {
 	  <li><a href="#">Contacto</a></li>
 	</ul>
 
-	<ul class="nav navbar-nav navbar-right">
-	  <div class="col-sm-3 col-md-12">
-	    <form class="navbar-form" role="search">
-	      <div class="input-group">
-		<input type="text" class="form-control" placeholder="Buscar" name="q">
-		<div class="input-group-btn">
-		  <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-		</div>
-	      </div>
-	    </form>
-    	  </div>
-    	  <!--<li><a href="#">Login</a></li>-->
+	<ul class="nav navbar-right">
+	  	<div class="col-sm-1 col-md-12">
+	    	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">Suscribete</button>
+			<div class="modal fade" id="myModal1" role="dialog">
+			    <div class="modal-dialog">
+			      <div class="modal-content">
+			        <div class="modal-header">
+			        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+			          	<h4 class="modal-title" style="color:#0b5394"><strong>Suscribete</strong></h4>
+					</div>
+				  	<div class="modal-body">
+				      	<form action='<?=$_SERVER['PHP_SELF']?>' method='post' name='sentMessage' id='contactForm' novalidate>
+				        <label class=''>Correo electronico:</label>
+					    <input type='' class='form-control' name='email' id='email' required data-validation-required-message='No ingresaste tu correo.'>
+					    <p class='help-block'></p>
+						
+					</div>
+					<div class="modal-footer">
+						<button type='submit' class='btn btn-primary'>Suscribirse</button>
+					</div>
+			    </div>
+			  </div>
+			</div>
+    	</div>
 	</ul>
 
       </div>
-
-
-      
       <div class="container-fluid principal">
 	<div class="col-md-8 banner">
 	  <img src="img/ttttt.png" alt="" class="">
@@ -249,16 +258,7 @@ if (!isset($_POST['email'])) {
 	      <img src="img/ttttt.png" alt="" class="">
 	    </div>
 	    <div class="publicacion">
-	      
-		<div class="col-md-12">
-		<h2 class="">Unete</h2>  
-			<form action='<?=$_SERVER['PHP_SELF']?>' method='post' name='sentMessage' id='contactForm' novalidate>
-	        <label class=''>Correo electronico:</label>
-		    <input type='' class='form-control' name='email' id='email' required data-validation-required-message='No ingresaste tu correo.'>
-		    <p class='help-block'></p>
-			<button type='submit' class='btn btn-primary'>Suscribirse</button>
-	  
-      	
+			  
     </form> 
 
 
