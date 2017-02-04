@@ -1,5 +1,11 @@
-<?php
-    $ruc = $_POST['ruc'];
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <input type='button' onclick='window.print();' value='Imprimir' /></form> 
+</body>
+</html>
+<?php  
+   $ruc = $_POST['ruc'];
    $mes = $_POST['mes'];
    $valor = $_POST['valor'];
    $anio = $_POST['anio'];
@@ -17,7 +23,8 @@
    else{
       $valor = 'NO';
    }
-?>
+
+   $html = '
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,56 +33,74 @@
     <link rel="stylesheet" href="estilo1.css" media="all" />
   </head>
   <body>
-    <input type='button' onclick='window.print();' value='Imprimir' /></form> 
-
     <hr style="visibility: hidden;">
     <h2>SÓLO PARA SER USADO COMO BORRADOR - PARA PERIODOS TRIBUTARIOS</h2>
       <div id="logo">
         <img src="logo.gif" border="0" width="250" height="65" align="right">
 
       </div>
-	<h1>Guía PAGO FÁCIL NUEVO RÉGIMEN ÚNICO SIMPLIFICADO</h1>
-	<h3>EN  CASO  DE  RECTIFICATORIA: SÓLO PODRÁ RECTIFICAR LA CATEGORÍA Y/O EL TOTAL INGRESOS BRUTOS DEL MES, PARA LO CUAL DEBERÁ LLENAR TODOS LOS DATOS DE ESTA GUÍA</h3>  
-
+  <h1>Guía PAGO FÁCIL NUEVO RÉGIMEN ÚNICO SIMPLIFICADO</h1>
+  <h3>EN  CASO  DE  RECTIFICATORIA: SÓLO PODRÁ RECTIFICAR LA CATEGORÍA Y/O EL TOTAL INGRESOS BRUTOS DEL MES, PARA LO CUAL DEBERÁ LLENAR TODOS LOS DATOS DE ESTA GUÍA</h3>  
   <table width="100%" border="0">
   <tr>
-    <td colspan="2">
-   <div width=20><iframe src="http://www.sunat.gob.pe/cl-ti-itmrconsruc/jcrS00Alias?accion=consPorRuc&nroRuc=$ruc&codigo=$codigo&tipdoc=1" width="335" height="40" frameborder="no" Scrolling="no" style="margin-left: 0px; margin-top: -10px;" >
-</iframe> </div>
-</td>
-   <!--<th>NÚMERO DE RUC:</th>
-   <td colspan="2"><?php $url_final?></td>-->
-  </tr>
+   <th colspan="3">
+     <div width=20><iframe src="';
+      $html .=$url_final;
+      $html .= '" width="800" height="30" frameborder="no" Scrolling="no" style="margin-left: 0px; margin-top: -10px;" >
+  </iframe> </div>
+    </th> 
+  </tr>';
+
+
+    
+    $html .= '
   <tr>
    <th>PERÍODO TRIBUTARIO:</th>
-   <td>01-2017</td>
+   <td>';
+
+    $html .= $mes;
+    $html .= '-';
+    $html .= $anio;
+    $html .= '</td>
    <td rowspan="5">
      <h5>
       <hr style="visibility: hidden;">
        <b>¿ES LA PRIMERA VEZ QUE DECLARA PARA ESTE PERÍODO?</b><br>
-       <p><b><big><big>SI / NO</big></big> </b></p>
+       <p><b><big><big>';
+    $html .= $valor;
+    $html .= '</big></big> </b></p>
        De haber marcado NO, deberá proporcionar la información de la<br> Compensación  de  las  Percepciones  de  IGV  y/o  de  los  pagos<br> efectuados  en  la  declaración  original  que  se  está  rectificando.<br>
         <p><b><big>COMPENSACIÓN  Y/O PAGOS EFECTUADOS:</big></b></p>
-        <p><b><big><big>S/ 0.00</big></big></b></p>
+        <p><b><big><big>S/ ';
+    $html .= $compensacion;
+    $html .= '</big></big></b></p>
         <u>IMPORTANTE:</u> Si está presentando una declaración rectificatoria,<br> NO OLVIDE consignar los montos compensados y/o los pagos<br> efectuados en la declaración original.<br>
         <hr style="visibility: hidden;">
      </h5>
    </td>
   </tr>
   <th>TOTAL INGRESOS BRUTOS DEL MES:</th>
-   <td>S/ 300000.00</td>
+   <td>S/ ';
+    $html .= $ingresos; 
+    $html .= '</td>
   </tr>
   <tr>
    <th>CATEGORÍA:</th>
-   <td>1</td>
+   <td>';
+    $html .= $categoria;
+    $html .= '</td>
   </tr>
   <tr>
    <th>MONTO A COMPENSAR POR PERCEPCIONES: </th>
-   <td>S/ 00.00</td>
+   <td>S/ ';
+    $html .= $percepciones;
+    $html .= '</td>
   </tr>
   <tr>
    <th>IMPORTE A PAGAR:</th>
-   <td>S/ 20.00</td>
+   <td>S/ ';
+   $html .= $pagar;
+   $html .= '</td>
   </tr>
   </table>
 
@@ -90,3 +115,9 @@
 
 </body>
 </html>
+';
+  echo $html;
+
+  //$mpdf->writeHTML($html);
+  //$mpdf->Output();
+?>
