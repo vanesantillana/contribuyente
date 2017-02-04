@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <input type='button' onclick='window.print();' value='Imprimir' /></form> 
+</body>
+</html>
 <?php  
 
 include("../lib/mpdf.php");
@@ -20,7 +26,6 @@ include("../lib/mpdf.php");
    else{
       $valor = 'NO';
    }
-
 
    $html = '
 <!DOCTYPE html>
