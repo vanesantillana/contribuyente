@@ -325,7 +325,7 @@ if (!isset($_POST['email'])) {
 								      <option value="08">Agosto</option>
 								      <option value="09">Septiembre</option>
 								      <option value="10">Octubre</option>
-								      <option value="11">Nobiembre</option>
+								      <option value="11">Noviembre</option>
 								      <option value="12">Diciembre</option>
 								    </select>
 							    </div>							     
@@ -339,7 +339,7 @@ if (!isset($_POST['email'])) {
 							</div>
 							<div class="form-group">
 							      <label for="inputAño">Percepciones:</label>
-							      <input class="form-control" placeholder="0.00" name="percepciones" value="">
+							      <input class="form-control" name="percepciones" value="0.0">
 							</div>	
 								<div class="form-group">
 						      		<label>¿Es la primera vez que declara para este período?</label>
@@ -352,7 +352,7 @@ if (!isset($_POST['email'])) {
 								    <label>Si marco NO, ingrese su compensación y/o pagos efectuados:</label>
 								    <input class="form-control" name="compensacion" value="0.00" placeholder="0.00">
 								</div> 
-							<input class="navbar-right" style="color: #FFF; background-color: #0b5394" size="50" type="submit"/>				      	
+							<input class='navbar-right btn btn-primary' style="color: #FFF; background-color: #0b5394" size="100" type="submit"/>				      	
 					      </div>
 						  
 					    </form> 
