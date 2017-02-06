@@ -34,13 +34,13 @@ if (!isset($_POST['email'])) {
   <body>
   	<div class="container">
   	  <div class="modal fade" id="myModal0" role="dialog">
-	    <div class="modal-dialog">
+	    <div class="modal-dialog modal-sm">
 	    
 	      <!-- Modal content-->
 	      <div class="modal-content">
-	        <div class="modal-header">
-	          <button type="button" class="close" data-dismiss="modal">&times;</button>
-	          <h3 class="modal-title" style="color:#0b5394" align="center"><strong>¡Suscríbete aquí!</strong></h3>
+	        <div class="modal-header" style="background-color:#0b5394">
+	          <button type="button" style="color:#FFFFFF" class="close" data-dismiss="modal">&times;</button>
+	          <h3 class="modal-title" style="color:#FFFFFF" align="center"><strong>¡Suscríbete aquí!</strong></h3>
 			</div>
 			<div class="modal-body">
 				<form action='<?=$_SERVER['PHP_SELF']?>' method='post' name='sentMessage' id='contactForm' novalidate>
@@ -282,98 +282,80 @@ if (!isset($_POST['email'])) {
 		    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">Guía Pago Fácil Nuevo Régimen Único Simplificado</button>
 			  <!-- Modal -->
 			<div class="modal fade" id="myModal" role="dialog">
-			    <div class="modal-dialog">
+			    <div class="modal-dialog modal-lg">
 
 			      <div class="modal-content">
-			        <div class="modal-header">
-			          <button type="button" class="close" data-dismiss="modal">&times;</button>
-			          <h4 class="modal-title" style="color:#0b5394" align="center"><strong>Guía Pago Fácil Nuevo Régimen Único Simplificado</strong></h4>
+			        <div class="modal-header" style="background-color:#0b5394">
+			          <button type="button" style="color:#FFFFFF" class="close" data-dismiss="modal">&times;</button>
+			          <h4 class="modal-title" style="color:#FFFFFF" align="center"><strong>Guía Pago Fácil Nuevo Régimen Único Simplificado</strong></h4>
 			        </div>
 			        <div class="modal-body">
 			          <div class="row">
 			          	<form name="formulario" method="post" action="formulario1/formato.php" target="_blank">
 					      <div class="col-md-6">
-							    <div class="form-group row">
-							      <label for="inputRuc" class="col-sm-4 col-form-label">RUC:</label>
-							      <div class="col-sm-8">
-							        <input class="form-control" placeholder="XXXXXXXXXXX" name="ruc" id="ruc" value="">
-							      </div>
+							    <div class="form-group">
+							      <label for="inputRuc">RUC:</label>
+							      <input class="form-control" placeholder="XXXXXXXXXXX" name="ruc" id="ruc" value="">
+							    </div>							    
+							    <div class="form-group">
+							      <label for="inputAño">Ingreso Mensual:</label>
+							      <input class="form-control" placeholder="100.00" name="ingresos" value="">
 							    </div>
-							    <center>
-							    <iframe src="http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image" width="110" height="60"></iframe>
+								<center>
+								   	<iframe src="http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image" width="150" height="60"></iframe>
 								</center>
-								<div class="form-group row">
-							      <label for="inputCodigo" class="col-sm-4 col-form-label">Ingresa imagen:</label>
-							      <div class="col-sm-8">
-							        <input class="form-control"  name="codigo" id="codigo" value="">
-							      </div>
-							    </div>
-							    <div class="form-group row">
-							      <label for="inputMes" class="col-sm-4 col-form-label">Mes:</label>
-							      <div class="col-sm-8">
-							        <input class="form-control" placeholder="01" name="mes" value="">
-							      </div>
-							    </div> 
-							    <div class="form-group row">
-							      <label for="inputAño" class="col-sm-4 col-form-label">Año:</label>
-							      <div class="col-sm-8">
-							        <input class="form-control" placeholder="2017" name="anio" value="2017">
-							      </div>
-							    </div>
-							    <div class="form-group row">
-							      <label for="inputAño" class="col-sm-4 col-form-label">Bruto Mensual:</label>
-							      <div class="col-sm-8">
-							        <input class="form-control" placeholder="100.00" name="ingresos" value="">
-							      </div>
-							    </div>
-							    <div class="form-group row">
-							      <label for="exampleSelect1" class="col-sm-4 col-form-label">Categoría:</label>
-							      <div class="col-sm-8">
-							        <select class="form-control" name="categoria">
-								      <option value="1">1</option>
-								      <option value="2">2</option>
-								      <option value="3">3</option>
-								      <option value="4">4</option>
-								      <option value="5">5</option>
+								<div class="form-group">
+								    <label for="inputCodigo">Ingresa la imagen:</label>
+								    <input class="form-control"  name="codigo" id="codigo" value="">
+								</div>						    
+					      </div>
+					      <div class="col-md-6 row">
+					      	<div class="row">
+					      	<div class="col-md-6">
+					    		<div class="form-group">
+							      	<label for="inputMes">Periodo:</label>
+							      	<select class="form-control" name="mes">
+								      <option value="01">Enero</option>
+								      <option value="02">Febrero</option>
+								      <option value="03">Marzo</option>
+								      <option value="04">Abril</option>
+								      <option value="05">Mayo</option>
+								      <option value="06">Junio</option>
+								      <option value="07">Julio</option>
+								      <option value="08">Agosto</option>
+								      <option value="09">Septiembre</option>
+								      <option value="10">Octubre</option>
+								      <option value="11">Noviembre</option>
+								      <option value="12">Diciembre</option>
 								    </select>
-							      </div>
-							    </div> 
-							    <div class="form-group row">
-							      <label for="inputAño" class="col-sm-4 col-form-label">Percepciones:</label>
-							      <div class="col-sm-8">
-							        <input class="form-control" placeholder="0.00" name="percepciones" value="">
-							      </div>
+							    </div>							     
+							</div>
+							<div class="col-md-6">						
+							    <div class="form-group">
+							      <label for="inputAño">Año:</label>
+							      <input class="form-control" placeholder="2017" name="anio" value="2017">
 							    </div>  
-							    <div class="form-group row">
-							      <label for="inputAño" class="col-sm-4 col-form-label">Importe:</label>
-							      <div class="col-sm-8">
-							        <input class="form-control" placeholder="20.00" name="pagar" value="">
-							      </div>
-							    </div> 
-						    
-					      </div>
-					      <div class="col-md-6">
-					      	<p>¿Es la primera vez que declara para este período?</p>
-					      	<div class="form-group row">
-					      		<center>
-						      	<input type="radio" name="valor" checked> SI
-  								<input type="radio" name="valor" > NO 
-  								</center>
 							</div>
-							<p>De haber marcado NO, deberá proporcionar la información de la Compensación de las Percepciones de IGV y/o de los pagos efectuados en la declaración original que se está rectificando.</p>
-							<div class="form-group row">
-							    <label for="inputAño" class="col-sm-5 col-form-label">Compensación:</label>
-							    <div class="col-sm-7">
-							        <input class="form-control" name="compensacion" value="0.00" placeholder="0.00">
-							    </div>
-							</div> 
-					      	
-					      </div>
-						    <div class="modal-footer">
-								<input style="color: #FFF; background-color: #0b5394" type="submit"/>
 							</div>
-					    </form>
-					      
+							<div class="form-group">
+							      <label for="inputAño">Percepciones:</label>
+							      <input class="form-control" name="percepciones" value="0.0">
+							</div>	
+								<div class="form-group">
+						      		<label>¿Es la primera vez que declara para este período?</label>
+						      		<center>
+							      	<input type="radio" name="valor" checked> SI
+	  								<input type="radio" name="valor" > NO 
+	  								</center>
+								</div>
+								<div class="form-group">
+								    <label>Si marco NO, ingrese su compensación y/o pagos efectuados:</label>
+								    <input class="form-control" name="compensacion" value="0.00" placeholder="0.00">
+								</div> 
+							<input class='navbar-right btn btn-primary' style="color: #FFF; background-color: #0b5394" size="100" type="submit"/>				      	
+					      </div>
+						  
+					    </form> 
 					  </div>
 			        </div>
 			      </div>

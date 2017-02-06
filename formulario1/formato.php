@@ -10,10 +10,9 @@
    $valor = $_POST['valor'];
    $anio = $_POST['anio'];
    $ingresos = $_POST['ingresos'];
-   $categoria = $_POST['categoria'];
    $percepciones = $_POST['percepciones'];
-   $pagar = $_POST['pagar'];
    $compensacion = $_POST['compensacion'];
+     
     $codigo=$_POST['codigo'];
     $url_final= "http://www.sunat.gob.pe/cl-ti-itmrconsruc/jcrS00Alias?accion=consPorRuc&nroRuc=$ruc&codigo=$codigo&tipdoc=1";
    if ($valor == TRUE ){
@@ -23,6 +22,25 @@
    else{
       $valor = 'NO';
    }
+
+   $infloat = (float) $ingresos;
+
+   if ($infloat <= 5000.0) {
+        $categoria = '1';
+        $pagar = '20.0';
+    } elseif ($infloat <= 8000.0) {
+        $categoria = '2';
+        $pagar = '50.0';
+    } elseif ($infloat <= 13000.0) {
+        $categoria = '3';
+        $pagar = '200.0';
+    } elseif ($infloat <= 20000.0) {
+        $categoria = '4';
+        $pagar = '400.0';
+    } else {
+        $categoria = '5';
+        $pagar = '600.0';
+    }
 
    $html = '
 <!DOCTYPE html>
@@ -46,7 +64,7 @@
    <th colspan="3">
      <div width=20><iframe src="';
       $html .=$url_final;
-      $html .= '" width="800" height="30" frameborder="no" Scrolling="no" style="margin-left: 0px; margin-top: -10px;" >
+      $html .= '" width="780" height="30" frameborder="no" Scrolling="no" style="margin-left: 0px; margin-top: -10px;" >
   </iframe> </div>
     </th> 
   </tr>';
@@ -69,7 +87,6 @@
        <p><b><big><big>';
     $html .= $valor;
     $html .= '</big></big> </b></p>
-       De haber marcado NO, deberá proporcionar la información de la<br> Compensación  de  las  Percepciones  de  IGV  y/o  de  los  pagos<br> efectuados  en  la  declaración  original  que  se  está  rectificando.<br>
         <p><b><big>COMPENSACIÓN  Y/O PAGOS EFECTUADOS:</big></b></p>
         <p><b><big><big>S/ ';
     $html .= $compensacion;
@@ -117,7 +134,4 @@
 </html>
 ';
   echo $html;
-
-  //$mpdf->writeHTML($html);
-  //$mpdf->Output();
 ?>
