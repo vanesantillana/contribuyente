@@ -1,7 +1,5 @@
+  <input type='button' onclick='window.print();' value='Imprimir' /></form> 
 <?php  
-
-include("../../lib/mpdf.php");
-   $mpdf = new mPDF();
    $html = '
   <!DOCTYPE html>
   <html lang="en">
@@ -58,7 +56,7 @@ include("../../lib/mpdf.php");
     </div>
     <div class="cuerpo">
       <div class="c1">
-        <br><br><br>
+        <br><br><br><br>
         <hr><hr><hr><hr style="margin-bottom: 10.5px;">
         x<br>
         x<br>
@@ -86,6 +84,4 @@ include("../../lib/mpdf.php");
   </html>
 ';
   echo $html;
- // $mpdf->writeHTML($html);
- // $mpdf->Output();
 ?>
