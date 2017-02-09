@@ -22,6 +22,8 @@ if (!isset($_POST['email'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>El buen contribuyente</title>
@@ -30,6 +32,33 @@ if (!isset($_POST['email'])) {
         	$('#myModal0').modal('show');
     });
 	</script>
+
+	<style>
+		@import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css');
+		input[type="checkbox"] {
+		    /* IE opacity hacks */
+		    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		    filter: alpha(opacity=0);
+		    opacity: 0;
+		    margin-left: 100px;
+		}
+		.cb-label {
+		    position: relative;
+		}
+		.cb-label:before {
+		    content: ' ';
+		    position: absolute;
+		    background: transparent url(imagenes/switch2.png) no-repeat scroll 0 0;
+		    height: 40px;
+		    width: 120px;
+		    left: 10px
+		}
+		input[type="checkbox"]:checked ~ .cb-label:before,
+		/* the .checked class is used by IE only */
+		input[type="checkbox"].checked ~ .cb-label:before {
+		    background-position: 0 -40px;
+		}
+	</style>
   </head>
   <body>
   	<div class="container">
@@ -71,20 +100,20 @@ if (!isset($_POST['email'])) {
       </div>
       
       <div class="col-md-12 sec2">
-	<ul class="nav navbar-nav">
-	  <li class="active"><a href="#">Inicio</a></li>
-	  <li><a href="#">Nosotros</a></li>
-	  <li><a href="#">Publicaciones</a></li>
-	  <li><a href="#">Noticias</a></li>
-	  <li><a href="#">Contacto</a></li>
-	</ul>
-
-	<ul class="nav navbar-right">
-	  	<div class="col-sm-3 col-md-12">
-	    	<button type="button" style="background-color:#0b5394" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal0">Suscribete</button>
-    	</div>
-	</ul>
-
+		<nav class="navbar navbar-bar" style="background-color: black">
+		  <div class="container-fluid">
+			  <ul class="nav navbar-nav">
+				  <li class="active"><a href="#">Inicio</a></li>
+				  <li><a href="#">Nosotros</a></li>
+				  <li><a href="#">Publicaciones</a></li>
+				  <li><a href="#">Noticias</a></li>
+				  <li><a href="#">Contacto</a></li>
+			  </ul>
+			  <ul class="nav navbar-nav navbar-right">
+			    	<button type="button" style="background-color:#0b5394;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal0">Suscribete</button>
+			  </ul>
+			</div>
+		</nav>
       </div>
       <div class="container-fluid principal">
 	<div class="col-md-8 banner">
@@ -278,10 +307,116 @@ if (!isset($_POST['email'])) {
 		  <div id="IndicadoresMin"><h2><a href="http://dolar.wilkinsonpc.com.co/">Dolar Hoy Peru</a></h2></div><script type="text/javascript" src="http://dolar.wilkinsonpc.com.co/widgets/gratis/indicadores-economicos-min.js?ancho=170&alto=85&fondo=transparent&fsize=10&ffamily=sans-serif&fcolor=000000"></script><!-- DolarWeb IndMin End -->
 		</div>
 		<div class="col-md-12">
-			<h2>Formatos</h2>		
-		    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">Guía Pago Fácil Nuevo Régimen Único Simplificado</button>
-			  <!-- Modal -->
-			<div class="modal fade" id="myModal" role="dialog">
+			<h2>Formatos</h2><br>		
+		    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal1">Guía Pagos Varios</button>
+		    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal2">Guía Pago Fácil Nuevo Régimen Único Simplificado</button>
+		    <!-- Modal Pagos Varios -->
+			<div class="modal fade" id="myModal1" role="dialog">
+			    <div class="modal-dialog modal-lg">
+
+			      <div class="modal-content">
+			        <div class="modal-header" style="background-color:#0b5394">
+			          <button type="button" style="color:#FFFFFF" class="close" data-dismiss="modal">&times;</button>
+			          <h4 class="modal-title" style="color:#FFFFFF" align="center"><strong>Guía Pagos Varios</strong></h4>
+			        </div>
+			        <div class="modal-body">
+			          <div>
+			          	<form role="form" method="post" action="guias/pv/guiapv.php" target="_blank">
+				           <div id="row">
+				           <h4><b>Datos Necesarios Para Realizar El Pago En Todos Los Casos</b></h4>
+				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+				              <label ><span class="fa fa-user"></span> N° de RUC:</label>
+				              <input type="text" class="form-control" id="mi-ruc" placeholder="XXXXXXXXXXX">
+				            </div>
+
+				            <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+				              <label ><span class="fa fa-calendar"></span> Periodo:</label>
+				              <input type="text" class="form-control"  id="mi-periodo" placeholder="2017">
+				            </div>
+
+				            <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+				              <label ><span class="fa fa-calendar-o"></span> Mes:</label>
+				              <select class="form-control" name="mes">
+								      <option value="01">Enero</option>
+								      <option value="02">Febrero</option>
+								      <option value="03">Marzo</option>
+								      <option value="04">Abril</option>
+								      <option value="05">Mayo</option>
+								      <option value="06">Junio</option>
+								      <option value="07">Julio</option>
+								      <option value="08">Agosto</option>
+								      <option value="09">Septiembre</option>
+								      <option value="10">Octubre</option>
+								      <option value="11">Noviembre</option>
+								      <option value="12">Diciembre</option>
+								</select>
+				            </div>
+				          </div>
+
+				          <div id="row">
+				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+				              <label ><span class="fa fa-list-alt"></span> Código Tributo ó Multa:</label>
+				              <input type="text" class="form-control" id="mi-codigo" placeholder="XXXX">
+				            </div>
+
+				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+				              <label ><span class="fa fa-money"></span> Importe a Pagar:</label>
+				              <input type="text" class="form-control"  id="mi-importe" placeholder="0">
+				            </div>
+
+				          </div>
+							<div class="row">
+							  <h4><b>&nbsp;&nbsp;&nbsp;Marque lo que Desea Pagar</b></h4>
+							  <div class="col-md-3">
+							  	<label ><span class="fa fa-toggle-off"></span>Tributo</label><br>
+							  	<input id="tributo" type="checkbox" name="tributo" checked="checked" />
+				            	<label for=tributo class=cb-label></label>
+				     
+							  </div>
+							  <div class="col-md-3">
+							  	<label ><span class="fa fa-toggle-off"></span> Multas</label><br>
+							  	<input id="multas" type="checkbox" name="multas"/>
+					            <label for=multas class=cb-label></label>
+							  </div>
+							  <div class="col-md-3">
+								<label ><span class="fa fa-toggle-off"></span> Costas y Gastos</label><br>
+								<input id="gastos" type="checkbox" name="gastos"/>
+					            <label for=gastos class=cb-label></label>
+							  </div>
+							  
+							  <div class="col-md-3">
+							  	<label ><span class="fa fa-toggle-off"></span>Fraccionamientos</label><br>
+							  	<input id="frac" type="checkbox" name="frac"/>
+				            	<label for=frac class=cb-label></label>
+							  </div>
+							</div>				
+				          <div id="row">
+				          	<hr style="visibility: hidden;">
+				           <h4><b>Datos Adicionales Por Tipo de Pago</b></h4>
+				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+				              <label ><span class="fa fa-external-link"></span> Tributo Asociado a la Multa:</label>
+				              <input type="text" class="form-control" id="m-t-asociado" placeholder="XXXX">
+				            </div>
+
+				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+				              <label ><span class="fa fa-external-linkr"></span> N° del Fraccionamiento:</label>
+				              <input type="text" class="form-control"  id="mi-t-fraccionamiento" placeholder="XXXXXXXXXXXXXX">
+				            </div>				  
+				          </div>
+				          <div class="row">
+			                    <div class="col-md-11 col-sm-12 col-xs-12 form-group">
+			                        <input class='navbar-right btn btn-primary' style="color: #FFF; background-color: #0b5394" size="100" type="submit" value="Generar PDF" />			                     
+			                    </div>
+			            	</div>
+				        </form> 
+					  </div>
+			        </div>
+			      </div>
+			      
+			    </div>
+			</div>
+			  <!-- Modal Nuevo Regimen -->
+			<div class="modal fade" id="myModal2" role="dialog">
 			    <div class="modal-dialog modal-lg">
 
 			      <div class="modal-content">
@@ -291,10 +426,10 @@ if (!isset($_POST['email'])) {
 			        </div>
 			        <div class="modal-body">
 			          <div class="row">
-			          	<form name="formulario" method="post" action="formulario1/formato.php" target="_blank">
+			          	<form name="formulario" method="post" action="guias/formato.php" target="_blank">
 					      <div class="col-md-6">
 							    <div class="form-group">
-							      <label for="inputRuc">RUC:</label>
+							      <label for="inputRuc">N° de RUC:</label>
 							      <input class="form-control" placeholder="XXXXXXXXXXX" name="ruc" id="ruc" value="">
 							    </div>							    
 							    <div class="form-group">
@@ -313,7 +448,7 @@ if (!isset($_POST['email'])) {
 					      	<div class="row">
 					      	<div class="col-md-6">
 					    		<div class="form-group">
-							      	<label for="inputMes">Periodo:</label>
+							      	<label for="inputMes">Mes:</label>
 							      	<select class="form-control" name="mes">
 								      <option value="01">Enero</option>
 								      <option value="02">Febrero</option>
@@ -362,7 +497,6 @@ if (!isset($_POST['email'])) {
 			      
 			    </div>
 			</div>
-
 		</div>
 		<div class="col-md-12">
 		  <h2>Conversor</h2>
