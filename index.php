@@ -34,6 +34,11 @@ if (!isset($_POST['email'])) {
 	</script>
 
 	<style>
+	 .espacio{
+ 	visibility: hidden;
+ 	margin-bottom: -1.5px;
+ }
+
 	.captcha img{
 		width: 120px;
 		height: 80px;
@@ -480,26 +485,27 @@ if (!isset($_POST['email'])) {
 		
 							<div class="row">
 							  	<h4><b>&nbsp;&nbsp;&nbsp;¿Es la primera vez que declara para este período?</b></h4>
-							  	<div class="col-md-6">
-								  	<label ></label>
+							  	<div class="col-md-12 col-sm-12 col-xs-12 form-group">
 								  	<input id="valor" type="checkbox" name="valor" checked="checked" />
-					            	<label for=valor class=cb-label></label>								
+					            	<label for=valor class=cb-label></label>
+					            	<hr class="espacio">								
 					            </div>	
-								<div class="col-md-6">
-								  	<center>
-								  	<div class="captcha">
-								  		<img src="http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image"></img>
-								  	</div>
-								   	</center>
-								</div>
+								
 							</div>			
 				          <div id="row">				
 				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 				              <label ><span class="fa fa-money"></span> Si marco NO, ingrese su compensación:</label>
 				              <input type="text" name="compensacion" class="form-control" id="m-t-asociado" placeholder="0">
 				            </div>
+				            <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+								  	<center>
+								  	<div class="captcha">
+								  		<img src="http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image"></img>
+								  	</div>
+								   	</center>
+							</div>
 
-				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+				            <div class="col-md-3 col-sm-12 col-xs-12 form-group">
 				              <label ><span class="fa fa-external-link"></span> Ingresa la imagen:</label>
 				              <input type="text" name="codigo" class="form-control"  id="mi-t-fraccionamiento" placeholder="XXXX" >
 				            </div>				  
@@ -582,11 +588,9 @@ if (!isset($_POST['email'])) {
 				          	<h4><b>¿Es ésta una declaración recitificatoria / sustitutoria?</b></h4>
 				          	<b> &nbsp;&nbsp;&nbsp;Si marco SI, llene el N° de orden e importe.</b><br>		
 				            <div class="col-md-4 col-sm-12 col-xs-12 form-group">
-				              <label ></label>
 								<input id="declaracion" type="checkbox" name="declaracion" />
 					            <label for=declaracion class=cb-label></label>
-					           	<hr style="visibility: hidden;">
-
+					           	<hr class="espacio">
 				            </div>
 
 				            <div class="col-md-4 col-sm-12 col-xs-12 form-group">

@@ -150,4 +150,8 @@ border-bottom: 3px solid #0b5394;
  #cerrar + label {
  	position: absolute;
  }
+ .espacio{
+ 	visibility: hidden;
+ 	margin-bottom: -1.5px;
+ }
 
