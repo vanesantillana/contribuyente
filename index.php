@@ -34,7 +34,7 @@ if (!isset($_POST['email'])) {
 	</script>
 
 	<style>
-	 .espacio{
+		 .espacio{
  	visibility: hidden;
  	margin-bottom: -1.5px;
  }
@@ -306,6 +306,8 @@ if (!isset($_POST['email'])) {
 	    </div>
 	    <div class="publicacion">
 			  
+    </form> 
+
 
 		</div>
 		<div class="col-md-12">
@@ -542,7 +544,7 @@ if (!isset($_POST['email'])) {
 			        </div>
 			        <div class="modal-body">
 			          <div>
-			          	<form name="formulario" method="post" action="guias/arreda/arrenda.html" target="_blank">
+			          	<form name="formulario" method="post" action="guias/arrenda/arrenda.html" target="_blank">
 					      <div id="row">
 				           <h4><b>Datos Necesarios del Arrendador</b></h4>
 				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
