@@ -310,6 +310,7 @@ if (!isset($_POST['email'])) {
 			<h2>Formatos</h2><br>		
 		    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal1">Guía Pagos Varios</button>
 		    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal2">Guía Pago Fácil Nuevo Régimen Único Simplificado</button>
+		    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal3">Generador de factura</button>
 		    <!-- Modal Pagos Varios -->
 			<div class="modal fade" id="myModal1" role="dialog">
 			    <div class="modal-dialog modal-lg">
@@ -497,6 +498,11 @@ if (!isset($_POST['email'])) {
 			      
 			    </div>
 			</div>
+			<!-- fin del segundo modal -->
+			<?php $Vdata = file_get_contents('guias/factura/from_factura.php'); 
+				
+				echo($Vdata);
+				?>
 		</div>
 		<div class="col-md-12">
 		  <h2>Conversor</h2>
