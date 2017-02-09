@@ -34,6 +34,10 @@ if (!isset($_POST['email'])) {
 	</script>
 
 	<style>
+	.captcha img{
+		width: 120px;
+		height: 80px;
+	}
 		@import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css');
 		input[type="checkbox"] {
 		    /* IE opacity hacks */
@@ -51,7 +55,7 @@ if (!isset($_POST['email'])) {
 		    background: transparent url(imagenes/switch2.png) no-repeat scroll 0 0;
 		    height: 40px;
 		    width: 120px;
-		    left: 10px
+		    left: 5px;
 		}
 		input[type="checkbox"]:checked ~ .cb-label:before,
 		/* the .checked class is used by IE only */
@@ -371,27 +375,31 @@ if (!isset($_POST['email'])) {
 							  	<label ><span class="fa fa-toggle-off"></span>Tributo</label><br>
 							  	<input id="tributo" type="checkbox" name="tributo" checked="checked" />
 				            	<label for=tributo class=cb-label></label>
+				            	<hr style="visibility: hidden;">
 				     
 							  </div>
 							  <div class="col-md-3">
 							  	<label ><span class="fa fa-toggle-off"></span> Multas</label><br>
 							  	<input id="multas" type="checkbox" name="multas"/>
 					            <label for=multas class=cb-label></label>
+					            <hr style="visibility: hidden;">
 							  </div>
 							  <div class="col-md-3">
 								<label ><span class="fa fa-toggle-off"></span> Costas y Gastos</label><br>
 								<input id="gastos" type="checkbox" name="gastos"/>
 					            <label for=gastos class=cb-label></label>
+					            <hr style="visibility: hidden;">
 							  </div>
 							  
 							  <div class="col-md-3">
 							  	<label ><span class="fa fa-toggle-off"></span>Fraccionamientos</label><br>
 							  	<input id="frac" type="checkbox" name="frac"/>
 				            	<label for=frac class=cb-label></label>
+				            	<hr style="visibility: hidden;">
 							  </div>
 							</div>				
 				          <div id="row">
-				          	<hr style="visibility: hidden;">
+				          	
 				           <h4><b>Datos Adicionales Por Tipo de Pago</b></h4>
 				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 				              <label ><span class="fa fa-external-link"></span> Tributo Asociado a la Multa:</label>
@@ -425,31 +433,23 @@ if (!isset($_POST['email'])) {
 			          <h4 class="modal-title" style="color:#FFFFFF" align="center"><strong>Guía Pago Fácil Nuevo Régimen Único Simplificado</strong></h4>
 			        </div>
 			        <div class="modal-body">
-			          <div class="row">
+			          <div>
 			          	<form name="formulario" method="post" action="guias/formato.php" target="_blank">
-					      <div class="col-md-6">
-							    <div class="form-group">
-							      <label for="inputRuc">N° de RUC:</label>
-							      <input class="form-control" placeholder="XXXXXXXXXXX" name="ruc" id="ruc" value="">
-							    </div>							    
-							    <div class="form-group">
-							      <label for="inputAño">Ingreso Mensual:</label>
-							      <input class="form-control" placeholder="100.00" name="ingresos" value="">
-							    </div>
-								<center>
-								   	<iframe src="http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image" width="150" height="60"></iframe>
-								</center>
-								<div class="form-group">
-								    <label for="inputCodigo">Ingresa la imagen:</label>
-								    <input class="form-control"  name="codigo" id="codigo" value="">
-								</div>						    
-					      </div>
-					      <div class="col-md-6 row">
-					      	<div class="row">
-					      	<div class="col-md-6">
-					    		<div class="form-group">
-							      	<label for="inputMes">Mes:</label>
-							      	<select class="form-control" name="mes">
+					      <div id="row">
+				           <h4><b>Datos Necesarios</b></h4>
+				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+				              <label ><span class="fa fa-user"></span> N° de RUC:</label>
+				              <input type="text" name="ruc" class="form-control" id="mi-ruc" placeholder="XXXXXXXXXXX">
+				            </div>
+
+				            <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+				              <label ><span class="fa fa-calendar"></span> Periodo:</label>
+				              <input type="text" name="anio" class="form-control"  id="mi-periodo" placeholder="2017">
+				            </div>
+
+				            <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+				              <label ><span class="fa fa-calendar-o"></span> Mes:</label>
+				              <select class="form-control" name="mes">
 								      <option value="01">Enero</option>
 								      <option value="02">Febrero</option>
 								      <option value="03">Marzo</option>
@@ -462,34 +462,53 @@ if (!isset($_POST['email'])) {
 								      <option value="10">Octubre</option>
 								      <option value="11">Noviembre</option>
 								      <option value="12">Diciembre</option>
-								    </select>
-							    </div>							     
-							</div>
-							<div class="col-md-6">						
-							    <div class="form-group">
-							      <label for="inputAño">Año:</label>
-							      <input class="form-control" placeholder="2017" name="anio" value="2017">
-							    </div>  
-							</div>
-							</div>
-							<div class="form-group">
-							      <label for="inputAño">Percepciones:</label>
-							      <input class="form-control" name="percepciones" value="0.0">
-							</div>	
-								<div class="form-group">
-						      		<label>¿Es la primera vez que declara para este período?</label>
-						      		<center>
-							      	<input type="radio" name="valor" checked> SI
-	  								<input type="radio" name="valor" > NO 
-	  								</center>
-								</div>
-								<div class="form-group">
-								    <label>Si marco NO, ingrese su compensación y/o pagos efectuados:</label>
-								    <input class="form-control" name="compensacion" value="0.00" placeholder="0.00">
-								</div> 
-							<input class='navbar-right btn btn-primary' style="color: #FFF; background-color: #0b5394" size="100" type="submit"/>				      	
+								</select>
+				            </div>
+				          </div>
+					      <div id="row">						    
+							    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+					              <label ><span class="fa fa-money"></span> Ingreso Mesual:</label>
+					              <input type="text" name="ingresos" class="form-control"  id="mi-importe" placeholder="0">
+					            </div>
+							    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+					              <label ><span class="fa fa-money"></span> Percepciones:</label>
+					              <input type="text" name="percepciones" class="form-control"  id="mi-importe" placeholder="0">
+					            </div>	
+														    
 					      </div>
-						  
+
+		
+							<div class="row">
+							  	<h4><b>&nbsp;&nbsp;&nbsp;¿Es la primera vez que declara para este período?</b></h4>
+							  	<div class="col-md-6">
+								  	<label ></label>
+								  	<input id="valor" type="checkbox" name="valor" checked="checked" />
+					            	<label for=valor class=cb-label></label>								
+					            </div>	
+								<div class="col-md-6">
+								  	<center>
+								  	<div class="captcha">
+								  		<img src="http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image"></img>
+								  	</div>
+								   	</center>
+								</div>
+							</div>			
+				          <div id="row">				
+				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+				              <label ><span class="fa fa-money"></span> Si marco NO, ingrese su compensación:</label>
+				              <input type="text" name="compensacion" class="form-control" id="m-t-asociado" placeholder="0">
+				            </div>
+
+				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+				              <label ><span class="fa fa-external-link"></span> Ingresa la imagen:</label>
+				              <input type="text" name="codigo" class="form-control"  id="mi-t-fraccionamiento" placeholder="XXXX" >
+				            </div>				  
+				          </div>
+				          <div class="row">
+			                    <div class="col-md-11 col-sm-12 col-xs-12 form-group">
+			                        <input class='navbar-right btn btn-primary' style="color: #FFF; background-color: #0b5394" size="100" type="submit" value="Generar PDF" />			                     
+			                    </div>
+			            	</div>
 					    </form> 
 					  </div>
 			        </div>
