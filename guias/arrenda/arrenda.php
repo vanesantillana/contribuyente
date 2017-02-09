@@ -1,3 +1,27 @@
+<input type='button' onclick='window.print();' value='Imprimir' align="left" /></form> 
+<?php 
+  $ruc = $_POST['ruc'];
+  $mes = $_POST['mes'];
+  $anio = $_POST['anio'];
+  $cod = $_POST['cod'];
+  $num = $_POST['num'];
+  $check = $_POST['check'];
+  $operacion = $_POST['operacion'];
+  $importe = $_POST['importe'];
+  $monto = $_POST['monto'];
+
+  if ($check == TRUE ){
+    $checksi = 'X';
+  }
+  else{
+    $checkno = 'X';
+  }
+  if ($ruc == '')
+  {
+    $ruc = '&nbsp;';
+  }
+   
+$html='
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,14 +44,14 @@
     }
     #capa5{ position:absolute;
      z-index:1;
-     top: 265px;
+     top: 262px;
      left:630px;
      width:300px;
      height:12px;
     }
     #capa1{ position:absolute;
      z-index:1;
-     top:190px;
+     top:187px;
      left:210px;
      width:300px;
      height:12px;
@@ -50,30 +74,61 @@
       visibility: hidden;
     }
   </style>
-  <input type='button' onclick='window.print();' value='Imprimir' align="left" /></form> 
 </head>
 <body>
   <div id="capa2"> <img src="arrenda.jpg" /> </div>
   <div id="capa1">
-    12345678910
+    ';
+  $html .= $ruc;
+  $html .=' 
     <hr style="margin-bottom: 35px;">
-    01&nbsp;&nbsp;&nbsp;2017
+  ';
+  $html .= $mes;
+  $html .=' 
+  &nbsp;
+  ';
+  $html .= $anio;
+  $html .=' 
   </div>
   <div id="capa4">
     <hr style="margin-bottom:-1px;">
-    &nbsp;1
+  ';
+  $html .= $cod;
+  $html .=' 
     <hr style="margin-bottom: 14px;">
-    1234567<br><br>
+  ';
+  $html .= $num;
+  $html .=' 
+  <br><br>
     <hr style="margin-bottom:-1px;">
-    S/560.00
+    S/
+  ';
+  $html .= $monto;
+  $html .=' 
   </div>
   <div id="capa5">
-    X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X
+  ';
+  $html .= $checksi;
+  $html .=' 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  ';
+  $html .= $checkno;
+  $html .=' 
   </div>
   <div id="capa3">
-    123<br><br>
+  ';
+  $html .= $operacion;
+  $html .=' 
+  <br><br>
     <hr style="margin-bottom: 5px;">
-    S/20.00   
+    S/
+  ';
+  $html .= $importe;
+  $html .='   
   </div>
 </body>
 </html>
+';
+echo $html;
+
+?>
