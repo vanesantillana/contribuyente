@@ -330,7 +330,7 @@ if (!isset($_POST['email'])) {
 			        </div>
 			        <div class="modal-body">
 			          <div>
-			          	<form role="form" method="post" action="guias/pv/guiapv.php" target="_blank">
+			          	<form role="form" method="post" action="guias/pv/guiapv.html" target="_blank">
 				           <div id="row">
 				           <h4><b>Datos Necesarios Para Realizar El Pago En Todos Los Casos</b></h4>
 				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
@@ -439,7 +439,7 @@ if (!isset($_POST['email'])) {
 			        </div>
 			        <div class="modal-body">
 			          <div>
-			          	<form name="formulario" method="post" action="guias/formato.php" target="_blank">
+			          	<form name="formulario" method="post" action="guias/nuevoreg/nuevoreg.html" target="_blank">
 					      <div id="row">
 				           <h4><b>Datos Necesarios</b></h4>
 				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
@@ -470,46 +470,55 @@ if (!isset($_POST['email'])) {
 								</select>
 				            </div>
 				          </div>
+
 					      <div id="row">						    
 							    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-					              <label ><span class="fa fa-money"></span> Ingreso Mesual:</label>
+					              <label ><span class="fa fa-money"></span> Total Ingresos Brutos del Mes</label>
 					              <input type="text" name="ingresos" class="form-control"  id="mi-importe" placeholder="0">
 					            </div>
 							    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-					              <label ><span class="fa fa-money"></span> Percepciones:</label>
-					              <input type="text" name="percepciones" class="form-control"  id="mi-importe" placeholder="0">
+					              <label ><span class="fa fa-money"></span> Total Compras del Mes:</label>
+					              <input type="text" name="compras" class="form-control"  id="mi-importe" placeholder="0">
 					            </div>	
 														    
-					      </div>
+					      </div>	
 
-		
-							<div class="row">
-							  	<h4><b>&nbsp;&nbsp;&nbsp;¿Es la primera vez que declara para este período?</b></h4>
-							  	<div class="col-md-12 col-sm-12 col-xs-12 form-group">
-								  	<input id="valor" type="checkbox" name="valor" checked="checked" />
-					            	<label for=valor class=cb-label></label>
-					            	<hr class="espacio">								
-					            </div>	
-								
-							</div>			
-				          <div id="row">				
-				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-				              <label ><span class="fa fa-money"></span> Si marco NO, ingrese su compensación:</label>
-				              <input type="text" name="compensacion" class="form-control" id="m-t-asociado" placeholder="0">
-				            </div>
+				          <div id="row">
+				          	<div class="col-md-6 col-sm-12 col-xs-12 form-group">
+					            <label ><span class="fa fa-money"></span> Percepciones:</label>
+					            <input type="text" name="percepciones" class="form-control"  id="mi-importe" placeholder="0">
+					        </div>				            
 				            <div class="col-md-3 col-sm-12 col-xs-12 form-group">
-								  	<center>
-								  	<div class="captcha">
-								  		<img src="http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image"></img>
-								  	</div>
-								   	</center>
+								<center>
+								<div class="captcha">
+								  	<img src="http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image"></img>
+								</div>
+								</center>
 							</div>
-
 				            <div class="col-md-3 col-sm-12 col-xs-12 form-group">
 				              <label ><span class="fa fa-external-link"></span> Ingresa la imagen:</label>
 				              <input type="text" name="codigo" class="form-control"  id="mi-t-fraccionamiento" placeholder="XXXX" >
 				            </div>				  
 				          </div>
+				          <div class="row">
+				          	<div class="col-md-12 col-sm-12 col-xs-12 form-group">
+				          		<h4><b>¿Es la primera vez que declara para este período?</b></h4>
+				          	</div>
+				          </div>
+				          <div class="row">
+							  	<div class="col-md-6 col-sm-12 col-xs-12 form-group">	
+							  		<label >&nbsp;&nbsp;&nbsp;&nbsp;<span class="fa fa-toggle-off"></span>Si marca NO, ingrese su compensación:</label><br>
+								  	<input id="valor" type="checkbox" name="valor" checked="checked" />
+					            	<label for=valor class=cb-label></label>
+					            									
+					            </div>	
+					            <div class="col-md-6 col-sm-12 col-xs-12 form-group">	
+					              <label ><span class="fa fa-money"></span> Compensación y/o Pagos Efectuados:</label>
+					              <hr style="margin-bottom: -9px">
+					              <input type="text" name="compensacion" class="form-control" id="m-t-asociado" placeholder="0">
+					            </div>
+								
+						  </div>
 				          <div class="row">
 			                    <div class="col-md-11 col-sm-12 col-xs-12 form-group">
 			                        <input class='navbar-right btn btn-primary' style="color: #FFF; background-color: #0b5394" size="100" type="submit" value="Generar PDF" />			                     
@@ -533,7 +542,7 @@ if (!isset($_POST['email'])) {
 			        </div>
 			        <div class="modal-body">
 			          <div>
-			          	<form name="formulario" method="post" action="guias/formato.php" target="_blank">
+			          	<form name="formulario" method="post" action="guias/arreda/arrenda.html" target="_blank">
 					      <div id="row">
 				           <h4><b>Datos Necesarios del Arrendador</b></h4>
 				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
@@ -585,21 +594,23 @@ if (!isset($_POST['email'])) {
 					      </div>
 		
 				          <div id="row">		
-				          	<h4><b>¿Es ésta una declaración recitificatoria / sustitutoria?</b></h4>
-				          	<b> &nbsp;&nbsp;&nbsp;Si marco SI, llene el N° de orden e importe.</b><br>		
-				            <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+				          	<h4><b>¿Es ésta una declaración recitificatoria / sustitutoria?</b></h4>	
+				            <div class="col-md-5 col-sm-12 col-xs-12 form-group">
+				            	<label ><span class="fa fa-toggle-off"></span> Si marca SI, llene el N° de orden e importe:</label><br>
 								<input id="declaracion" type="checkbox" name="declaracion" />
 					            <label for=declaracion class=cb-label></label>
 					           	<hr class="espacio">
 				            </div>
 
 				            <div class="col-md-4 col-sm-12 col-xs-12 form-group">
-				              <label ><span class="fa fa-external-link"></span> Número de orden u Operación:</label>
+				              <label ><span class="fa fa-external-link"></span> N° de Orden u operación:</label>
+				              <hr style="margin-bottom: -9px">
 				              <input type="text" name="codigo" class="form-control"  id="mi-t-fraccionamiento" placeholder="0" ><br>
 				            </div>
 
-				            <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+				            <div class="col-md-3 col-sm-12 col-xs-12 form-group">
 				              <label ><span class="fa fa-money"></span> Importe a Pagar:</label>
+				              <hr style="margin-bottom: -9px">
 				              <input type="text" name="codigo" class="form-control"  id="mi-t-fraccionamiento" placeholder="0" ><br>
 				            </div>				  
 				          </div>
