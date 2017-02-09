@@ -49,16 +49,25 @@ if ($uploadOk == 0) {
     }
 }
 
-*/
-$nombre_archivo = $HTTP_POST_FILES['logo']['name'];
-$tipo_archivo = $HTTP_POST_FILES['logo']['type'];
-$tamano_archivo = $HTTP_POST_FILES['logo']['size'];
-//compruebo si las características del archivo son las que deseo
-echo $tipo_archivo;
-    if (move_uploaded_file($HTTP_POST_FILES['logo']['tmp_name'], $nombre_archivo)){
-       echo "El archivo ha sido cargado correctamente.";
-    }else{
-       echo "Ocurrió algún error al subir el fichero. No pudo guardarse.";
+*/$target_dir = "uploads/";
+$target_file = $target_dir . basename($_FILES["logo"]["name"]);
+$uploadOk = 1;
+$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+// Check if image file is a actual image or fake image
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+&& $imageFileType != "gif" ) {
+    echo "Sorry, only JPG, JPEG, PNG & GIF son los permitidos.";
+    $uploadOk = 0;
+}
+// Check if $uploadOk is set to 0 by an error
+if ($uploadOk == 0) {
+    echo "La imagen no sera cargada.";
+// if everything is ok, try to upload file
+} else {
+    if (move_uploaded_file($_FILES["logo"]["tmp_name"], "uploads/logo.".$imageFileType)) {
+        echo "The file ". basename( $_FILES["logo"]["name"]). " has been uploaded.";
+    } else {
+        echo "Sorry, there was an error uploading your file.";
     }
- 
+}
 ?>

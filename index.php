@@ -500,8 +500,7 @@ if (!isset($_POST['email'])) {
 			</div>
 			<!-- fin del segundo modal -->
 			<?php $Vdata = file_get_contents('guias/factura/from_factura.php'); 
-				
-				echo($Vdata);
+					echo($Vdata);
 				?>
 		</div>
 		<div class="col-md-12">
