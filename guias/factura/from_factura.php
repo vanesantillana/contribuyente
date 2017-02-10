@@ -41,7 +41,7 @@
 
 				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 				              <label ><span class="fa fa-suitcase" style="font-size:15px"></span> Rubro y/o ocupacion de la empresa</label>
-				              <input type="text" class="form-control"  name="rubro" placeholder="A que se dedica?">
+				              <input type="text" class="form-control"  name="rubro" placeholder="Construccion-Mecanica-etc.">
 				            </div>
 
 				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
