@@ -24,9 +24,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="estilo_switch.css">
+
+    <script src="http://momentjs.com/downloads/moment-with-locales.js"></script>
+<script src="http://momentjs.com/downloads/moment-timezone-with-data.js"></script>
+
+  <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
     <title>El buen contribuyente</title>
     <script type="text/javascript">
       $(window).on('load',function(){
@@ -283,11 +289,11 @@
     </div>
     <div class="col-md-12">
       <h2>Formatos</h2><br>		
-      <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal1">Guía Pagos Varios</button>
-      <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal2">Guía Pago Fácil Nuevo Régimen Único Simplificado</button>
+      <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal1">Guía Pagos Varios</button><br>
+      <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal4">Generador de Factura</button><br>
+      <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal5">Recibo por Honorarios</button><br>
       <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal3">Guía Para Arrendamiento</button><br>
-
-      <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal4">Generador de factura</button>
+      <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal2">Guía Pago Fácil Nuevo Régimen Único Simplificado</button><br>
       
       <!-- Modal Pagos Varios -->
       <?php $Vdata = file_get_contents('guias/pv/from_guiapv.php'); 
@@ -303,6 +309,10 @@
 	    ?>
       <!-- Modal Factura -->
       <?php $Vdata = file_get_contents('guias/factura/from_factura.php'); 
+	    echo($Vdata);
+	    ?>
+	  <!-- Modal HOnorarios -->
+      <?php $Vdata = file_get_contents('guias/honorario/from_honorario.php'); 
 	    echo($Vdata);
 	    ?>
     </div>
@@ -343,8 +353,21 @@
     </div>
     
     </div>
-    
+    <script type="text/javascript">
+    	function addNow() {
+		  nowDate = moment().tz("Europe/London").format('YYYY-MM-DD');
+		  nowTime = moment().tz("Europe/London").format('HH:mm:ss');
+		  document.getElementById('registration-date').value = nowDate;
+		  document.getElementById('registration-time').value = nowTime;
+		  set = setTimeout(function () { addNow(); }, 1000);
+		}
+
+		function stopNow() {
+		  clearTimeout(set);
+		}
+    </script>
   </body>
+
 </html>
 
 
