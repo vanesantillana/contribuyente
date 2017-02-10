@@ -36,6 +36,9 @@ if ($uploadOk == 0) {
     <!--<link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
     	-->
     <link rel="stylesheet" href="factura.css">
+    <script>
+    window.print();
+  </script>
   </head>
   <body>
       <div id="capa3">
