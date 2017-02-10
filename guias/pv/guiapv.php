@@ -1,4 +1,4 @@
-<input type='button' onclick='window.print();' value='Imprimir' align="left" /></form> 
+<!--<input type='button' onclick='window.print();' value='Imprimir' align="left" /></form> -->
 <?php 
   $ruc = $_POST['ruc'];
   $mes = $_POST['mes'];
@@ -24,7 +24,10 @@
    if ($frac == TRUE ){
       $frac = 'X';
    }
-
+   if ($anio == '')
+  {
+    $anio = '&nbsp;&nbsp;&nbsp;&nbsp;';
+  }
   if ($ruc == '')
   {
     $ruc = '&nbsp;';
@@ -65,6 +68,7 @@ $html='
     #capa2{
      position:absolute;
      z-index:0;
+     top: 22px;
     }
     body {
       position: relative;
@@ -80,6 +84,10 @@ $html='
       visibility: hidden;
     }
   </style>
+  <script>
+		window.print();
+  </script>
+
 </head>
 <body>
   <div id="capa2"> <img src="guiapv.jpg" /> </div>
