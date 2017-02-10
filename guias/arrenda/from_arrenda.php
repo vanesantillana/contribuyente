@@ -97,7 +97,7 @@
 		      </center>
 		    </div>
 		    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
-		      <label ><span class="fa fa-external-link"></span> Ingresa la imagen:</label>
+		      <label ><class="fa fa-picture-o" style="font-size:15px"></span> Ingresa la imagen:</label>
 		      <input type="text" name="codigo" class="form-control"  id="mi-t-fraccionamiento" placeholder="XXXX" >
 		    </div>
 		    
