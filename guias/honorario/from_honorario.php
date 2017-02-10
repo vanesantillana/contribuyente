@@ -17,8 +17,8 @@
 		      <input type="text" name="nombre1" class="form-control" placeholder="Juan Perez Sanchez">
 		    </div>
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-		      <label ><span class="fa fa-location-arrow" style="font-size:15px"></span> Dirección:</label>
-		      <input type="text" name="direc1" class="form-control" placeholder="Urb, Ciudad, Provincia, Distrito">
+		      <label ><span class="fa fa-map-marker" style="font-size:15px"></span> Dirección:</label>
+		      <input type="text" name="direc1" class="form-control" placeholder="Urbanización-Distrito-Ciudad">
 		    </div>
 		   </div>
 		  <div id="row">
@@ -39,8 +39,8 @@
 		      <input type="text" name="nombre2" class="form-control" placeholder="Maria Alvarez Ponce">
 		    </div>
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-		      <label ><span class="fa fa-location-arrow" style="font-size:15px"></span> Dirección:</label>
-		      <input type="text" name="direc2" class="form-control" placeholder="Urb, Ciudad, Provincia, Distrito">
+		      <label ><span class="fa fa-map-marker" style="font-size:15px"></span> Dirección:</label>
+		      <input type="text" name="direc2" class="form-control" placeholder="Urbanización-Distrito-Ciudad">
 		    </div>
 		   </div>
 		  <div id="row">
@@ -70,7 +70,7 @@
 		      <input type="text" name="suma" class="form-control" placeholder="Trescientos Cincuenta">
 		    </div>
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-		      <label ><span class="fa fa-briefcase" style="font-size:15px" ></span> Concepto:</label>
+		      <label ><span class="fa fa-suitcase" style="font-size:15px" ></span> Concepto:</label>
 		      <input type="text" name="concepto" class="form-control"  placeholder="Elaboración de expediente...">
 		    </div>
 		  </div>

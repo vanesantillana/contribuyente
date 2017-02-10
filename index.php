@@ -290,7 +290,7 @@
     <div class="col-md-12">
       <h2>Formatos</h2><br>		
       <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal1">Guía Pagos Varios</button><br>
-      <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal4">Generador de factura</button><br>
+      <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal4">Generador de Factura</button><br>
       <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal5">Recibo por Honorarios</button><br>
       <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal3">Guía Para Arrendamiento</button><br>
       <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal2">Guía Pago Fácil Nuevo Régimen Único Simplificado</button><br>
