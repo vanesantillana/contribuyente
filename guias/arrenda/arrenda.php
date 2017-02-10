@@ -1,4 +1,3 @@
-<input type='button' onclick='window.print();' value='Imprimir' align="left" /></form> 
 <?php 
   $ruc = $_POST['ruc'];
   $mes = $_POST['mes'];
@@ -59,6 +58,7 @@ $html='
     #capa2{
      position:absolute;
      z-index:0;
+     top: 21px;
     }
     body {
       position: relative;
@@ -74,6 +74,9 @@ $html='
       visibility: hidden;
     }
   </style>
+  <script>
+    window.print();
+  </script
 </head>
 <body>
   <div id="capa2"> <img src="arrenda.jpg" /> </div>
