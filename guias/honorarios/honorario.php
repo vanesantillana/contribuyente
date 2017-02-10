@@ -63,6 +63,9 @@ $total=$_POST['total'];
        	left: 350px;
        }
 	</style>
+	<script>
+    window.print();
+  </script>
 </head>
 
 <body>
@@ -89,7 +92,7 @@ $total=$_POST['total'];
 		<h3>Nro: E001 - 1</h3>
 	</div>
 	<div class="total">
-		<p><strong>Total por honorarios:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?php echo $total; ?></p>
+		<p><strong>Total por honorarios:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S/. <?php echo $total; ?></p>
 		<p><strong>Retencion (8 %) IR </strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(0.00)</p>
 		<p><strong>Total Neto Recibido </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?php echo $total; ?> SOLES</p>
 		
