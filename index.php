@@ -18,7 +18,7 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="estilo.css">	
+    <link rel="stylesheet" href="estilos/estilo.css">	
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="estilo_switch.css">
+    <link rel="stylesheet" href="estilos/estilo_switch.css">
 
     <script src="http://momentjs.com/downloads/moment-with-locales.js"></script>
 <script src="http://momentjs.com/downloads/moment-timezone-with-data.js"></script>
@@ -282,11 +282,7 @@
 
 
     </div>
-    <div class="col-md-12">
-      <h2>Indicadores</h2>
-      <!-- DolarWeb IndMin Start -->
-      <div id="IndicadoresMin"><h2><a href="http://dolar.wilkinsonpc.com.co/">Dolar Hoy Peru</a></h2></div><script type="text/javascript" src="http://dolar.wilkinsonpc.com.co/widgets/gratis/indicadores-economicos-min.js?ancho=170&alto=85&fondo=transparent&fsize=10&ffamily=sans-serif&fcolor=000000"></script><!-- DolarWeb IndMin End -->
-    </div>
+    
     <div class="col-md-12">
       <h2>Formatos</h2><br>		
       <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal1">Guía Pagos Varios</button><br>
@@ -320,6 +316,10 @@
       <h2>Conversor</h2>
       <iframe id="tmccc" src="http://themoneyconverter.com/ES/CurrencyConverter.aspx?tab=0&amp;from=PEN&amp;to=USD&amp;bg=ffffff" style="width:350px; height:400px; border: none;" scrolling="no" marginwidth="0" marginheight="0"></iframe>
     </div>
+    <div class="col-md-12">
+    	<script id="cid0020000147748197194" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 249px;height: 410px;">{"handle":"contribuyente","arch":"js","styles":{"a":"0b5394","b":100,"c":"FFFFFF","d":"FFFFFF","k":"0b5394","l":"0b5394","m":"0b5394","n":"FFFFFF","p":"11.25","q":"0b5394","r":100,"t":0,"usricon":0.69,"surl":0,"cnrs":"0.35","fwtickm":1}}</script>
+    </div>
+
     </div>					
     </div>
     </div>
