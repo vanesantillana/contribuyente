@@ -55,7 +55,7 @@ if ($uploadOk == 0) {
 	<div id="capa4">
 	  <h2 style="letter-spacing: -1px;">R.U.C. <?php echo $ruc ?></h2>
 	  <h2 style="letter-spacing: 10px;">FACTURA</h2>
-	  <h3>001 -       N°000001</h3>
+	  <h3 style='letter-spacing: 0.1em;font-size: 23px;font-family: "Courier New", Courier, monospace;'>001 -       N°000001</h3>
 	  <br>
 	</div>
       </div>
