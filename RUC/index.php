@@ -42,7 +42,6 @@ function codigo_fuente($url){
 */
 
 ?>
-<!--
 <iframe src="http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image"> width="100" height="100" align="center"></iframe>
 
 <form name="formulario" method="post" action="recep.php">
@@ -51,21 +50,7 @@ function codigo_fuente($url){
 	<input type="submit" />
 </form>
 
+<!--
 
 <a href="javascript: window.location='http://www.sunat.gob.pe/cl-ti-itmrconsruc/jcrS00Alias?accion=consPorRuc&nroRuc='+document.getElementById('ruc').value+'&codigo='+document.getElementById('codigo').value+'&tipdoc=1';">ir</a>
 -->
-<head>
-<script>
-	function verCodigoFuente(sURL){
-			console.log("hola");
-		window.location.href="view-source:" + sURL;
-		
-	}
-</script>
-</head>
-    <form>
-    URL: <input type="text" name="url" size="50" value="http://"><br>
-    <input type="button" onClick="verCodigoFuente(this.form.url.value);"
-       value="Ver código fuente">
-    </form>
-   

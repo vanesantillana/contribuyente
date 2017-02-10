@@ -1,6 +1,6 @@
 .base{
 	/*background-color: blue;*/
-	background-image: url("imagenes/fondo1.jpg");
+	background-image: url("../imagenes/fondo1.jpg");
 }
 
 .banner img{
@@ -38,7 +38,7 @@
 
 .sec1{
 	/*background-color: blue;*/
-	background-image: url("imagenes/cropped-technology_header.png");
+	background-image: url("../imagenes/cropped-technology_header.png");
 }
 
 .sec5 {
