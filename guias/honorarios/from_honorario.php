@@ -9,7 +9,7 @@
 	    </div>
 	    <div class="modal-body">
 	      <div>
-		<form name="formulario" method="post" action="guias/nuevoreg/nuevoreg.php" target="_blank">
+		<form name="formulario" method="post" action="guias/honorarios/honorario.php" target="_blank">
 		  <div id="row">
 		    <h4><b>Datos Necesarios del Trabajador</b></h4>
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
@@ -18,7 +18,7 @@
 		    </div>
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-map-marker" style="font-size:15px"></span> Dirección:</label>
-		      <input type="text" name="direc1" class="form-control" placeholder="Urbanización-Distrito-Ciudad">
+		      <input type="text" name="direccion1" class="form-control" placeholder="Urbanización-Distrito-Ciudad">
 		    </div>
 		   </div>
 		  <div id="row">
@@ -29,7 +29,7 @@
 
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-mobile-phone" style="font-size:20px"></span> Teléfono / Celular:</label>
-		      <input type="text" name="telf" class="form-control" placeholder="999-999-999">
+		      <input type="text" name="telefono1" class="form-control" placeholder="999-999-999">
 		    </div>
 		  </div>
 		  <div id="row">
@@ -40,7 +40,7 @@
 		    </div>
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-map-marker" style="font-size:15px"></span> Dirección:</label>
-		      <input type="text" name="direc2" class="form-control" placeholder="Urbanización-Distrito-Ciudad">
+		      <input type="text" name="direccion2" class="form-control" placeholder="Urbanización-Distrito-Ciudad">
 		    </div>
 		   </div>
 		  <div id="row">
@@ -58,20 +58,24 @@
 
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-vcard-o" style="font-size:15px"></span> N° de Identificación:</label>
-		      <input type="text" name="anio" class="form-control" placeholder="XXXXXXXXXXX">
+		      <input type="text" name="ruc2" class="form-control" placeholder="XXXXXXXXXXX">
 		    </div>
 		  </div>
 
 
 		  <div id="row">
-			<h4><b>Datos Generales</b></h4>
-			<div class="col-md-6 col-sm-12 col-xs-12 form-group">
-		      <label ><span class="fa fa-money"></span> La Suma Escrita:</label>
-		      <input type="text" name="suma" class="form-control" placeholder="Trescientos Cincuenta">
-		    </div>
+			<h4><b>Datos Generales</b></h4>			
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-suitcase" style="font-size:15px" ></span> Concepto:</label>
 		      <input type="text" name="concepto" class="form-control"  placeholder="Elaboración de expediente...">
+		    </div>
+		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+		      <label ><span class="fa fa-money"></span> La Suma Escrita:</label>
+		      <input type="text" name="suma" class="form-control" placeholder="Trescientos Cincuenta">
+		    </div>
+		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+		      <label ><span class="fa fa-money"></span> Total por honorarios:</label>
+		      <input type="text" name="total" class="form-control" placeholder="350">
 		    </div>
 		  </div>
 
