@@ -6,6 +6,7 @@ $direccion1 = $_POST['direccion1'];
 
 
 $nombre2 = $_POST['nombre2'];
+$identificado = $_POST['identificado'];
 $ruc2 = $_POST['ruc2'];
 $direccion2 = $_POST['direccion2'];
 
@@ -23,9 +24,18 @@ $total=$_POST['total'];
 	<meta charset="UTF-8">
 	<title>Recibo por Honorarios electronico</title>
 	<style>
+		body {
+	      position: relative;
+	      width: 21cm;  
+	      height: 29.7cm; 
+	      margin: 0 auto; 
+	      color: #001028;
+	      background: #FFFFFF;
+	      
+	    }
 		.principal{
 			position: absolute;
-			left: 70px;
+			top: 20px;
 		}
 
 		.principal p{
@@ -42,16 +52,20 @@ $total=$_POST['total'];
        	 text-transform: uppercase;
        	border-style: solid;
        	text-align: center;
-       	width: 500px;
-       	height: 130px;
-       	left: 770px;
+       	top: 15px;
+       	width: 320px;
+       	height: 150px;
+       	left: 450px;
        }	
        .total{
        	position: absolute;
        	top: 450px;
-       	left: 450px;
+       	left: 350px;
        }
 	</style>
+	<script>
+    window.print();
+  </script>
 </head>
 
 <body>
@@ -63,6 +77,7 @@ $total=$_POST['total'];
 		<br>
 		
 		<p><strong>Recibi de: </strong> <?php echo $nombre2; ?></p>
+		<p><strong>Identificado con </strong> <?php echo $identificado;?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Número </strong><?php echo $ruc2;?> </p>
 		<p><strong>Domiciliado en:</strong> <?php echo $direccion2; ?></p>
 		<p><strong>La suma de </strong> <?php echo $suma; ?></p>
 		<p><strong>Por concepto de </strong> <?php echo $concepto; ?></p>
@@ -77,7 +92,7 @@ $total=$_POST['total'];
 		<h3>Nro: E001 - 1</h3>
 	</div>
 	<div class="total">
-		<p><strong>Total por honorarios:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?php echo $total; ?></p>
+		<p><strong>Total por honorarios:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S/. <?php echo $total; ?></p>
 		<p><strong>Retencion (8 %) IR </strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(0.00)</p>
 		<p><strong>Total Neto Recibido </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?php echo $total; ?> SOLES</p>
 		

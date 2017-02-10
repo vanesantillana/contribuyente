@@ -312,7 +312,7 @@
 	    echo($Vdata);
 	    ?>
 	  <!-- Modal HOnorarios -->
-      <?php $Vdata = file_get_contents('guias/honorario/from_honorario.php'); 
+      <?php $Vdata = file_get_contents('guias/honorarios/from_honorario.php'); 
 	    echo($Vdata);
 	    ?>
     </div>

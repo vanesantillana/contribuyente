@@ -91,7 +91,7 @@
 		    </div>
 
 		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
-		      <label ><span class="fa fa-external-linkr"></span> N° del Fraccionamiento:</label>
+		      <label ><span class="fa fa-vcard-o" style="font-size:15px"></span> N° del Fraccionamiento:</label>
 		      <input type="text" class="form-control"  id="mi-t-fraccionamiento" placeholder="XXXXXXXXXXXXXX" name="fraccionamiento">
 		    </div>
 
@@ -103,7 +103,7 @@
 		      </center>
 		    </div>
 		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
-		      <label ><span class="fa fa-external-link"></span> Ingresa la imagen:</label>
+		      <label ><span class="fa fa-picture-o" style="font-size:15px"></span> Ingresa la imagen:</label>
 		      <input type="text" name="codigo" class="form-control"  id="mi-t-fraccionamiento" placeholder="XXXX" >
 		    </div>
 
