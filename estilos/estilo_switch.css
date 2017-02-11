@@ -31,3 +31,17 @@
       input[type="checkbox"].checked ~ .cb-label:before {
       background-position: 0 -40px;
       }
+
+.embed-container {
+    position: relative;
+    padding-bottom: 100%;
+    height: 0;
+    overflow: hidden;
+}
+.embed-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
