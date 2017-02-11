@@ -5,7 +5,7 @@
 	  <div class="modal-content">
 	    <div class="modal-header" style="background-color:#0b5394">
 	      <button type="button" style="color:#FFFFFF" class="close" data-dismiss="modal">&times;</button>
-	      <h4 class="modal-title" style="color:#FFFFFF" align="center"><strong>Guía Pago Fácil Nuevo Régimen Único Simplificado</strong></h4>
+	      <h4 class="modal-title" style="color:#FFFFFF" align="center"><strong>Recibo por Honorarios</strong></h4>
 	    </div>
 	    <div class="modal-body">
 	      <div>
