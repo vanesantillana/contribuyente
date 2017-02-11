@@ -44,8 +44,9 @@
       $(window).on('load',function(){
       $('#myModal0').modal('show');
       });
-    </script>
     
+    </script>
+
   </head>
 
   <body>
@@ -66,7 +67,7 @@
 	<div id="headerwrap">
 			<div class=" headerc" >
 
-				<img src="imagenes/BUENCONTRI.png" />
+				<a href="javascript:location.reload()"><img src="imagenes/BUENCONTRI.png" /></a>
 			</div>
 	    <div class="container">
 			<div class="row">
@@ -213,19 +214,27 @@
 		</div>
 	</div>
 
-	<div id="footerwrap">
+	<div id="footerwrap" style="text-align: center;">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4">
-					<p><b>WEB DESIGNER, DEVELOPER & GAME ADDICT</b></p>
+					<p><b>La web a la que todo buen contribuyente debe acceder.</b></p>
+					<a href="javascript:location.reload()"><img style="height: 80px;" src="imagenes/BUENCONTRI.png" /></a>
 				</div>
 			
 				<div class="col-lg-4">
-					<p>Living in the amazing London.</p>
+					<div ><h4 style="color: white;">Siguenos en:</h4>
+					<a href="http://www.facebook.com" target="_blank"><i style="font-size: 40px;" class="fa fa-facebook"></i></a>
+				</div>
 				</div>
 				<div class="col-lg-4">
-					<p>hello@instant.com</p>
+					<p>Comentarios y sugerencias a: sugerencias@elbuencontribuyente.com</p>
 				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<p>Web desarollada por <a href="http://www.multiviral.com.pe" target="_blank">MultiViral</a></p>
 			</div>
 		</div>
 	</div><!--/footerwrap -->
@@ -237,5 +246,20 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script>
+	   var myFunc = function() {
+	   	 $("#captcha_img").attr("src", "http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image");
+     }
+
+	   $('#refresh,#captcha_img').click(function() {
+	   	   setTimeout(myFunc, 2000);
+    });
+
+    </script>
   </body>
 </html>
+
+<!-- $('#refresh,#captcha_img').click(function() {
+	   	 $("#captcha_img").delay(5000).attr("src", "http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image");
+    });
+-->

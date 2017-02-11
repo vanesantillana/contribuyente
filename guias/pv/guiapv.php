@@ -12,6 +12,9 @@
   $trimul = $_POST['trimul'];
   $fraccionamiento = $_POST['fraccionamiento'];
 
+  $codigo=$_POST['codigo']; 
+  $url= "http://www.sunat.gob.pe/cl-ti-itmrconsruc/jcrS00Alias?accion=consPorRuc&nroRuc=$ruc&codigo=$codigo&tipdoc=1?";
+
   if ($tributo == TRUE ){
       $tributo = 'X';
    }
@@ -85,14 +88,33 @@ $html='
     }
   </style>
   <script>
-		window.print();
+  var myFunc = function() {
+      window.print();
+}
+window.onload = function() {
+  setTimeout(myFunc, 3000);
+}
   </script>
 
 </head>
-<body>
+<body>';
+   $html .=' <div id="content">
+    <div>
+        <iframe id="optomaFeed" src=';
+     $html .= $url;  
+    $html .='  scrolling="no"
+            frameborder="0" height="180" width="100%" style=" z-index: 1;position:absolute; clip: rect(10px,600px,30px,222px);
+                top: 269px;
+    left: 268px;"></iframe>
+    </div>
+</div>';
+
+$html.='
   <div id="capa2"> <img src="guiapv.jpg" /> </div>
   <div id="capa3">
    ';
+
+ 
   $html .= $tributo;
   $html .=' 
     <br>
