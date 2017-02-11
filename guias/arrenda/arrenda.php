@@ -9,6 +9,10 @@
   $importe = $_POST['importe'];
   $monto = $_POST['monto'];
 
+
+  $codigo=$_POST['codigo']; 
+  $url= "http://www.sunat.gob.pe/cl-ti-itmrconsruc/jcrS00Alias?accion=consPorRuc&nroRuc=$ruc&codigo=$codigo&tipdoc=1?";
+
   if ($check == TRUE ){
     $checksi = 'X';
   }
@@ -78,8 +82,20 @@ $html='
     window.print();
   </script
 </head>
-<body>
-  <div id="capa2"> <img src="arrenda.jpg" /> </div>
+<body>';
+
+   $html .=' <div id="content">
+    <div>
+        <iframe id="optomaFeed" src=';
+     $html .= $url;  
+    $html .='  scrolling="no"
+            frameborder="0" height="180" width="100%" style=" z-index: 1;position:absolute; clip: rect(10px,470px,30px,220px);
+top: 180px;
+left: 120px;"></iframe>
+    </div>
+</div>';
+
+$html.='  <div id="capa2"> <img src="arrenda.jpg" /> </div>
   <div id="capa1">
     ';
   $html .= $ruc;
