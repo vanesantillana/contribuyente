@@ -32,7 +32,7 @@ if ($uploadOk == 0) {
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Factura</title>
     <!--<link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
     	-->
     <link rel="stylesheet" href="factura.css">
