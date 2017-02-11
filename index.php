@@ -17,15 +17,6 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
 
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="estilos/estilo.css">	
 
@@ -38,7 +29,7 @@
 	<link rel="stylesheet" href="estilos/estilo_switch.css"> <!-- switch de vane -->
     <script src="http://momentjs.com/downloads/moment-with-locales.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-	<link rel="stylesheet" href="estilos/estilo_carrucel.css">
+	<link rel="stylesheet" href="estilos/estilo_carrusel.css">
 
     <title>El buen contribuyente</title>
     <script type="text/javascript">
@@ -51,24 +42,42 @@
   </head>
 
   <body>
+	<style>
+		@media only screen and (max-width: 780px) {
+			#hora{
+				visibility: hidden;
+			
+			}
+			
+			#headerwrap h1 {
+				font-size: 26px;
+			}
+		}
+		@media only screen and (max-width: 580px) {
+			.head-hide{
+				visibility: hidden;
+			}
+		}
+	</style>
 
-    <!-- Static navbar -->
-	<!--<div id="headerwrap">
-	    <div class="container">
-			<div class="row header">
-				<div class="col-lg-9 col-lg-offset-3">
-					<h4>Aplicaciones y soluciones para el</h4>
-					<h1>CONTRIBUYENTE</h1>
-					<h4>Genera formularios de pagos a la SUNAT, facturas empresariales y mas.</h4>
+	<div class=" headerc" >
+				<a href="javascript:location.reload()"><img src="imagenes/BUENCONTRI.png" /></a>
+					<iframe id="hora" src="http://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&timezone=America%2FLima" width="300"  frameborder="0" seamless style="float: right; margin-top: -25px;"></iframe>
+	</div>
+
+	<div id="headerwrap" class="container head-hide">
+				<div class="row">
+		            <div class="col-lg-8 col-lg-offset-3">
+		       		<h4 >Aplicaciones y soluciones para el</h4>
+						<h1 >CONTRIBUYENTE</h1>
+						<h4>Genera formularios de pagos a la SUNAT, facturas empresariales y mas.</h4>
+					</div>
 				</div>
 			</div>
-	    </div> 
-	</div>-->
-
 	<div id="myCarousel" class="carousel-slide" data-ride="carousel">
     	
         <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
+        <div class="carousel-inner inner-local" role="listbox">
             <div class="item active">
                 <img src="imagenes/portada5.jpg">
             </div>
@@ -88,32 +97,12 @@
                 <img src="imagenes/portada2.jpg">
             </div>
         </div>
+        
         <div class="carousel-caption">
-        	<div class=" headerc" >
-				<a href="javascript:location.reload()"><img src="imagenes/BUENCONTRI.png" /></a>
-			</div>
-		</div>
-        <div class="carousel-caption">
-        	<div id="headerwrap">
-				<div class="row">
-		            <div class="col-lg-8 col-lg-offset-3">
-		            	<hr style="visibility: hidden; margin-bottom: 180px;">
-						<h4>Aplicaciones y soluciones para el</h4>
-						<h1>CONTRIBUYENTE</h1>
-						<h4>Genera formularios de pagos a la SUNAT, facturas empresariales y mas.</h4>
-					</div>
-				</div>
-			</div>
+        	
         </div>
         <!-- Left and right controls -->
-        <a class="left carousel-control" href="http://bootsnipp.com/snippets/80nXX#myCarousel" role="button" data-slide="prev">
-            <span class="fa fa-angle-left" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-        </a>
-        <a class="right carousel-control" href="http://bootsnipp.com/snippets/80nXX#myCarousel" role="button" data-slide="next">
-            <span class="fa fa-angle-right" aria-hidden="true"></span>
-            <span class="sr-only">Siguiente</span>
-        </a>
+       
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1" class=""></li>
@@ -123,24 +112,9 @@
             <li data-target="#myCarousel" data-slide-to="5" class=""></li>
         </ol>
     </div>
-	<!--
-	<div id="headerwrap">
-			<div class=" headerc" >
-
-				<a href="javascript:location.reload()"><img src="imagenes/BUENCONTRI.png" /></a>
-			</div>
-	    <div class="container">
-
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-3">
-					<h4>Aplicaciones y soluciones para el</h4>
-					<h1>CONTRIBUYENTE</h1>
-					<h4>Genera formularios de pagos a la SUNAT, facturas empresariales y mas.</h4>
-				</div>
-			</div>
-	    </div> =
-	</div>-->
-
+			
+	 
+	
 	<section id="works"></section>
 	<div class="container">
 		<div class="row mt mb centro">
@@ -232,6 +206,7 @@
 				</div>
 			</div>
 		</div>
+		
 		<div class="container">
 			<div class="row">
 				<p>Web desarollada por <a href="http://www.multiviral.com.pe" target="_blank">MultiViral</a></p>
@@ -247,14 +222,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script>
-	   var myFunc = function() {
-	   	 $("#captcha_img").attr("src", "http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image");
+	   var myFunc1 = function() {
+	   	 $("#captcha_img1,#captcha_img2,#captcha_img3").attr("src", "http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image");
      }
 
-	   $('#refresh,#captcha_img').click(function() {
-	   	   setTimeout(myFunc, 2000);
+	   $('#refresh1,#refresh2,#refresh3').click(function() {
+	   	   setTimeout(myFunc1, 2000);
     });
-
     </script>
   </body>
 </html>

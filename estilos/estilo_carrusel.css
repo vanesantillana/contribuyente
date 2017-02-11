@@ -58,7 +58,7 @@
 				padding-bottom: 20px;
 				color: #fff;
 				text-align: right;
-				top: 100px;
+				    height: 400px			
 				font-size: 30px;
 				
 			}
@@ -67,7 +67,7 @@
 	text-align:right;
 	background-attachment: relative;
 	background-position: center center;
-	min-height: 650px;
+	
 	width: 100%;
 	
     -webkit-background-size: 100%;
