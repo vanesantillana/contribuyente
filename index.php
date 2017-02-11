@@ -68,6 +68,9 @@
 			<div class=" headerc" >
 
 				<a href="javascript:location.reload()"><img src="imagenes/BUENCONTRI.png" /></a>
+				<!--<iframe width="320" height="47" scrolling="no" src="http://pagina-del-dia.euroresidentes.es/gadget-dia-de-hoyH.php?fondo=&texto=FFFFFF" frameborder="0"></iframe>
+				<iframe width="200" height="200" scrolling="no" src="http://pagina-del-dia.euroresidentes.es/gadget-dia-de-hoy.php?fondo=&texto=FFFFFF" frameborder="0"></iframe>
+				-->
 			</div>
 	    <div class="container">
 
@@ -77,8 +80,8 @@
 					<h1>CONTRIBUYENTE</h1>
 					<h4>Genera formularios de pagos a la SUNAT, facturas empresariales y mas.</h4>
 				</div>
-			</div><!--/row -->
-	    </div> <!-- /container -->
+			</div>
+	    </div> 
 	</div>
 
 	<section id="works"></section>
@@ -172,6 +175,7 @@
 				</div>
 			</div>
 		</div>
+		
 		<div class="container">
 			<div class="row">
 				<p>Web desarollada por <a href="http://www.multiviral.com.pe" target="_blank">MultiViral</a></p>
