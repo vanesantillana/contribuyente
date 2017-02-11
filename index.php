@@ -27,18 +27,19 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="estilos/estilo.css">		
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.boots trapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/estilo.css">	
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="estilos/estilo_switch.css"> <!-- switch de vane -->
     <script src="http://momentjs.com/downloads/moment-with-locales.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-	<link rel="stylesheet" href="estilos/estilo_carrusel.css">	
-	
+	<link rel="stylesheet" href="estilos/estilo_carrucel.css">
+
     <title>El buen contribuyente</title>
     <script type="text/javascript">
       $(window).on('load',function(){
@@ -46,7 +47,7 @@
       });
     
     </script>
-
+	
   </head>
 
   <body>
@@ -63,25 +64,8 @@
 			</div>
 	    </div> 
 	</div>-->
-	<!--
-	<div id="headerwrap">
-			<div class=" headerc" >
 
-				<a href="javascript:location.reload()"><img src="imagenes/BUENCONTRI.png" /></a>
-			</div>
-	    <div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-3 textoborde">
-					<h4>Aplicaciones y soluciones para el</h4>
-					<h1>CONTRIBUYENTE</h1>
-					<h4>Genera formularios de pagos a la SUNAT, facturas empresariales y más.</h4>
-				</div>
-			</div>
-	    </div> 
-
-	</div>-->
-	
-    <div id="myCarousel" class="carousel-slide" data-ride="carousel">
+	<div id="myCarousel" class="carousel-slide" data-ride="carousel">
     	
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
@@ -106,13 +90,14 @@
         </div>
         <div class="carousel-caption">
         	<div class=" headerc" >
-				<img src="imagenes/BUENCONTRI.png"/>
+				<a href="javascript:location.reload()"><img src="imagenes/BUENCONTRI.png" /></a>
 			</div>
 		</div>
         <div class="carousel-caption">
         	<div id="headerwrap">
 				<div class="row">
 		            <div class="col-lg-8 col-lg-offset-3">
+		            	<hr style="visibility: hidden; margin-bottom: 180px;">
 						<h4>Aplicaciones y soluciones para el</h4>
 						<h1>CONTRIBUYENTE</h1>
 						<h4>Genera formularios de pagos a la SUNAT, facturas empresariales y mas.</h4>
@@ -138,8 +123,23 @@
             <li data-target="#myCarousel" data-slide-to="5" class=""></li>
         </ol>
     </div>
-	</div>
+	<!--
+	<div id="headerwrap">
+			<div class=" headerc" >
 
+				<a href="javascript:location.reload()"><img src="imagenes/BUENCONTRI.png" /></a>
+			</div>
+	    <div class="container">
+
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-3">
+					<h4>Aplicaciones y soluciones para el</h4>
+					<h1>CONTRIBUYENTE</h1>
+					<h4>Genera formularios de pagos a la SUNAT, facturas empresariales y mas.</h4>
+				</div>
+			</div>
+	    </div> =
+	</div>-->
 
 	<section id="works"></section>
 	<div class="container">
