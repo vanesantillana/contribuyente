@@ -63,7 +63,14 @@
 			</div>
 	    </div> 
 	</div>-->
-	
+	<style>
+		@media only screen and (max-width: 700px) {
+			#hora{
+				visibility: hidden;
+			}
+		}
+	</style>
+
 	<div id="headerwrap">
 			<div class=" headerc" >
 
@@ -71,6 +78,7 @@
 				<!--<iframe width="320" height="47" scrolling="no" src="http://pagina-del-dia.euroresidentes.es/gadget-dia-de-hoyH.php?fondo=&texto=FFFFFF" frameborder="0"></iframe>
 				<iframe width="200" height="200" scrolling="no" src="http://pagina-del-dia.euroresidentes.es/gadget-dia-de-hoy.php?fondo=&texto=FFFFFF" frameborder="0"></iframe>
 				-->
+				<iframe id="hora" src="http://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&timezone=America%2FLima" width="300"  frameborder="0" seamless style="float: right; margin-top: -25px;"></iframe>
 			</div>
 	    <div class="container">
 
