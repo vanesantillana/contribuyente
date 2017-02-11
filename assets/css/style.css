@@ -1,21 +1,4 @@
-/*
- * Author: Carlos Alvarez
- * URL: http://Alvarez.is
- *
- * Project Name: NYC Design
- * Version: 1.0
- * Date: 04-20-2014
- * URL: 
- */
-
-
-/* ==========================================================================
-   Base Styles, Bootstrap Modifications & Fonts Import
-   ========================================================================== */
-
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-
-
 ::-moz-selection {
     background: #f2c2c9;
     color: #a4003a;
@@ -28,10 +11,6 @@
     text-shadow: none;
 }
 
-/*
- * A better looking default horizontal rule
- */
-
  hr {
     display: block;
     height: 1px;
@@ -39,6 +18,10 @@
     border-top: 1px solid #ccc;
     margin: 1em 0;
     padding: 0;
+}
+
+.centered{
+	text-align: center;
 }
 
 .centro h1{
@@ -68,7 +51,6 @@
 /* ==========================================================================
    General styles
    ========================================================================== */
-
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -113,10 +95,10 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 
 #headerwrap {
-	background: url(../img/back.jpg) no-repeat center top;
-	margin-top: -70px;
+	background: url(../../imagenes/contribuyente.jpg) no-repeat center top;
+	
 	padding-top: 250px;
-	text-align:center;
+	text-align:right;
 	background-attachment: relative;
 	background-position: center center;
 	min-height: 650px;
@@ -239,4 +221,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .gallery img:hover {
 	opacity: 0.4;
+}
+
+.headerc{
+background-color: rgba(0, 16, 68, 0.6);  
+	width: 100%;
+	margin-top: -250px;
+	padding-top: 20px;
+	height: 150px;
+	padding-left: 25px;
+	margin-bottom: 180px;
+}
+.headerc img{
+	width: 300px;
+	float: left;
+
+
 }
