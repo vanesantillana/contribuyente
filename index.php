@@ -27,25 +27,25 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="estilos/estilo.css">	
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos/estilo.css">		
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.boots trapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="estilos/estilo_switch.css"> <!-- switch de vane -->
     <script src="http://momentjs.com/downloads/moment-with-locales.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-
+	<link rel="stylesheet" href="estilos/estilo_carrusel.css">	
+	
     <title>El buen contribuyente</title>
     <script type="text/javascript">
       $(window).on('load',function(){
       $('#myModal0').modal('show');
       });
     </script>
-
+    
   </head>
 
   <body>
@@ -62,23 +62,83 @@
 			</div>
 	    </div> 
 	</div>-->
-	
+	<!--
 	<div id="headerwrap">
 			<div class=" headerc" >
 
 				<img src="imagenes/BUENCONTRI.png" />
 			</div>
 	    <div class="container">
-
 			<div class="row">
-				<div class="col-lg-8 col-lg-offset-3">
+				<div class="col-lg-8 col-lg-offset-3 textoborde">
 					<h4>Aplicaciones y soluciones para el</h4>
 					<h1>CONTRIBUYENTE</h1>
-					<h4>Genera formularios de pagos a la SUNAT, facturas empresariales y mas.</h4>
+					<h4>Genera formularios de pagos a la SUNAT, facturas empresariales y más.</h4>
 				</div>
-			</div><!--/row -->
-	    </div> <!-- /container -->
+			</div>
+	    </div> 
+
+	</div>-->
+	
+    <div id="myCarousel" class="carousel-slide" data-ride="carousel">
+    	
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="imagenes/portada5.jpg">
+            </div>
+            <div class="item">
+                <img src="imagenes/portada7.jpg" >
+            </div>
+            <div class="item">
+                <img src="imagenes/portada0.jpg">
+            </div>
+            <div class="item">
+                <img src="imagenes/portada4.jpg">
+            </div>
+            <div class="item">
+                <img src="imagenes/portada10.jpg">
+            </div>
+            <div class="item">
+                <img src="imagenes/portada2.jpg">
+            </div>
+        </div>
+        <div class="carousel-caption">
+        	<div class=" headerc" >
+				<img src="imagenes/BUENCONTRI.png"/>
+			</div>
+		</div>
+        <div class="carousel-caption">
+        	<div id="headerwrap">
+				<div class="row">
+		            <div class="col-lg-8 col-lg-offset-3">
+						<h4>Aplicaciones y soluciones para el</h4>
+						<h1>CONTRIBUYENTE</h1>
+						<h4>Genera formularios de pagos a la SUNAT, facturas empresariales y mas.</h4>
+					</div>
+				</div>
+			</div>
+        </div>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="http://bootsnipp.com/snippets/80nXX#myCarousel" role="button" data-slide="prev">
+            <span class="fa fa-angle-left" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="right carousel-control" href="http://bootsnipp.com/snippets/80nXX#myCarousel" role="button" data-slide="next">
+            <span class="fa fa-angle-right" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="4" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="5" class=""></li>
+        </ol>
+    </div>
 	</div>
+
 
 	<section id="works"></section>
 	<div class="container">
