@@ -13,7 +13,7 @@
       -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
       filter: alpha(opacity=0);
       opacity: 0;
-      margin-left: 100px;
+      margin-left: 10px;
       }
       .cb-label {
       position: relative;
@@ -21,7 +21,7 @@
       .cb-label:before {
       content: ' ';
       position: absolute;
-      background: transparent url(imagenes/switch2.png) no-repeat scroll 0 0;
+      background: transparent url(../imagenes/switch2.png) no-repeat scroll 0 0;
       height: 40px;
       width: 120px;
       left: 5px;
