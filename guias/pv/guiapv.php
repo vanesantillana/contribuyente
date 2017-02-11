@@ -88,7 +88,12 @@ $html='
     }
   </style>
   <script>
-		window.print();
+  var myFunc = function() {
+      window.print();
+}
+window.onload = function() {
+  setTimeout(myFunc, 3000);
+}
   </script>
 
 </head>

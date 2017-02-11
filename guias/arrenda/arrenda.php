@@ -79,8 +79,13 @@ $html='
     }
   </style>
   <script>
-    window.print();
-  </script
+   var myFunc = function() {
+      window.print();
+}
+window.onload = function() {
+  setTimeout(myFunc, 3000);
+}
+  </script>
 </head>
 <body>';
 
