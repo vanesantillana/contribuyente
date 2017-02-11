@@ -54,10 +54,6 @@
    ========================================================================== */
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
 }
@@ -96,14 +92,12 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 
 #headerwrap {
-	background: url(../../imagenes/contribuyente.jpg) no-repeat center top;
-	
-	padding-top: 250px;
+	z-index: 1;
+	position: absolute;
+	padding-top: 30%;
 	text-align:right;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 650px;
 	width: 100%;
+
 	
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -114,8 +108,11 @@ h1, h2, h3, h4, h5, h6 {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
 
+    text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+
+
+}
 #headerwrap h1 {
 	color:#ffffff;
 	padding-top: 10px;
@@ -225,17 +222,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .headerc{
-background-color: rgba(0, 16, 68, 0.6);  
+ background-color: rgba(0, 16, 68, 0.6);  
 	width: 100%;
-	margin-top: -250px;
 	padding-top: 20px;
 	height: 150px;
 	padding-left: 25px;
-	margin-bottom: 180px;
+	margin-bottom: -280px;
+	z-index: 1;
+	position: absolute;
+
 }
 .headerc img{
 	width: 300px;
 	float: left;
 
 
+}
+
+.inner-local{
+	height: 20%;
 }

@@ -17,15 +17,6 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
 
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="estilos/estilo.css">	
 
@@ -38,6 +29,7 @@
 	<link rel="stylesheet" href="estilos/estilo_switch.css"> <!-- switch de vane -->
     <script src="http://momentjs.com/downloads/moment-with-locales.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+	<link rel="stylesheet" href="estilos/estilo_carrusel.css">
 
     <title>El buen contribuyente</title>
     <script type="text/javascript">
@@ -50,48 +42,79 @@
   </head>
 
   <body>
-
-    <!-- Static navbar -->
-	<!--<div id="headerwrap">
-	    <div class="container">
-			<div class="row header">
-				<div class="col-lg-9 col-lg-offset-3">
-					<h4>Aplicaciones y soluciones para el</h4>
-					<h1>CONTRIBUYENTE</h1>
-					<h4>Genera formularios de pagos a la SUNAT, facturas empresariales y mas.</h4>
-				</div>
-			</div>
-	    </div> 
-	</div>-->
 	<style>
-		@media only screen and (max-width: 700px) {
+		@media only screen and (max-width: 780px) {
 			#hora{
+				visibility: hidden;
+			
+			}
+			
+			#headerwrap h1 {
+				font-size: 26px;
+			}
+		}
+		@media only screen and (max-width: 580px) {
+			.head-hide{
 				visibility: hidden;
 			}
 		}
 	</style>
 
-	<div id="headerwrap">
-			<div class=" headerc" >
-
+	<div class=" headerc" >
 				<a href="javascript:location.reload()"><img src="imagenes/BUENCONTRI.png" /></a>
-				<!--<iframe width="320" height="47" scrolling="no" src="http://pagina-del-dia.euroresidentes.es/gadget-dia-de-hoyH.php?fondo=&texto=FFFFFF" frameborder="0"></iframe>
-				<iframe width="200" height="200" scrolling="no" src="http://pagina-del-dia.euroresidentes.es/gadget-dia-de-hoy.php?fondo=&texto=FFFFFF" frameborder="0"></iframe>
-				-->
-				<iframe id="hora" src="http://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&timezone=America%2FLima" width="300"  frameborder="0" seamless style="float: right; margin-top: -25px;"></iframe>
-			</div>
-	    <div class="container">
-
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-3">
-					<h4>Aplicaciones y soluciones para el</h4>
-					<h1>CONTRIBUYENTE</h1>
-					<h4>Genera formularios de pagos a la SUNAT, facturas empresariales y mas.</h4>
-				</div>
-			</div>
-	    </div> 
+					<iframe id="hora" src="http://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&timezone=America%2FLima" width="300"  frameborder="0" seamless style="float: right; margin-top: -25px;"></iframe>
 	</div>
 
+	<div id="headerwrap" class="container head-hide">
+				<div class="row">
+		            <div class="col-lg-8 col-lg-offset-3">
+		       		<h4 >Aplicaciones y soluciones para el</h4>
+						<h1 >CONTRIBUYENTE</h1>
+						<h4>Genera formularios de pagos a la SUNAT, facturas empresariales y mas.</h4>
+					</div>
+				</div>
+			</div>
+	<div id="myCarousel" class="carousel-slide" data-ride="carousel">
+    	
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner inner-local" role="listbox">
+            <div class="item active">
+                <img src="imagenes/portada5.jpg">
+            </div>
+            <div class="item">
+                <img src="imagenes/portada7.jpg" >
+            </div>
+            <div class="item">
+                <img src="imagenes/portada0.jpg">
+            </div>
+            <div class="item">
+                <img src="imagenes/portada4.jpg">
+            </div>
+            <div class="item">
+                <img src="imagenes/portada10.jpg">
+            </div>
+            <div class="item">
+                <img src="imagenes/portada2.jpg">
+            </div>
+        </div>
+        
+        <div class="carousel-caption">
+        	
+        </div>
+        <!-- Left and right controls -->
+       
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="4" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="5" class=""></li>
+        </ol>
+    </div>
+			
+	 
+	
 	<section id="works"></section>
 	<div class="container">
 		<div class="row mt mb centro">
