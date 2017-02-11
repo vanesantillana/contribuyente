@@ -98,9 +98,9 @@ $html='
         <iframe id="optomaFeed" src=';
      $html .= $url;  
     $html .='  scrolling="no"
-            frameborder="0" height="180" width="100%" style=" z-index: 1;position:absolute; clip: rect(10px,600px,30px,220px);
-            top: 271px;
-left: 270px;"></iframe>
+            frameborder="0" height="180" width="100%" style=" z-index: 1;position:absolute; clip: rect(10px,600px,30px,222px);
+                top: 269px;
+    left: 268px;"></iframe>
     </div>
 </div>';
 
