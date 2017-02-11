@@ -126,24 +126,24 @@
 
 		</div>
 		<div class="row centered mt mb">
-			<h1 style="font-weight: 700;">APPS</h1>
+			<h1 style="font-weight: 700; font-family: 'Montserrat', sans-serif;">APLICACIONES</h1>
 			
 			<div class="col-lg-4 col-md-4 col-sm-4 gallery ">
-				<a data-toggle="modal" data-target="#myModal6"><img src="assets/img/portfolio/folio01.png" class="img-responsive"></a>
+				<a data-toggle="modal" data-target="#myModal6"><img src="imagenes/conversor.jpg" class="img_redonda"></a>
 				<h3>Conversor de moneda</h3>			
 				  <?php $Vdata = file_get_contents('apps/conversor.php'); 
 	    			echo($Vdata);
 	    			?>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a data-toggle="modal" data-target="#myModal7"><img src="assets/img/portfolio/folio02.png" class="img-responsive"></a>
-				<h3>Calculadora</h3>			
+				<a data-toggle="modal" data-target="#myModal7"><img src="imagenes/calculadora.jpg" class="img_redonda"></a>
+				<h3>Calculadora Tributaria</h3>			
 				<?php $Vdata = file_get_contents('apps/calc.php'); 
 	    			echo($Vdata);
 	    			?>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a data-toggle="modal" data-target="#myModal8"><img src="assets/img/portfolio/folio03.png" class="img-responsive"></a>
+				<a data-toggle="modal" data-target="#myModal8"><img src="imagenes/calendario.jpg" class="img_redonda"></a>
 				<h3>Calendario de SUNAT</h3>
 				<?php $Vdata = file_get_contents('apps/calendario.php'); 
 	    			echo($Vdata);
