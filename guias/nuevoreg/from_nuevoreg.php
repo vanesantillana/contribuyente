@@ -61,7 +61,7 @@
 		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
 		      <center>
 				<div class="captcha">
-				  <img id="captcha_img" src="http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image"></img>
+				  <img id="captcha_img3" src="http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image"></img>
 				</div>
 		      </center>
 		    </div>
@@ -91,7 +91,7 @@
 		  </div>
 		  <div class="row">
 		    <div class="col-md-11 col-sm-12 col-xs-12 form-group">
-		      <input class='navbar-right btn btn-primary' id="refresh" style="color: #FFF; background-color: #0b5394" size="100" type="submit" value="Vista Previa" />			                     
+		      <input class='navbar-right btn btn-primary' id="refresh3" style="color: #FFF; background-color: #0b5394" size="100" type="submit" value="Vista Previa" />			                     
 		    </div>
 		  </div>
 		</form> 

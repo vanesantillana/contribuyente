@@ -199,14 +199,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script>
-	   var myFunc = function() {
-	   	 $("#captcha_img").attr("src", "http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image");
+	   var myFunc1 = function() {
+	   	 $("#captcha_img1,#captcha_img2,#captcha_img3").attr("src", "http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image");
      }
 
-	   $('#refresh,#captcha_img').click(function() {
-	   	   setTimeout(myFunc, 2000);
+	   $('#refresh1,#refresh2,#refresh3').click(function() {
+	   	   setTimeout(myFunc1, 2000);
     });
-
     </script>
   </body>
 </html>
