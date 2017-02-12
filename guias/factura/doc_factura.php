@@ -61,9 +61,11 @@ if ($uploadOk == 0) {
 	  <h3 style='letter-spacing: 0.1em;font-size: 23px;font-family: "Courier New", Courier, monospace;'>001 -       N°000001</h3>
 	  <br>
 	</div>
+    
       </div>
       <div id="capa2">
 		<img src="uploads/factura12.jpg" alt=""> 
     </div>
+    <div id="capa5"><p>Modelo de factura generado por <a href="http://elbuencontribuyente.com">http://elbuencontribuyente.com</a> para fines academicos.</p></div>
   </body>
 </html>
