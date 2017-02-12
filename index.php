@@ -206,14 +206,28 @@
 				</div>
 			</div>
 		</div>
+<?php include 'contador.php'; ?>
+
+
+
+
 		
 		<div class="container">
 			<div class="row">
-				<p>Web desarollada por <a href="http://www.multiviral.com.pe" target="_blank">MultiViral</a></p>
+				<div class="col-md-2"></div>
+				<div class="col-sm-8" style="float: left; text-align: center;">
+					<p>Web desarollada por <a  href="http://www.multiviral.com.pe" target="_blank">MultiViral</a></p>
+				</div>
+				<div class="col-md-2" style="float: right;">
+					<p>Visitante:
+ 					<?php echo " <span style='color:white;' class='views'>".$total."</span>"; ?>
+					</p>
+				</div>
 			</div>
 		</div>
 	</div><!--/footerwrap -->
 	
+
 
 
     <!-- Bootstrap core JavaScript
@@ -230,6 +244,20 @@
 	   	   setTimeout(myFunc1, 2000);
     });
     </script>
+	<script>	
+		// Hacemos la Function para abrir el contador de visitas
+	function recargar_views(){
+	    $(".views").load("./contador.txt");
+	}
+
+	// Establecemos el temporizador a 1 segundos
+	timer = setInterval("recargar_views()", 1000);
+
+	</script>
+
+
+
+
   </body>
 </html>
 
