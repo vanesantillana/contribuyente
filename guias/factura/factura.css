@@ -40,7 +40,8 @@
     }
 
     #capa3 img{
-    width: 100%;	
+    width: 210px;
+    height: 160px;	
     }
     body {
       position: relative;
@@ -55,3 +56,11 @@
     hr{
       visibility: hidden;
     }
+
+#capa5{
+    position: absolute;
+    top: 1240px;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 2px
+}

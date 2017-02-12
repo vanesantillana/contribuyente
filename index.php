@@ -7,7 +7,7 @@
     <meta name="description" content="Genere documentos de la SUNAT gratis, facturas y acceda a aplicaciones utiles. Herramientas gratis para los contribuyentes peruanos.">
     <meta name="author" content="elbuencontribuyente.com">
 
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="shortcut icon" href="imagenes/hormi.png">
 	
     <title>El buen contribuyente</title>
 
