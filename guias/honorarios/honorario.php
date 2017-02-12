@@ -27,7 +27,7 @@ $total=$_POST['total'];
 		body {
 	      position: relative;
 	      width: 21cm;  
-	      height: 29.7cm; 
+	      height: 26cm; 
 	      margin: 0 auto; 
 	      color: #001028;
 	      background: #FFFFFF;
@@ -62,6 +62,13 @@ $total=$_POST['total'];
        	top: 450px;
        	left: 350px;
        }
+       #capa5{
+    position: absolute;
+    top: 1070px;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 2px
+}
 	</style>
 	<script>
     window.print();
@@ -97,5 +104,7 @@ $total=$_POST['total'];
 		<p><strong>Total Neto Recibido </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?php echo $total; ?> SOLES</p>
 		
 	</div>
+	<div id="capa5"><p>Modelo de Recibo por honorarios electronico generado por <a href="http://elbuencontribuyente.com">http://elbuencontribuyente.com</a> para fines academicos.</p></div>
+  </
 </body>
 </html>
