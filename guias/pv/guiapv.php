@@ -73,15 +73,19 @@ $html='
      z-index:0;
      top: 22px;
     }
+     #capa2 img{
+      width:1100px;
+      height:800px;
+    }
     body {
       position: relative;
       width: 21cm;  
       height: 29.7cm; 
-      margin: 0 auto; 
       color: #001028;
       background: #FFFFFF;
       font: bold 90% monospace;
       font-size: 1.5em;
+      margin-left:0px;
     }
     hr{
       visibility: hidden;
@@ -89,7 +93,7 @@ $html='
   </style>
   <script>
   var myFunc = function() {
-      window.print();
+      //window.print();
 }
 window.onload = function() {
   setTimeout(myFunc, 3000);
