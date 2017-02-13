@@ -86,7 +86,7 @@ $html='
     body {
       position: relative;
       width: 21cm;  
-      height: 26cm;  
+      height: 29.7cm; 
       margin: 0 auto; 
       margin-left: 0px;
       left: 30px;
