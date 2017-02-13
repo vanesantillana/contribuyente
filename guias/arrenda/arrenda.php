@@ -6,18 +6,21 @@
   $num = $_POST['num'];
   $check = $_POST['check'];
   $operacion = $_POST['operacion'];
-  $importe = $_POST['importe'];
   $monto = $_POST['monto'];
 
-
+  $soles ='S/.  ';
   $codigo=$_POST['codigo']; 
   $url= "http://www.sunat.gob.pe/cl-ti-itmrconsruc/jcrS00Alias?accion=consPorRuc&nroRuc=$ruc&codigo=$codigo&tipdoc=1?";
 
   if ($check == TRUE ){
     $checksi = 'X';
+    $checkno = '&nbsp;';
+    $monto1 .= $monto*5/100;
   }
   else{
     $checkno = 'X';
+    $checksi = '&nbsp;';
+    $soles = '';
   }
   if ($ruc == '')
   {
@@ -33,29 +36,29 @@ $html='
   <style>
     #capa3{ position:absolute;
      z-index:1;
-     top: 355px;
-     left: 580px;
+     top: 356px;
+     left: 595px;
      width:300px;
      height:12px;
     }
     #capa4{ position:absolute;
      z-index:1;
-     top:296px;
-     left: 309px;
+     top:299px;
+     left: 320px;
      width:300px;
      height:12px;
     }
     #capa5{ position:absolute;
      z-index:1;
      top: 262px;
-     left:630px;
+     left:634px;
      width:300px;
      height:12px;
     }
     #capa1{ position:absolute;
      z-index:1;
-     top:187px;
-     left:210px;
+     top:193px;
+     left:212px;
      width:300px;
      height:12px;
     }
@@ -64,15 +67,22 @@ $html='
      z-index:0;
      top: 21px;
     }
+    #capa6{
+      position: absolute;
+      top: 1300px;
+      font-weight: normal;
+      font-size: 14px;
+      letter-spacing: 2px
+    }
     body {
       position: relative;
       width: 21cm;  
-      height: 29.7cm; 
+      height: 26cm; 
       margin: 0 auto; 
       color: #001028;
       background: #FFFFFF;
       font: bold 90% monospace;
-      font-size: 1.5em;
+      font-size: 1.3em;
     }
     hr{
       visibility: hidden;
@@ -81,10 +91,10 @@ $html='
   <script>
    var myFunc = function() {
       window.print();
-}
-window.onload = function() {
-  setTimeout(myFunc, 3000);
-}
+    }
+    window.onload = function() {
+      setTimeout(myFunc, 3000);
+    }
   </script>
 </head>
 <body>';
@@ -95,7 +105,7 @@ window.onload = function() {
      $html .= $url;  
     $html .='  scrolling="no"
             frameborder="0" height="180" width="100%" style=" z-index: 1;position:absolute; clip: rect(10px,470px,30px,222px);
-top: 180px;
+top: 183px;
 left: 120px;"></iframe>
     </div>
 </div>';
@@ -109,7 +119,7 @@ $html.='  <div id="capa2"> <img src="arrenda.jpg" /> </div>
   ';
   $html .= $mes;
   $html .=' 
-  &nbsp;
+  &nbsp;&nbsp;
   ';
   $html .= $anio;
   $html .=' 
@@ -119,24 +129,24 @@ $html.='  <div id="capa2"> <img src="arrenda.jpg" /> </div>
   ';
   $html .= $cod;
   $html .=' 
-    <hr style="margin-bottom: 14px;">
-  ';
+    <hr style="margin-bottom: 16px;">
+  &nbsp;';
   $html .= $num;
   $html .=' 
   <br><br>
-    <hr style="margin-bottom:-1px;">
-    S/
+    <hr style="margin-bottom:5px;">
+    S/.
   ';
   $html .= $monto;
   $html .=' 
   </div>
   <div id="capa5">
   ';
-  $html .= $checksi;
-  $html .=' 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  ';
   $html .= $checkno;
+  $html .=' 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  ';
+  $html .= $checksi;
   $html .=' 
   </div>
   <div id="capa3">
@@ -144,12 +154,13 @@ $html.='  <div id="capa2"> <img src="arrenda.jpg" /> </div>
   $html .= $operacion;
   $html .=' 
   <br><br>
-    <hr style="margin-bottom: 5px;">
-    S/
+    <hr style="margin-bottom: 12px;">
   ';
-  $html .= $importe;
+  $html .= $soles;
+  $html .= $monto1;
   $html .='   
   </div>
+  <div id="capa6"><p>Modelo de factura generado por <a href="http://elbuencontribuyente.com">http://elbuencontribuyente.com</a> para fines académicos</p></div>
 </body>
 </html>
 ';

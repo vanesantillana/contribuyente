@@ -104,7 +104,7 @@ $total=$_POST['total'];
 		<p><strong>Total Neto Recibido </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?php echo $total; ?> SOLES</p>
 		
 	</div>
-	<div id="capa5"><p>Modelo de Recibo por honorarios electronico generado por <a href="http://elbuencontribuyente.com">http://elbuencontribuyente.com</a> para fines academicos.</p></div>
+	<div id="capa5"><p>Modelo de Recibo por honorarios electronico generado por <a href="http://elbuencontribuyente.com">http://elbuencontribuyente.com</a> para fines académicos.</p></div>
   </
 </body>
 </html>

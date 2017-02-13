@@ -66,6 +66,6 @@ if ($uploadOk == 0) {
       <div id="capa2">
 		<img src="uploads/factura12.jpg" alt=""> 
     </div>
-    <div id="capa5"><p>Modelo de factura generado por <a href="http://elbuencontribuyente.com">http://elbuencontribuyente.com</a> para fines academicos.</p></div>
+    <div id="capa5"><p>Modelo de factura generado por <a href="http://elbuencontribuyente.com">http://elbuencontribuyente.com</a> para fines académicos.</p></div>
   </body>
 </html>
