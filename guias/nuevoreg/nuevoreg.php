@@ -11,7 +11,7 @@
   
   $url= "http://www.sunat.gob.pe/cl-ti-itmrconsruc/jcrS00Alias?accion=consPorRuc&nroRuc=$ruc&codigo=$codigo&tipdoc=1?";
 
-  
+  $soles ='S/.  ';
   $infloat = (float) $ingresos;
   if ($infloat <= 5000.0) {
     $categoria = '1';
@@ -23,6 +23,7 @@
 
   if ($check == TRUE ){
     $checksi = 'X';
+    $soles = '';
   }
   else{
     $checkno = 'X';
@@ -41,15 +42,29 @@ $html='
   <style>
     #capa3{ position:absolute;
      z-index:1;
-     top: 251px;
-     left:523px;
+     top: 270px;
+     left:565px;
+     width:300px;
+     height:12px;
+    }
+    #capa5{ position:absolute;
+     z-index:1;
+     top: 365px;
+     left: 630px;
      width:300px;
      height:12px;
     }
     #capa1{ position:absolute;
      z-index:1;
-     top:181px;
-     left:210px;
+     top:197px;
+     left:225px;
+     width:300px;
+     height:12px;
+    }
+    #capa4{ position:absolute;
+     z-index:1;
+     top:280px;
+     left:249px;
      width:300px;
      height:12px;
     }
@@ -58,15 +73,22 @@ $html='
      z-index:0;
      top: 22px;
     }
+    #capa6{
+      position: absolute;
+      top: 1300px;
+      font-weight: normal;
+      font-size: 14px;
+      letter-spacing: 2px
+    }
     body {
       position: relative;
       width: 21cm;  
-      height: 29.7cm; 
+      height: 26cm;  
       margin: 0 auto; 
       color: #001028;
       background: #FFFFFF;
       font: bold 90% monospace;
-      font-size: 1.5em;
+      font-size: 1.3em;
     }
     hr{
       visibility: hidden;
@@ -89,7 +111,7 @@ window.onload = function() {
      $html .= $url;  
     $html .='  scrolling="no"
             frameborder="0" height="180" width="100%" style=" z-index: 1;position:absolute; clip: rect(10px,600px,30px,222px);
-            top: 173px;
+            top: 190px;
 left: 143px;"></iframe>
     </div>
 </div>';
@@ -98,38 +120,40 @@ left: 143px;"></iframe>
 $html.='
   <div id="capa2"> <img src="nuevoreg.png" /> </div>
   <div id="capa1">
-  ';
+  &nbsp;';
   $html .= $ruc;
   $html .=' 
-    <hr style="margin-bottom: 8px;">
-  ';
+    <hr style="margin-bottom: 15px;">
+  &nbsp;';
   $html .= $mes;
   $html .=' 
-  &nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;
   ';
   $html .= $anio;
   $html .=' 
-    <hr style="margin-bottom:-1px;">
-  S/';
+  </div>
+
+  <div id="capa4">
+  &nbsp;S/.';
   $html .= $ingresos;
   $html .=' 
-    <hr style="margin-bottom: 7px;">
-  S/';
+    <hr style="margin-bottom: 13px;">
+  &nbsp;S/.';
   $html .= $compras;
   $html .=' 
    <br>
-    <hr style="margin-bottom: 1px;">
+    <hr style="margin-bottom: 7px;">
   ';
   $html .= $categoria;
   $html .=' 
   <br>
-    <hr style="margin-bottom:-1px;">
-    S/
+    <hr style="margin-bottom: 12px;">
+  &nbsp;S/.
   ';
   $html .= $percepciones;
   $html .=' 
     <hr style="margin-bottom: 7px;">
-    S/
+  &nbsp;S/.
   ';
   $html .= $total;
   $html .=' 
@@ -139,17 +163,20 @@ $html.='
   ';
   $html .= $checksi;
   $html .=' 
-    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   ';
   $html .= $checkno;
   $html .=' 
-    <hr style="margin-bottom: 53px;">
-    &nbsp;&nbsp;&nbsp;S/
+  </div>
+
+  <div id="capa5">
   ';
+  $html .= $soles;
   $html .= $compensacion;
   $html .=' 
   <br>    
   </div>
+  <div id="capa6"><p>Modelo de factura generado por <a href="http://elbuencontribuyente.com">http://elbuencontribuyente.com</a> para fines académicos</p></div>
  
 </body>
 </html>

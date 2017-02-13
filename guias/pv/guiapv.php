@@ -1,4 +1,3 @@
-<!--<input type='button' onclick='window.print();' value='Imprimir' align="left" /></form> -->
 <?php 
   $ruc = $_POST['ruc'];
   $mes = $_POST['mes'];
@@ -49,22 +48,29 @@ $html='
   <style>
     #capa1{ position:absolute;
      z-index:1;
-     top: 278px;
-     left:270px;
+     top: 377px;
+     left: 355px;
      width:300px;
      height:12px;
     }
     #capa3{ position:absolute;
      z-index:1;
-     top: 151px;
-     left: 88px;
+     top: 207px;
+     left: 100px;
      width:300px;
      height:12px;
     }
+    #capa6{
+      position: absolute;
+      top: 1500px;
+      font-weight: normal;
+      font-size: 14px;
+      letter-spacing: 2px
+    }
     #capa4{ position:absolute;
      z-index:1;
-     top: 495px;
-     left: 560px;
+     top: 668px;
+     left: 799px;
      width:300px;
      height:12px;
     }
@@ -73,19 +79,21 @@ $html='
      z-index:0;
      top: 22px;
     }
-     #capa2 img{
-      width:1100px;
-      height:800px;
-    }
+    #capa2 img{
+      width: 1050px;
+      height: 800px;
+  }
     body {
       position: relative;
       width: 21cm;  
       height: 29.7cm; 
+      margin: 0 auto; 
+      margin-left: 0px;
+      left: 30px;
       color: #001028;
       background: #FFFFFF;
       font: bold 90% monospace;
       font-size: 1.5em;
-      margin-left:0px;
     }
     hr{
       visibility: hidden;
@@ -93,7 +101,7 @@ $html='
   </style>
   <script>
   var myFunc = function() {
-      //window.print();
+      window.print();
 }
 window.onload = function() {
   setTimeout(myFunc, 3000);
@@ -108,8 +116,8 @@ window.onload = function() {
      $html .= $url;  
     $html .='  scrolling="no"
             frameborder="0" height="180" width="100%" style=" z-index: 1;position:absolute; clip: rect(10px,600px,30px,222px);
-                top: 269px;
-    left: 268px;"></iframe>
+                top: 369px;
+    left: 430px;"></iframe>
     </div>
 </div>';
 
@@ -117,45 +125,46 @@ $html.='
   <div id="capa2"> <img src="guiapv.jpg" /> </div>
   <div id="capa3">
    ';
-
- 
   $html .= $tributo;
   $html .=' 
     <br>
+    <hr style="margin-bottom: -2px;">
   ';
   $html .= $multas;
   $html .='  
     <br>
+    <hr style="margin-bottom: -4px;">
   ';
   $html .= $gastos;
   $html .='  
     <br>
+    <hr style="margin-bottom: -4px;">
   ';
   $html .= $frac;
   $html .='
     <br>    
   </div>
   <div id="capa1">
-  ';
+  &nbsp;&nbsp;&nbsp;&nbsp;';
   $html .= $ruc;
   $html .='
-    <hr style="margin-bottom: 20px;">
+    <hr style="margin-bottom: 39px;">
   ';
   $html .= $anio;
   $html .='
-    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   ';
   $html .= $mes;
   $html .='
-    <hr style="margin-bottom:-2px;">
-  ';
+    <hr style="margin-bottom: 8px;">
+  &nbsp;&nbsp;';
   $html .= $codtribu;
   $html .='
-    <hr style="margin-bottom: 5px;">
-  S/';
+    <hr style="margin-bottom: 17px;">
+  &nbsp;&nbsp;S/.';
   $html .= $importe;
   $html .='
-    <hr style="margin-bottom: 53px;">
+    <hr style="margin-bottom: 85px;">
   ';
   $html .= $trimul;
   $html .='
@@ -166,6 +175,7 @@ $html.='
   $html .= $fraccionamiento;
   $html .='
   </div>
+  <div id="capa6"><p>Modelo de factura generado por <a href="http://elbuencontribuyente.com">http://elbuencontribuyente.com</a> para fines académicos</p></div>
  
 </body>
 </html>

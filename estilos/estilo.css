@@ -154,4 +154,6 @@ border-bottom: 3px solid #0b5394;
  	visibility: hidden;
  	margin-bottom: -1.5px;
  }
-
+.mayus{
+	text-transform: uppercase;  
+}
