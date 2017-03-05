@@ -217,7 +217,7 @@
 			<div class="row">
 				<div class="col-md-2"></div>
 				<div class="col-sm-8" style="float: left; text-align: center;">
-					<p>Web desarollada por <a  href="http://www.multiviral.com.pe" target="_blank">MultiViral</a></p>
+					<p>Web desarollada por <a  href="http://multiviral.netne.net/" target="_blank">MultiViral</a></p>
 				</div>
 				<div class="col-md-2" style="float: right;">
 					<p>Visitante:
