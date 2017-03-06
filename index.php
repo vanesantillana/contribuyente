@@ -171,8 +171,8 @@
 			
 			<div class="col-lg-4 col-md-4 col-sm-4 gallery ">
 				<a data-toggle="modal" data-target="#myModal6"><img src="imagenes/conversor.jpg" class="img_redonda"></a>
-				<h3>Conversor de moneda</h3>			
-				  <?php $Vdata = file_get_contents('apps/conversor.php'); 
+				<h3>Formularios vigentes para realizar tramites del RUC</h3>			
+				  <?php $Vdata = file_get_contents('apps/formularios.php'); 
 	    			echo($Vdata);
 	    			?>
 			</div>
