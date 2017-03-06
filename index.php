@@ -1,3 +1,6 @@
+<?php 
+	if (!isset($_POST['comentario'])) {
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -207,9 +210,10 @@
 					<a href="http://www.facebook.com" target="_blank"><i style="font-size: 40px;" class="fa fa-facebook"></i></a>
 				</div>
 				</div>
-				<div class="col-lg-4">
-					<p>Comentarios y sugerencias a:</p>
-					
+				<div class="col-lg-4 comentario">
+					<p>Comentarios y sugerencias:</p>
+					<textarea placeholder="Escribeme aqui" name="comentario"></textarea>
+					<button>Enviar Comentario</button>
 				</div>
 			</div>
 		</div>
@@ -261,3 +265,21 @@
 	   	 $("#captcha_img").delay(5000).attr("src", "http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image");
     });
 -->
+<?php
+}else{
+	$mensaje="COMENTARIO DEL BUEN CONTRIBUYENTE";
+	$mensaje.= "\nComentario o Sugerencia: ". $_POST['comentario'];
+	$destino="vanessa.santillana@ucsp.edu.pe";
+	$remitente = "sugerencias@elbuencontribuyente.com";
+
+	$asunto = "Asunto: Comentario o Sugerencia del Buen Contribuyente";
+	mail($destino,$asunto,$mensaje,"FROM: $remitente");
+?>
+
+<?php
+   echo "<script>";
+   echo "alert('Comentario o Sugerencia enviado con exito');";
+   echo "window.location = 'index.php';";
+   echo "</script>";  
+   }
+?>
