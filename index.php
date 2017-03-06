@@ -158,7 +158,7 @@
 				?>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a data-toggle="modal" data-target="#myModal6"><img src="imagenes/boleta.jpg" class="img-responsive"></a>
+				<a data-toggle="modal" data-target="#myModal9"><img src="imagenes/boleta.jpg" class="img-responsive"></a>
 				<h3>Boleta de Pago del Trabajador</h3>
 				<?php $Vdata = file_get_contents('guias/boleta/from_boleta.php'); 
 				    echo($Vdata);
@@ -208,16 +208,13 @@
 				</div>
 				</div>
 				<div class="col-lg-4">
-					<p>Comentarios y sugerencias a: sugerencias@elbuencontribuyente.com</p>
+					<p>Comentarios y sugerencias a:</p>
+					
 				</div>
 			</div>
 		</div>
 <?php include 'contador.php'; ?>
 
-
-
-
-		
 		<div class="container">
 			<div class="row">
 				<div class="col-md-2"></div>
@@ -233,9 +230,6 @@
 		</div>
 	</div><!--/footerwrap -->
 	
-
-
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -260,10 +254,6 @@
 	timer = setInterval("recargar_views()", 1000);
 
 	</script>
-
-
-
-
   </body>
 </html>
 
