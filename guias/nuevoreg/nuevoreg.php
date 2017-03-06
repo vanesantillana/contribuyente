@@ -11,8 +11,12 @@
   
   $url= "http://www.sunat.gob.pe/cl-ti-itmrconsruc/jcrS00Alias?accion=consPorRuc&nroRuc=$ruc&codigo=$codigo&tipdoc=1?";
 
-  $soles ='S/.  ';
-  $infloat = (float) $ingresos;
+  $soles ='S/.  ';  
+  if ((float)$compras > (float)$ingresos){
+    $ingreso = $compras;
+  }
+
+  $infloat = (float) $ingreso;
   if ($infloat <= 5000.0) {
     $categoria = '1';
     $total = '20.0';
@@ -32,7 +36,14 @@
   {
     $ruc = '&nbsp;';
   }
-   
+  
+  if ($percepciones != '')
+  {
+    $total = (string)((float)$total - (float)$percepciones);
+    if ((float)$total < 0)
+      $total = '0.0'; 
+  }
+
 $html='
 <!DOCTYPE html>
 <html lang="en">
