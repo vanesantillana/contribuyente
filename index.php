@@ -278,7 +278,7 @@
 	$mensaje="\t\tCOMENTARIO DEL BUEN CONTRIBUYENTE\n";
 	$mensaje.= "\nComentario o Sugerencia: ". $_POST['sugerencia'];
 	$destino="multiviralbeta@gmail.com";
-	$destino1="hormigitatributaria@gmail.com";
+	$destino1="hormiguitatributaria@gmail.com";
 	$remitente = "sugerencias@elbuencontribuyente.com";
 
 	$asunto = "Asunto: Comentario o Sugerencia del Buen Contribuyente";
