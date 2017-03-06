@@ -62,24 +62,19 @@
 		  
 		  <div id="row">		
 		    <h4><b>¿Es ésta una declaración recitificatoria / sustitutoria?</b></h4>	
-		    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-toggle-off"></span> Si marca No, pase al Monto:</label><br>
 		      <input id="declaracion" type="checkbox" name="check" />
 		      <label for=declaracion class=cb-label></label>
 		      <hr class="espacio">
 		    </div>
 
-		    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-external-link"></span> N° de Orden u operación:</label>
 		      <hr style="margin-bottom: -9px">
 		      <input type="text" name="operacion" class="form-control"  id="mi-t-fraccionamiento" placeholder="0" ><br>
 		    </div>
-
-		    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
-		      <label ><span class="fa fa-money"></span> Importe a Pagar:</label>
-		      <hr style="margin-bottom: -9px">
-		      <input type="text" name="importe" class="form-control"  id="mi-t-fraccionamiento" placeholder="0" ><br>
-		    </div>				  
+		    				  
 		  </div>
 		  
 		  <div id="row">
