@@ -1,5 +1,5 @@
 <!-- Modal Factura -->
-			<div class="modal fade" id="myModal6" role="dialog">
+			<div class="modal fade" id="myModal9" role="dialog">
 			    <div class="modal-dialog modal-lg">
 			      <div class="modal-content">
 			        <div class="modal-header" style="background-color:#0b5394">
@@ -86,7 +86,7 @@
 				        	<div class="col-md-12 col-sm-12 col-xs-12 form-group">
 				        		<div class="col-md-4 col-sm-12 col-xs-12 form-group">
 				              		<label ><span class="fa fa-male" style="font-size:15px"></span>Haber mensual:</label>
-				              		<input type="number" class="form-control"  name="mensual" placeholder="En soles S/.">
+				              		<input type="number" class="form-control" step="0.01" name="mensual" placeholder="En soles S/.">
 				              	</div> 
 								<div class="col-md-3 col-sm-12 col-xs-12 form-group">
 				              	<h5 style="text-align: center"><b>Remuneraciones opcionales</b><input style="opacity: 1;" name="remuneracion" id="remuneracion" type="checkbox" name="remuneracion" onchange="Remuneraciones()"/></h5>
@@ -97,27 +97,27 @@
 							<div id="remuneracion_opcional">
 								<div class="col-md-4 col-sm-12 col-xs-12 form-group">
 				              		<label ><span class="fa fa-male" style="font-size:15px"></span> Horas Extras:</label>
-				              		<input type="number" class="form-control"  name="horas_extras" placeholder="En soles S/.">      
+				              		<input type="number" class="form-control" value=0 name="horas_extras" placeholder="En soles S/.">      
 				            	</div>
 								<div class="col-md-4 col-sm-12 col-xs-12 form-group">
 				              		<label ><span class="fa fa-male" style="font-size:15px"></span> Bonif. Nocturna:</label>
-				              		<input type="number" class="form-control"  name="boni_nocturna" placeholder="En soles S/.">      
+				              		<input type="number" class="form-control" value=0 name="boni_nocturna" placeholder="En soles S/.">      
 				            	</div>
 				            	<div class="col-md-4 col-sm-12 col-xs-12 form-group">
 				              		<label ><span class="fa fa-male" style="font-size:15px"></span> Otras Remunerac.:</label>
-				              		<input type="number" class="form-control"  name="otros_remuneraciones" placeholder="En soles S/.">      
+				              		<input type="number" class="form-control" value=0 name="otras_remuneraciones" placeholder="En soles S/.">      
 				            	</div>
 				            	<div class="col-md-4 col-sm-12 col-xs-12 form-group">
 				              		<label ><span class="fa fa-male" style="font-size:15px"></span> Gratificaciones:</label>
-				              		<input type="number" class="form-control"  name="gratificaciones" placeholder="En soles S/.">      
+				              		<input type="number" class="form-control" value=0 name="gratificaciones" placeholder="En soles S/.">      
 				            	</div>
 				            	<div class="col-md-4 col-sm-12 col-xs-12 form-group">
 				              		<label ><span class="fa fa-male" style="font-size:15px"></span> Reintegros:</label>
-				              		<input type="number" class="form-control"  name="reintegros" placeholder="En soles S/.">      
+				              		<input type="number" class="form-control" value=0 name="reintegros" placeholder="En soles S/.">      
 				            	</div>
 				            	<div class="col-md-4 col-sm-12 col-xs-12 form-group">
 				              		<label ><span class="fa fa-male" style="font-size:15px"></span> Vacaciones:</label>
-				              		<input type="number" class="form-control"  name="vacaciones" placeholder="En soles S/.">    
+				              		<input type="number" class="form-control" value=0 name="vacaciones" placeholder="En soles S/.">    
 				            	</div>
 							</div>
 				        </div>

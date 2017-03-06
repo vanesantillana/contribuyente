@@ -1,3 +1,6 @@
+<?php 
+	if (!isset($_POST['sugerencia'])) {
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -158,7 +161,7 @@
 				?>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a data-toggle="modal" data-target="#myModal6"><img src="imagenes/boleta.jpg" class="img-responsive"></a>
+				<a data-toggle="modal" data-target="#myModal9"><img src="imagenes/boleta.jpg" class="img-responsive"></a>
 				<h3>Boleta de Pago del Trabajador</h3>
 				<?php $Vdata = file_get_contents('guias/boleta/from_boleta.php'); 
 				    echo($Vdata);
@@ -204,20 +207,26 @@
 			
 				<div class="col-lg-4">
 					<div ><h4 style="color: white;">Siguenos en:</h4>
+					<br>
 					<a href="http://www.facebook.com" target="_blank"><i style="font-size: 40px;" class="fa fa-facebook"></i></a>
 				</div>
 				</div>
-				<div class="col-lg-4">
-					<p>Comentarios y sugerencias a: sugerencias@elbuencontribuyente.com</p>
+				<div class="col-lg-4 comentario">
+					<p>Comentarios y sugerencias:</p>
+					<form id="contact-form" method="post" action="<?=$_SERVER['PHP_SELF']?>" role="form">
+						<div class="form-group">
+							<textarea placeholder="Escribeme aqui" class="form-control" name="sugerencia" id="sugerencia" required></textarea>
+						</div>
+						<div id="cf-submit">
+							<input type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar Comentario">
+						</div>						
+						<br>	
+					</form>
 				</div>
 			</div>
 		</div>
 <?php include 'contador.php'; ?>
 
-
-
-
-		
 		<div class="container">
 			<div class="row">
 				<div class="col-md-2"></div>
@@ -233,9 +242,6 @@
 		</div>
 	</div><!--/footerwrap -->
 	
-
-
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -260,10 +266,6 @@
 	timer = setInterval("recargar_views()", 1000);
 
 	</script>
-
-
-
-
   </body>
 </html>
 
@@ -271,3 +273,23 @@
 	   	 $("#captcha_img").delay(5000).attr("src", "http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image");
     });
 -->
+<?php
+}else{
+	$mensaje="\t\tCOMENTARIO DE elbuencontribuyente.com\n";
+	$mensaje.= "\nComentario o Sugerencia: ". $_POST['sugerencia'];
+	$destino="multiviralbeta@gmail.com";
+	$destino1="hormiguitatributaria@gmail.com";
+	$remitente = "sugerencias@elbuencontribuyente.com";
+
+	$asunto = "Asunto: Comentario o Sugerencia del Buen Contribuyente";
+	mail($destino,$asunto,$mensaje,"FROM: $remitente");
+	mail($destino1,$asunto,$mensaje,"FROM: $remitente");
+?>
+
+<?php
+   echo "<script>";
+   echo "alert('Comentario o Sugerencia enviado con exito, gracias.');";
+   echo "window.location = 'index.php';";
+   echo "</script>";  
+   }
+?>
