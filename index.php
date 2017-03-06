@@ -1,5 +1,5 @@
 <?php 
-	if (!isset($_POST['comentario'])) {
+	if (!isset($_POST['sugerencia'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -207,13 +207,21 @@
 			
 				<div class="col-lg-4">
 					<div ><h4 style="color: white;">Siguenos en:</h4>
+					<br>
 					<a href="http://www.facebook.com" target="_blank"><i style="font-size: 40px;" class="fa fa-facebook"></i></a>
 				</div>
 				</div>
 				<div class="col-lg-4 comentario">
 					<p>Comentarios y sugerencias:</p>
-					<textarea placeholder="Escribeme aqui" name="comentario"></textarea>
-					<button>Enviar Comentario</button>
+					<form id="contact-form" method="post" action="<?=$_SERVER['PHP_SELF']?>" role="form">
+						<div class="form-group">
+							<textarea placeholder="Escribeme aqui" class="form-control" name="sugerencia" id="sugerencia" required></textarea>
+						</div>
+						<div id="cf-submit">
+							<input type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar Comentario">
+						</div>						
+						<br>	
+					</form>
 				</div>
 			</div>
 		</div>
@@ -267,13 +275,15 @@
 -->
 <?php
 }else{
-	$mensaje="COMENTARIO DEL BUEN CONTRIBUYENTE";
-	$mensaje.= "\nComentario o Sugerencia: ". $_POST['comentario'];
-	$destino="vanessa.santillana@ucsp.edu.pe";
+	$mensaje="\t\tCOMENTARIO DEL BUEN CONTRIBUYENTE\n";
+	$mensaje.= "\nComentario o Sugerencia: ". $_POST['sugerencia'];
+	$destino="multiviralbeta@gmail.com";
+	$destino1="hormigitatributaria@gmail.com";
 	$remitente = "sugerencias@elbuencontribuyente.com";
 
 	$asunto = "Asunto: Comentario o Sugerencia del Buen Contribuyente";
 	mail($destino,$asunto,$mensaje,"FROM: $remitente");
+	mail($destino1,$asunto,$mensaje,"FROM: $remitente");
 ?>
 
 <?php
