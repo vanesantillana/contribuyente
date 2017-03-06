@@ -20,8 +20,6 @@
 					<a href="http://www.sunat.gob.pe/orientacion/formularios/ruc/f-2127.pdf" target="_blank" class="list-group-item"><span class=" glyphicon glyphicon-download-alt pull-right"></span>Solicitud de Modificación de Datos, Cambio de Régimen o Suspensión Temporal de Actividades.</a>
 					<a href="http://www.sunat.gob.pe/orientacion/formularios/ruc/f-2135.pdf" target="_blank" class="list-group-item"><span class=" glyphicon glyphicon-download-alt pull-right"></span>Solicitud de Baja de Inscripción o de Tributos.</a>
 					<a href="http://www.sunat.gob.pe/orientacion/formularios/ruc/f-2305.pdf" target="_blank" class="list-group-item"><span class=" glyphicon glyphicon-download-alt pull-right"></span>Declaración de contribuyentes que hayan suscrito algún tipo de convenio con implicancia tributaria.</a>
-					
-
 				</div>
 			</div>
 		</div>
