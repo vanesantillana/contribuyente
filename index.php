@@ -275,7 +275,7 @@
 -->
 <?php
 }else{
-	$mensaje="\t\tCOMENTARIO DEL BUEN CONTRIBUYENTE\n";
+	$mensaje="\t\tCOMENTARIO DE elbuencontribuyente.com\n";
 	$mensaje.= "\nComentario o Sugerencia: ". $_POST['sugerencia'];
 	$destino="multiviralbeta@gmail.com";
 	$destino1="hormiguitatributaria@gmail.com";
@@ -288,7 +288,7 @@
 
 <?php
    echo "<script>";
-   echo "alert('Comentario o Sugerencia enviado con exito');";
+   echo "alert('Comentario o Sugerencia enviado con exito, gracias.');";
    echo "window.location = 'index.php';";
    echo "</script>";  
    }
