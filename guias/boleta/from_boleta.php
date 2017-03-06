@@ -1,5 +1,5 @@
 <!-- Modal Factura -->
-			<div class="modal fade" id="myModal6" role="dialog">
+			<div class="modal fade" id="myModal9" role="dialog">
 			    <div class="modal-dialog modal-lg">
 
 			      <div class="modal-content">

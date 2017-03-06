@@ -154,4 +154,45 @@ border-bottom: 3px solid #0b5394;
  	visibility: hidden;
  	margin-bottom: -1.5px;
  }
+ textarea {
+	background: #fbfbfb;
+	width: 100%;
+	height: 50px;
+	border: 2px solid #eee;
+	border-radius: 3px;
+	resize: none;
+	padding: 10px;
+	font-size: 15px;
+	color: #333;
+	margin: 1px -15px;
+}
 
+textarea:focus{
+	background: #fff;
+}
+
+textarea::-webkit-scrollbar {
+	width: 15px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background: rgba(0,0,0,.1);
+}
+
+.comentario button {
+	background: #327fed;
+	padding: 5px 15px;
+	font-size: 15px;
+	color: #fff;
+	border: none;
+	right: 0px;
+	border-radius: 3px;
+	box-shadow: 0 3px 0 #0b397c;
+	cursor: pointer;
+	float: right;
+}
+
+.comentario button:hover {
+	background: #327fed;
+}
