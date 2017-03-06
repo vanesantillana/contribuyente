@@ -143,8 +143,6 @@
 				?>
 			</div>
 
-			<div class="col-lg-2 col-md-2 col-sm-2 gallery"></div>
-
 			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
 				<a data-toggle="modal" data-target="#myModal4"><img src="imagenes/factura.jpg" class="img-responsive"></a>
 				<h3>Generador de Factura</h3>
@@ -156,6 +154,13 @@
 				<a data-toggle="modal" data-target="#myModal5"><img src="imagenes/honorarios.jpg" class="img-responsive"></a>
 				<h3>Recibo por Honorarios</h3>
 				<?php $Vdata = file_get_contents('guias/honorarios/from_honorario.php'); 
+				    echo($Vdata);
+				?>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
+				<a data-toggle="modal" data-target="#myModal6"><img src="imagenes/boleta.jpg" class="img-responsive"></a>
+				<h3>Boleta de Pago del Trabajador</h3>
+				<?php $Vdata = file_get_contents('guias/boleta/from_boleta.php'); 
 				    echo($Vdata);
 				?>
 			</div>
