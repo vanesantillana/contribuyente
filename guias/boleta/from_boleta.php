@@ -11,16 +11,18 @@
 			          	<form name="formulario" role="form" method="post" action="guias/boleta/boleta.php" enctype="multipart/form-data" target="_blank">
 				           <div id="row">
 				           <h4><b>Datos Necesarios de la Boleta</b></h4>
-				            <div class="col-md-8 col-sm-12 col-xs-12 form-group">
+				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 				              <label ><span class="fa fa-institution" style="font-size:15px"></span> Nombre de Empresa:</label>
 				              <input type="text" class="form-control" name="nombre_empresa" placeholder="Nombre">
 				            </div>	
-				            <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 				              <label ><span class="fa fa-vcard-o" style="font-size: 15px"></span> N° de RUC:</label>
 				              <input type="text" class="form-control" name="ruc" placeholder="XXXXXXXXXXX">
 				            </div>
+				          </div>
+				          <div id="row">
 				            <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-				              <label ><span class="fa fa-institution" style="font-size:15px"></span> Direccion:</label>
+				              <label ><span class="fa fa-institution" style="font-size:15px"></span> Dirección:</label>
 				              <input type="text" class="form-control" name="direccion" placeholder="Direccion de la empresa">
 				            </div>	
 				          </div>
@@ -56,10 +58,10 @@
 		      					</select>
 				            </div>	
 				        	<div class="col-md-3 col-sm-12 col-xs-12 form-group">
-				              	<label ><span class="fa fa-sort" style="font-size: 15px"></span> Estado Civil:</label>
+				              	<label ><span class="fa fa-sort" style="font-size: 15px"></span> Estado:</label>
 				              	<select class="form-control" name="estado">
-									<option value="soltero">Soltero</option>
-									<option value="casado">Casado</option>
+									<option value="soltero">Sin hijos</option>
+									<option value="casado">Con hijos</option>
 		      					</select>
 				            </div>	      
 
@@ -84,13 +86,15 @@
 				        <h4><b>Remuneraciones del trabajador</b></h4>
 				     
 				        	<div class="col-md-12 col-sm-12 col-xs-12 form-group">
-				        		<div class="col-md-4 col-sm-12 col-xs-12 form-group">
-				              		<label ><span class="fa fa-male" style="font-size:15px"></span>Haber mensual:</label>
+				        		<div class="col-md-6 col-sm-12 col-xs-12 form-group">
+				              		<label ><span class="fa fa-money" style="font-size:15px"></span> Haber mensual:</label>
 				              		<input type="number" class="form-control" step="0.01" name="mensual" placeholder="En soles S/.">
-				              	</div> 
-								<div class="col-md-3 col-sm-12 col-xs-12 form-group">
-				              	<h5 style="text-align: center"><b>Remuneraciones opcionales</b><input style="opacity: 1;" name="remuneracion" id="remuneracion" type="checkbox" name="remuneracion" onchange="Remuneraciones()"/></h5>
-				              	</div>   
+				              		</div> 
+							<div class="col-md-6 col-sm-12 col-xs-12 form-group">
+				              		 <label ><span class="fa fa-toggle-off"></span> Remuneraciones opcionales</label><br>
+				              		<input name="remuneracion" id="remuneracion" type="checkbox" onchange="Remuneraciones()"/>
+				              		<label for=remuneracion class=cb-label></label>
+				              		</div>
 			            	</div>
 			           
 				        	
