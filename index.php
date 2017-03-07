@@ -279,11 +279,13 @@
 	$mensaje.= "\nComentario o Sugerencia: ". $_POST['sugerencia'];
 	$destino="multiviralbeta@gmail.com";
 	$destino1="hormiguitatributaria@gmail.com";
+	$destino2="jorgehuamanigarate@gmail.com";
 	$remitente = "sugerencias@elbuencontribuyente.com";
 
 	$asunto = "Asunto: Comentario o Sugerencia del Buen Contribuyente";
 	mail($destino,$asunto,$mensaje,"FROM: $remitente");
 	mail($destino1,$asunto,$mensaje,"FROM: $remitente");
+	mail($destino2,$asunto,$mensaje,"FROM: $remitente");
 ?>
 
 <?php
