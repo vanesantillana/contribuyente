@@ -101,12 +101,17 @@ if ($uploadOk == 0) {
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Factura</title>
+    <title>Boleta de Pagos</title>
     <!--<link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
     	-->
     <link rel="stylesheet" href="boleta.css">
     <script>
-    
+      var myFunc = function() {
+      window.print();
+  }
+  window.onload = function() {
+    setTimeout(myFunc, 3000);
+  }
   </script>
   </head>
   <body>

@@ -173,7 +173,7 @@
 			<h1 style="font-weight: 700; font-family: 'Montserrat', sans-serif;">APLICACIONES</h1>
 			
 			<div class="col-lg-4 col-md-4 col-sm-4 gallery ">
-				<a data-toggle="modal" data-target="#myModal6"><img src="imagenes/conversor.jpg" class="img_redonda"></a>
+				<a data-toggle="modal" data-target="#myModal6"><img src="imagenes/formularios.jpg" class="img_redonda"></a>
 				<h3>Formularios vigentes para realizar tramites del RUC</h3>			
 				  <?php $Vdata = file_get_contents('apps/formularios.php'); 
 	    			echo($Vdata);
@@ -279,11 +279,13 @@
 	$mensaje.= "\nComentario o Sugerencia: ". $_POST['sugerencia'];
 	$destino="multiviralbeta@gmail.com";
 	$destino1="hormiguitatributaria@gmail.com";
+	$destino2="jorgehuamanigarate@gmail.com";
 	$remitente = "sugerencias@elbuencontribuyente.com";
 
 	$asunto = "Asunto: Comentario o Sugerencia del Buen Contribuyente";
 	mail($destino,$asunto,$mensaje,"FROM: $remitente");
 	mail($destino1,$asunto,$mensaje,"FROM: $remitente");
+	mail($destino2,$asunto,$mensaje,"FROM: $remitente");
 ?>
 
 <?php
