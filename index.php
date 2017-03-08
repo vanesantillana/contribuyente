@@ -276,7 +276,7 @@
 <?php
 }else{
 	$mensaje="\t\tCOMENTARIO DE elbuencontribuyente.com\n";
-	$mensaje.= "\nComentario o Sugerencia: ". $_POST['sugerencia'];
+	$mensaje.= "\nEste comentario fue recibido desde el buen contribuyente: \n". $_POST['sugerencia'];
 	$destino="multiviralbeta@gmail.com";
 	$destino1="hormiguitatributaria@gmail.com";
 	$destino2="jorgehuamanigarate@gmail.com";
