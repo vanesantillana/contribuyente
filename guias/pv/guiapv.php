@@ -12,6 +12,7 @@
   $fraccionamiento = $_POST['fraccionamiento'];
 
   $codigo=$_POST['codigo']; 
+  $codigo = strtoupper($codigo);
   $url= "http://www.sunat.gob.pe/cl-ti-itmrconsruc/jcrS00Alias?accion=consPorRuc&nroRuc=$ruc&codigo=$codigo&tipdoc=1?";
 
   if ($tributo == TRUE ){
@@ -38,6 +39,26 @@
   {
     $codtribu = '&nbsp;';
   }
+  function strstr_after($haystack, $needle, $case_insensitive = false) {
+    $strpos = ($case_insensitive) ? 'stripos' : 'strpos';
+    $pos = $strpos($haystack, $needle);
+    if (is_int($pos)) {
+        return substr($haystack, $pos + strlen($needle));
+    }
+    // Most likely false or null
+    return $pos;
+}
+  
+
+  function agrega($valor){
+    if( $valor == '')
+      return $valor;
+    $v=strstr_after($valor, '.');
+    if($v=='')
+      return $valor.'.00';
+    return $valor;
+  }
+
    
 $html='
 <!DOCTYPE html>
@@ -162,7 +183,7 @@ $html.='
   $html .='
     <hr style="margin-bottom: 17px;">
   &nbsp;&nbsp;S/.';
-  $html .= $importe;
+  $html .= agrega($importe);
   $html .='
     <hr style="margin-bottom: 85px;">
   ';

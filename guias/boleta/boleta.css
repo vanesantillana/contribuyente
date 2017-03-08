@@ -3,12 +3,12 @@
  z-index:1;
  width:220px;
  top:50px;
- left: 10px;
+ left: 17px;
 }
 #capa1{ 
     z-index: 1;
     /* background-color: yellow; */
-    left: 20px;
+    left: 28px;
     width: 404px;
     top: -40px;
     height: 30px;
@@ -27,20 +27,20 @@
 }
 
 #capa4{ 
-    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: Arial, Helvetica, sans-serif; */
     /* border: 2px solid gray; */
     position: absolute;
     /* text-align: center; */
     z-index: 1;
-    top: 164px;
+    top: 178px;
     width: 440px;
-    left: 10px;
+       left: 13px;
+    position: absolute;
     /* line-height: 25px; */
-    
 }
 
 #capa4 table{
-    font-size: 10px;
+    font-size: 11px;
 }
 #capa2{/*IMAGEN DE FACTURA*/
  position:absolute;
@@ -58,7 +58,7 @@
 }
 body {
   position: relative;
-  width: 26cm;  
+  width: 28cm;  
   height: 15cm; 
   margin: 0 auto; 
   font-family: sans-serif;
@@ -76,45 +76,44 @@ hr{
 }
 
 #copia{    
-    left: 519px;
+    left: 558px;
     position: absolute;
+    width: 500px;
 }
 
 #capa6{
     z-index: 1;
     /* width: 404px; */
-    top: 265px;
+    top: 285px;
     position: absolute;
-    
-    left: 124px;
+    left: 138px;
     font-size: 9.5px;
     text-align: right;
 }
 #capa6 td{
     min-width: 70px;
-    height: 12px;
+    height: 13px;
 }
 
 #capa7{
     z-index: 1;
     /* width: 404px; */
-    top: 265px;
+    top: 284px;
     position: absolute;
-    
-    left: 345px;
+    left: 372px;
     font-size: 9.5px;
     text-align: right;
 }
 #capa7 td{
-    min-width: 50px;
-    height: 12px;
+    min-width: 53px;
+    height: 13px;
 }
 #total{
-    z-index: 1;
+        z-index: 1;
     width: 100px;
-    top: 407px;
+    top: 439px;
     position: absolute;
-    left: 352px;
+    left: 377px;
     text-align: right;
     /* background-color: yellow; */
     height: 50px;
@@ -123,24 +122,24 @@ hr{
 
 #letras{
     z-index: 1;
-    top: 457px;
+    top: 484px;
     position: absolute;
-    font-size: 9px;
-    left: 13px;
+    font-size: 10px;
+    left: 20px;
 }
 
 #fecha{
     z-index: 1;
-    top: 487px;
+    top: 515px;
     position: absolute;
-    font-size: 9px;
-    left: 240px;
+    font-size: 11px;
+    left: 229px;
 }
 
 #reu{
     z-index: 1;
-    top: 197px;
+    top: 213px;
     position: absolute;
-    font-size: 9px;
+    font-size: 12px;
     left: 240px;
 }

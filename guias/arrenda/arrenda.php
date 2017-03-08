@@ -10,6 +10,7 @@
 
   $soles ='S/.  ';
   $codigo=$_POST['codigo']; 
+  $codigo = strtoupper($codigo);
   $url= "http://www.sunat.gob.pe/cl-ti-itmrconsruc/jcrS00Alias?accion=consPorRuc&nroRuc=$ruc&codigo=$codigo&tipdoc=1?";
 
   if ($check == TRUE ){
@@ -26,7 +27,26 @@
   {
     $ruc = '&nbsp;';
   }
-   
+  function strstr_after($haystack, $needle, $case_insensitive = false) {
+    $strpos = ($case_insensitive) ? 'stripos' : 'strpos';
+    $pos = $strpos($haystack, $needle);
+    if (is_int($pos)) {
+        return substr($haystack, $pos + strlen($needle));
+    }
+    // Most likely false or null
+    return $pos;
+}
+  
+
+  function agrega($valor){
+    if( $valor == '')
+      return $valor;
+    $v=strstr_after($valor, '.');
+    if($v=='')
+      return $valor.'.00';
+    return $valor;
+  }
+
 $html='
 <!DOCTYPE html>
 <html lang="en">
@@ -137,7 +157,7 @@ $html.='  <div id="capa2"> <img src="arrenda.jpg" /> </div>
     <hr style="margin-bottom:5px;">
     S/.
   ';
-  $html .= $monto;
+  $html .= agrega($monto);
   $html .=' 
   </div>
   <div id="capa5">
@@ -157,7 +177,7 @@ $html.='  <div id="capa2"> <img src="arrenda.jpg" /> </div>
     <hr style="margin-bottom: 12px;">
   ';
   $html .= $soles;
-  $html .= $monto1;
+  $html .= agrega($monto1);
   $html .='   
   </div>
   <div id="capa6"><p>Modelo de factura generado por <a href="http://elbuencontribuyente.com">http://elbuencontribuyente.com</a> para fines académicos</p></div>

@@ -14,11 +14,11 @@
 				           <h4><b>Datos Necesarios Para Generar una Factura de muestra</b></h4>
 				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 				              <label ><span class="fa fa-institution" style="font-size:15px"></span> Nombre de empresa:</label>
-				              <input type="text" class="form-control" name="nombre_empresa" placeholder="Nombre">
+				              <input type="text" class="form-control" name="nombre_empresa" placeholder="Nombre" required>
 				            </div>	
 				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 				              <label ><span class="fa fa-vcard-o" style="font-size: 15px"></span> N° de RUC:</label>
-				              <input type="text" class="form-control" name="ruc" placeholder="XXXXXXXXXXX">
+				              <input type="text" class="form-control" name="ruc" placeholder="XXXXXXXXXXX" required>
 				            </div>
 
 				          </div>
@@ -27,11 +27,11 @@
 
 				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 				              <label ><span class="fa fa-male" style="font-size:15px"></span> Nombre del titular de la empresa:</label>
-				              <input type="text" class="form-control"  name="nombre_titular" placeholder="Dueño de la empresa">
+				              <input type="text" class="form-control"  name="nombre_titular" placeholder="Dueño de la empresa" required>
 				            </div>
 							            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 				              <label ><span class="fa fa-map-marker" style="font-size:15px"></span> Direccion:</label>
-				              <input type="text" class="form-control" name="direccion" placeholder="Urbanización-Distrito-Ciudad">
+				              <input type="text" class="form-control" name="direccion" placeholder="Urbanización-Distrito-Ciudad" required>
 				            </div>
 	            
 				          </div>
@@ -41,12 +41,12 @@
 
 				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 				              <label ><span class="fa fa-suitcase" style="font-size:15px"></span> Rubro y/o ocupacion de la empresa</label>
-				              <input type="text" class="form-control"  name="rubro" placeholder="Construccion-Mecanica-etc.">
+				              <input type="text" class="form-control"  name="rubro" placeholder="Construccion-Mecanica-etc." required>
 				            </div>
 
 				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 				              <label ><span class="fa fa-picture-o" style="font-size:15px"></span> Logo:</label>
-				              <input id="logo" name="logo" type="file" />
+				              <input id="logo" name="logo" type="file" required/>
 				            </div>
 				  
 				          </div>

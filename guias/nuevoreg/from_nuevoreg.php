@@ -14,7 +14,7 @@
 		    <h4><b>Datos Necesarios</b></h4>
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-user"></span> N° de RUC:</label>
-		      <input type="text" name="ruc" class="form-control" id="mi-ruc" placeholder="XXXXXXXXXXX">
+		      <input type="text" name="ruc" class="form-control" id="mi-ruc" placeholder="XXXXXXXXXXX" required>
 		    </div>
 
 		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
@@ -43,20 +43,20 @@
 
 		  <div id="row">						    
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-		      <label ><span class="fa fa-money"></span> Total Ingresos Brutos del Mes</label>
-		      <input type="text" name="ingresos" class="form-control"  id="mi-importe" placeholder="0">
+		      <label ><span class="fa fa-money"></span> Total Ingresos Brutos del Mes (S/.):</label>
+		      <input type="number" step="0.01" name="ingresos" class="form-control"  id="mi-importe" placeholder="0" required>
 		    </div>
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-		      <label ><span class="fa fa-money"></span> Total Compras del Mes:</label>
-		      <input type="text" name="compras" class="form-control"  id="mi-importe" placeholder="0">
+		      <label ><span class="fa fa-money"></span> Total Compras del Mes (S/.):</label>
+		      <input type="number" step="0.01" name="compras" class="form-control"  id="mi-importe" placeholder="0" required>
 		    </div>	
 		    
 		  </div>	
 
 		  <div id="row">
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-		      <label ><span class="fa fa-money"></span> Percepciones:</label>
-		      <input type="text" name="percepciones" class="form-control"  id="mi-importe" placeholder="0">
+		      <label ><span class="fa fa-money"></span> Percepciones (S/.):</label>
+		      <input type="number" step="0.01" name="percepciones" class="form-control"  id="mi-importe" placeholder="0">
 		    </div>				            
 		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
 		      <center>
@@ -78,14 +78,16 @@
 		  <div class="row">
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">	
 		      <label >&nbsp;&nbsp;&nbsp;&nbsp;<span class="fa fa-toggle-off"></span>Si marca NO, ingrese su compensación:</label><br>
-		      <input id="valor" type="checkbox" name="check" checked="checked" />
+		      <input id="valor" type="checkbox" name="check" checked="checked" onchange="compensar()" />
 		      <label for=valor class=cb-label></label>
 		      
 		    </div>	
-		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">	
-		      <label ><span class="fa fa-money"></span> Compensación y/o Pagos Efectuados:</label>
-		      <hr style="margin-bottom: -9px">
-		      <input type="text" name="compensacion" class="form-control" id="m-t-asociado" placeholder="0">
+		    <div id="compensacion_op">
+			    <div class="col-md-6 col-sm-12 col-xs-12 form-group">	
+			      <label ><span class="fa fa-money"></span> Compensación y/o Pagos Efectuados (S/.):</label>
+			      <hr style="margin-bottom: -9px">
+			      <input type="text" name="compensacion" class="form-control" id="m-t-asociado" placeholder="0">
+			    </div>
 		    </div>
 		    
 		  </div>
@@ -101,3 +103,12 @@
 	  
 	</div>
       </div>
+    <script>
+    	function compensar(){
+	    if($('#valor').is(":checked"))   
+	        $("#compensacion_op").hide();
+	    else
+	        $("#compensacion_op").show();	
+	}
+		compensar();
+    </script>
