@@ -22,7 +22,7 @@
 				          </div>
 				          <div id="row">
 				            <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-				              <label ><span class="fa fa-institution" style="font-size:15px"></span> Dirección:</label>
+				              <label ><span class="fa fa-map-marker" style="font-size:15px"></span> Dirección:</label>
 				              <input type="text" class="form-control" name="direccion" placeholder="Direccion de la empresa">
 				            </div>	
 				          </div>
