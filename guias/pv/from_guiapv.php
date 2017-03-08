@@ -14,12 +14,12 @@
 		    <h4><b>Datos Necesarios Para Realizar El Pago En Todos Los Casos</b></h4>
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-user"></span> N° de RUC:</label>
-		      <input type="text" class="form-control" id="mi-ruc" name="ruc" placeholder="XXXXXXXXXXX">
+		      <input type="text" class="form-control" id="mi-ruc" name="ruc" placeholder="XXXXXXXXXXX" required>
 		    </div>
 
 		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-calendar"></span> Periodo:</label>
-		      <input type="text" class="form-control"  id="mi-periodo" name="anio" placeholder="2017">
+		      <input type="text" class="form-control"  id="mi-periodo" name="anio" placeholder="2017" value="2017">
 		    </div>
 
 		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
@@ -48,8 +48,8 @@
 		    </div>
 
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-		      <label ><span class="fa fa-money"></span> Importe a Pagar:</label>
-		      <input type="text" class="form-control"  id="mi-importe" placeholder="0" name="importe">
+		      <label ><span class="fa fa-money"></span> Importe a Pagar (S/.):</label>
+		      <input type="number" step="0.01" class="form-control"  id="mi-importe" placeholder="0" name="importe" required>
 		    </div>
 
 		  </div>

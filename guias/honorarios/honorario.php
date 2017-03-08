@@ -1,4 +1,5 @@
 <?php 
+ include ('../boleta/NumeroALetras.php');
 $nombre1= $_POST['nombre1'];
 $ruc1 = $_POST['ruc1'];
 $telefono1 = $_POST['telefono1'];
@@ -10,12 +11,35 @@ $identificado = $_POST['identificado'];
 $ruc2 = $_POST['ruc2'];
 $direccion2 = $_POST['direccion2'];
 
-$suma=$_POST['suma'];
 $concepto=$_POST['concepto'];
 $observacion=$_POST['observacion'];
 $inciso=$_POST['inciso'];
 $fecha=$_POST['fecha'];
 $total=$_POST['total'];
+
+$suma = NumeroALetras::convertir(intval($total));
+
+function strstr_after($haystack, $needle, $case_insensitive = false) {
+    $strpos = ($case_insensitive) ? 'stripos' : 'strpos';
+    $pos = $strpos($haystack, $needle);
+    if (is_int($pos)) {
+        return substr($haystack, $pos + strlen($needle));
+    }
+    // Most likely false or null
+    return $pos;
+}
+
+
+  function agrega($valor){
+    if( $valor == '')
+      return $valor;
+    $v=strstr_after($valor, '.');
+    if($v=='')
+      return $valor.'.00';
+    return $valor;
+  }
+$centimos=strstr_after(agrega($total),'.');
+
 ?>
 
 <!DOCTYPE html>
@@ -86,7 +110,7 @@ $total=$_POST['total'];
 		<p><strong>Recibi de: </strong> <?php echo $nombre2; ?></p>
 		<p><strong>Identificado con </strong> <?php echo $identificado;?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Número </strong><?php echo $ruc2;?> </p>
 		<p><strong>Domiciliado en:</strong> <?php echo $direccion2; ?></p>
-		<p><strong>La suma de </strong> <?php echo $suma; ?></p>
+		<p><strong>La suma de </strong> <?php echo $suma,' CON ',$centimos ,'/100 SOLES'; ?></p>
 		<p><strong>Por concepto de </strong> <?php echo $concepto; ?></p>
 		<p><strong>Observación:</strong> <?php echo $observacion; ?></p>
 		<p><strong>Inciso:</strong> <?php echo $inciso; ?></p>
@@ -99,9 +123,9 @@ $total=$_POST['total'];
 		<h3>Nro: E001 - 1</h3>
 	</div>
 	<div class="total">
-		<p><strong>Total por honorarios:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S/. <?php echo $total; ?></p>
+		<p><strong>Total por honorarios:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S/. <?php echo agrega($total); ?></p>
 		<p><strong>Retencion (8 %) IR </strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(0.00)</p>
-		<p><strong>Total Neto Recibido </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?php echo $total; ?> SOLES</p>
+		<p><strong>Total Neto Recibido </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?php echo agrega($total); ?> SOLES</p>
 		
 	</div>
 	<div id="capa5"><p>Modelo de Recibo por honorarios electronico generado por <a href="http://elbuencontribuyente.com">http://elbuencontribuyente.com</a> para fines académicos.</p></div>

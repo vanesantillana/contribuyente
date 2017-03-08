@@ -1,8 +1,14 @@
 <?php 
+  // ini_set('display_errors', 1);
+   //error_reporting(E_ALL);
+
+
+
 $nombre_empresa = $_POST['nombre_empresa'];
 $ruc = $_POST['ruc'];
 $direccion = $_POST['direccion'];
-
+$fecha_e=$_POST['fecha_e'];
+$ciudad=$_POST['ciudad'];
 
 $nombre = $_POST['nombre'];
 $pension = $_POST['pension'];
@@ -42,7 +48,7 @@ $essalud=$essalud*$totalr;
 $spp1 = $_POST['spp1']*$totalr/100;
 $spp2 = $_POST['spp2']*$totalr/100;
 $spp3 = $_POST['spp3']*$totalr/100;
-
+$nombre_afp=$_POST['nombre_afp'];
 $totald=0.0;
 if($pension=='AFP'){
   $totald=$spp1+$spp2+$spp3;
@@ -91,9 +97,25 @@ if ($uploadOk == 0) {
     return $pos;
 }
   
-  $centimos=strstr_after($neto, '.');
-  //echo $centimos;
 
+  function agrega($valor){
+    $v=strstr_after($valor, '.');
+    if($v=='')
+      return $valor.'.00';
+    return $valor;
+  }
+
+  $centimos=strstr_after($neto, '.');
+  if($centimos=='')
+    $centimos='00';
+
+  //echo $centimos;
+  $año=strstr($fecha_e,'-',true);
+  $fecha_e=strstr_after($fecha_e,'-');
+  $mes=strstr($fecha_e,'-',true);
+  $dia=strstr_after($fecha_e,'-');
+  //echo $dia;
+  $meses=['','Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
 
 ?>
 
@@ -115,12 +137,13 @@ if ($uploadOk == 0) {
   </script>
   </head>
   <body>
+  <div id="original">
       <div id="capa3">
       	<div id="logo">
       	  <img src=<?php echo 'uploads/logo.'.$imageFileType ?>  alt="">
       	</div>
 	      <div id="capa1">
-      	  <h2 style=""> <?php echo $nombre_empresa; ?></h2>
+      	  <h2 style=""> <?php echo strtoupper($nombre_empresa); ?></h2>
           <h6 style="">RUC <?php echo $ruc ?></h6>
           <p> <?php echo $direccion ?></p>
       	</div>
@@ -129,7 +152,11 @@ if ($uploadOk == 0) {
        <table>
          <tr>
               <td style="min-width: 220px;"><strong> Nombre:</strong> &nbsp;&nbsp;<?php  echo $nombre; ?></td>
-              <td><strong>Sist. Pension:</strong>&nbsp;&nbsp; <?php echo $pension; ?></td>
+              <td><strong>Sist. Pension:</strong>&nbsp;&nbsp; <?php 
+              echo $pension,' - '; 
+              if($pension=='AFP')
+                echo $nombre_afp;
+              ?></td>
             </tr>
             <tr>
               <td><strong>Cargo u ocupacion:</strong> &nbsp;&nbsp;<?php echo $cargo; ?></td>
@@ -148,8 +175,7 @@ if ($uploadOk == 0) {
       <div id="capa6">
        <table>
         <tr>
-          <td><?php echo $mensual; 
-              if(is_float(!$mensual)) echo ".00";
+          <td><?php echo agrega($mensual); 
           ?></td>
         </tr>
         <tr>
@@ -160,7 +186,7 @@ if ($uploadOk == 0) {
         <tr>
           <td><?php 
               if($horas_extras){
-                echo $horas_extras;
+                echo agrega($horas_extras);
               }
            ?></td>
         </tr>
@@ -168,7 +194,7 @@ if ($uploadOk == 0) {
           <td>
             <?php 
               if($boni_nocturna)
-                echo $boni_nocturna;
+                echo agrega($boni_nocturna);
              ?>
           </td>
         </tr>
@@ -176,7 +202,7 @@ if ($uploadOk == 0) {
           <td>
           <?php 
               if($otras_remuneraciones)
-                echo $otras_remuneraciones;
+                echo agrega($otras_remuneraciones);
              ?>
           </td>
         </tr>
@@ -184,7 +210,7 @@ if ($uploadOk == 0) {
           <td>
             <?php 
               if($gratificaciones)
-                echo $gratificaciones;
+                echo agrega($gratificaciones);
              ?>
           </td>
         </tr>
@@ -192,7 +218,7 @@ if ($uploadOk == 0) {
           <td>
             <?php 
               if($reintegros)
-                echo $reintegros;
+                echo agrega($reintegros);
              ?>
           </td>
         </tr>
@@ -200,7 +226,7 @@ if ($uploadOk == 0) {
           <td>
             <?php 
               if($vacaciones)
-                echo $vacaciones;
+                echo agrega($vacaciones);
              ?>
           </td>
         </tr>
@@ -211,7 +237,7 @@ if ($uploadOk == 0) {
           <td></td>
         </tr>    
         <tr>
-          <td><?php echo $totalr; ?></td>
+          <td><?php echo agrega($totalr); ?></td>
         </tr>    
        </table>      
        </div>
@@ -219,12 +245,12 @@ if ($uploadOk == 0) {
        <table>
         <tr>
           <td></td>
-          <td><?php echo $essalud; ?></td>
+          <td><?php echo agrega($essalud); ?></td>
         </tr>
         <tr>
           <td><?php
             if($pension=='ONP'){
-              echo $onp;
+              echo agrega($onp);
             }
           ?></td>
           <td></td>
@@ -233,7 +259,7 @@ if ($uploadOk == 0) {
           <td>
             <?php
             if($pension=='AFP'){
-              echo $spp1;
+              echo agrega($spp1);
             }
             ?>
           </td>
@@ -243,7 +269,7 @@ if ($uploadOk == 0) {
           <td>
             <?php
             if($pension=='AFP'){
-              echo $spp2;
+              echo agrega($spp2);
             }
             ?>
           </td>
@@ -253,7 +279,7 @@ if ($uploadOk == 0) {
           <td>
             <?php
             if($pension=='AFP'){
-              echo $spp1;
+              echo agrega($spp1);
             }
             ?>
           </td>
@@ -263,7 +289,7 @@ if ($uploadOk == 0) {
           <td>
             <?php
             if($inasistencia){
-              echo $inasistencia;
+              echo agrega($inasistencia);
             }
             ?>
 
@@ -279,207 +305,26 @@ if ($uploadOk == 0) {
           <td></td>
         </tr>
         <tr>
-          <td><?php echo $totald; ?></td>
-          <td><?php echo $essalud; ?></td>
+          <td><?php echo agrega($totald); ?></td>
+          <td><?php echo agrega($essalud); ?></td>
         </tr>
        </table>      
        </div>
       <div id="total">
-        <p><?php echo 'S/.',$neto; ?></p>
+        <p><?php echo 'S/.',agrega($neto); ?></p>
       </div>
       <div id="letras" >
         <p> <?php echo 'SON ',$letras,' CON ',$centimos,'/100 NUEVOS SOLES'; ?></p>
       </div>  
       <div id="fecha" >
-        <p> <?php echo 'Arequipa, ',getdate()[mday],' de Marzo del 2017'; ?></p>
+        <p> <?php echo $ciudad,', ',$dia,' de ',$meses[(int)$mes],' del ',$año; ?></p>
       </div>
       <div id="reu" >
-        <p> <strong>REMUNERACIONES FEBRERO 2017</strong></p>
+        <p> <strong>REMUNERACIONES  <?php echo strtoupper($meses[(int)$mes]),' ',$año;?></strong></p>
       </div>
 
-
-       <div id="copia">
-       <div id="capa3">
-        <div id="logo">
-          <img src=<?php echo 'uploads/logo.'.$imageFileType ?>  alt="">
-        </div>
-        <div id="capa1">
-          <h2 style=""> <?php echo $nombre_empresa; ?></h2>
-          <h6 style="letter-spacing: -1px;">RUC <?php echo $ruc ?></h6>
-          <p> <?php echo $direccion ?></p>
-        </div>
-      </div>
-      <div id="capa4">
-       <table>
-         <tr>
-              <td style="min-width: 220px;"><strong> Nombre:</strong> &nbsp;&nbsp;<?php  echo $nombre; ?></td>
-              <td><strong>Sist. Pension:</strong>&nbsp;&nbsp; <?php echo $pension; ?></td>
-            </tr>
-            <tr>
-              <td><strong>Cargo u ocupacion:</strong> &nbsp;&nbsp;<?php echo $cargo; ?></td>
-              <td><strong>Nacionalidad:</strong> &nbsp;&nbsp;<?php echo $nacionalidad; ?></td>
-            </tr>
-            <tr>
-              <td><strong>Fecha de ingreso:</strong> &nbsp;&nbsp;<?php echo $fecha; ?></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td><strong>Documento/Identidad:</strong> &nbsp;&nbsp;<?php echo $dni; ?></td>
-              <td></td>
-            </tr>      
-       </table>      
-       </div>
-        <div id="capa6">
-       <table>
-        <tr>
-          <td><?php echo $mensual; 
-              if(is_float(!$mensual)) echo ".00";
-          ?></td>
-        </tr>
-        <tr>
-          <td><?php if($estado=='casado'){
-                    echo 85,'.00';
-            } ?></td>
-        </tr>
-        <tr>
-          <td><?php 
-              if($horas_extras){
-                echo $horas_extras;
-              }
-           ?></td>
-        </tr>
-        <tr>
-          <td>
-            <?php 
-              if($boni_nocturna)
-                echo $boni_nocturna;
-             ?>
-          </td>
-        </tr>
-        <tr>
-          <td>
-          <?php 
-              if($otras_remuneraciones)
-                echo $otras_remuneraciones;
-             ?>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <?php 
-              if($gratificaciones)
-                echo $gratificaciones;
-             ?>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <?php 
-              if($reintegros)
-                echo $reintegros;
-             ?>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <?php 
-              if($vacaciones)
-                echo $vacaciones;
-             ?>
-          </td>
-        </tr>
-        <tr>
-          <td></td>
-        </tr> 
-        <tr>
-          <td></td>
-        </tr>    
-        <tr>
-          <td><?php echo $totalr; ?></td>
-        </tr>    
-       </table>      
-       </div>
-<div id="capa7">
-       <table>
-        <tr>
-          <td></td>
-          <td><?php echo $essalud; ?></td>
-        </tr>
-        <tr>
-          <td><?php
-            if($pension=='ONP'){
-              echo $onp;
-            }
-          ?></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>
-            <?php
-            if($pension=='AFP'){
-              echo $spp1;
-            }
-            ?>
-          </td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>
-            <?php
-            if($pension=='AFP'){
-              echo $spp2;
-            }
-            ?>
-          </td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>
-            <?php
-            if($pension=='AFP'){
-              echo $spp1;
-            }
-            ?>
-          </td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>
-            <?php
-            if($inasistencia){
-              echo $inasistencia;
-            }
-            ?>
-
-          </td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td><?php echo $totald; ?></td>
-          <td><?php echo $essalud; ?></td>
-        </tr>
-       </table>      
-       </div>
-      <div id="total">
-        <p><?php echo 'S/.',$neto; ?></p>
-      </div>
-      <div id="letras" style="width: 300px;" >
-        <p> <?php echo 'SON ',$letras,' CON ',$centimos,'/100 NUEVOS SOLES'; ?></p>
-      </div>  
-      <div id="fecha" style="width: 300px;">
-        <p> <?php echo 'Arequipa, ',getdate()[mday],' de Marzo del 2017'; ?></p>
-      </div>
-      <div id="reu" >
-        <p> <strong>REMUNERACIONES FEBRERO 2017</strong></p>
-      </div>
+</div>
+       <div id="copia" >
 
       </div>
 
@@ -487,6 +332,13 @@ if ($uploadOk == 0) {
     		 <img src="uploads/boleta_final.png" alt=""> 
        </div>
         <div id="capa5"><p>Modelo de boleta generado por <a href="http://elbuencontribuyente.com">http://elbuencontribuyente.com</a> para fines académicos.</p></div>
+  
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>
+    $( "#original" ).clone().appendTo( "#copia" );
+  </script>
+
   </body>
 </html>
 
