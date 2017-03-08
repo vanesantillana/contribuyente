@@ -18,6 +18,7 @@
       }
       .cb-label {
       position: relative;
+      cursor: pointer;
       }
       .cb-label:before {
       content: ' ';
@@ -31,6 +32,7 @@
       /* the .checked class is used by IE only */
       input[type="checkbox"].checked ~ .cb-label:before {
       background-position: 0 -40px;
+      cursor: pointer;
       }
 
 .embed-container {

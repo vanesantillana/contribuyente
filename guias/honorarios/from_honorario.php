@@ -14,7 +14,7 @@
 		    <h4><b>Datos Necesarios del Trabajador</b></h4>
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-child" style="font-size:15px"></span> Nombre Completo:</label>
-		      <input type="text" name="nombre1" class="form-control" placeholder="Juan Perez Sanchez">
+		      <input type="text" name="nombre1" class="form-control" placeholder="Juan Perez Sanchez" required>
 		    </div>
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-map-marker" style="font-size:15px"></span> Dirección:</label>
@@ -24,7 +24,7 @@
 		  <div id="row">
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-user"></span> N° de RUC:</label>
-		      <input type="text" name="ruc1" class="form-control" placeholder="XXXXXXXXXXX">
+		      <input type="text" name="ruc1" class="form-control" placeholder="XXXXXXXXXXX" required>
 		    </div>
 
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
@@ -36,7 +36,7 @@
 		    <h4><b>Datos Necesarios del Cliente</b></h4>
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-child" style="font-size:15px"></span> Nombre Completo:</label>
-		      <input type="text" name="nombre2" class="form-control" placeholder="Maria Alvarez Ponce">
+		      <input type="text" name="nombre2" class="form-control" placeholder="Maria Alvarez Ponce" required>
 		    </div>
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-map-marker" style="font-size:15px"></span> Dirección:</label>
@@ -58,7 +58,7 @@
 
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-vcard-o" style="font-size:15px"></span> N° de Identificación:</label>
-		      <input type="text" name="ruc2" class="form-control" placeholder="XXXXXXXXXXX">
+		      <input type="text" name="ruc2" class="form-control" placeholder="XXXXXXXXXXX" required>
 		    </div>
 		  </div>
 
@@ -69,13 +69,9 @@
 		      <label ><span class="fa fa-suitcase" style="font-size:15px" ></span> Concepto:</label>
 		      <input type="text" name="concepto" class="form-control"  placeholder="Elaboración de expediente...">
 		    </div>
-		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
-		      <label ><span class="fa fa-money"></span> La Suma Escrita:</label>
-		      <input type="text" name="suma" class="form-control" placeholder="Trescientos Cincuenta">
-		    </div>
-		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-money"></span> Total por honorarios:</label>
-		      <input type="text" name="total" class="form-control" placeholder="350">
+		      <input type="number" step="0.01" name="total" class="form-control" placeholder="0">
 		    </div>
 		  </div>
 

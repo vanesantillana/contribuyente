@@ -14,12 +14,12 @@
 		    <h4><b>Datos Necesarios del Arrendador</b></h4>
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-user"></span> N° de RUC:</label>
-		      <input type="text" name="ruc" class="form-control" id="mi-ruc" placeholder="XXXXXXXXXXX">
+		      <input type="text" name="ruc" class="form-control" id="mi-ruc" placeholder="XXXXXXXXXXX" required>
 		    </div>
 
 		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-calendar"></span> Periodo:</label>
-		      <input type="text" name="anio" class="form-control"  id="mi-periodo" placeholder="2017">
+		      <input type="text" name="anio" class="form-control"  id="mi-periodo" placeholder="2017" value="2017">
 		    </div>
 
 		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
@@ -63,16 +63,24 @@
 		  <div id="row">		
 		    <h4><b>¿Es ésta una declaración recitificatoria / sustitutoria?</b></h4>	
 		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-		      <label ><span class="fa fa-toggle-off"></span> Si marca No, pase al Monto:</label><br>
-		      <input id="declaracion" type="checkbox" name="check" />
+		      <!--<label ><span class="fa fa-toggle-off"></span> Llene el Monto:</label><br>-->
+		      <input id="declaracion" type="checkbox" onchange="activar()" name="check" />
 		      <label for=declaracion class=cb-label></label>
 		      <hr class="espacio">
 		    </div>
-
-		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-		      <label ><span class="fa fa-external-link"></span> N° de Orden u operación:</label>
-		      <hr style="margin-bottom: -9px">
-		      <input type="text" name="operacion" class="form-control"  id="mi-t-fraccionamiento" placeholder="0" ><br>
+			<div id="orden">
+			    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+			      <label ><span class="fa fa-external-link"></span> N° de Orden u operación:</label>
+			      <hr style="margin-bottom: -9px">
+			      <input type="text" name="operacion" class="form-control"  id="mi-t-fraccionamiento" placeholder="0" ><br>
+			    </div>
+		    </div>
+		    <div id="reemplazo">
+			    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+			      <hr class="espacio">
+			      <hr class="espacio">
+			      <hr class="espacio">
+			    </div>
 		    </div>
 		    				  
 		  </div>
@@ -81,8 +89,8 @@
 		    <h4><b>Monto del Alquiler</b></h4>				         	
 		    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
 		      <label ></label>
-		      <label ><span class="fa fa-money"></span> Importe:</label>
-		      <input type="text" name="monto" class="form-control"  id="mi-t-fraccionamiento" placeholder="0" >
+		      <label ><span class="fa fa-money"></span> Importe (S/.):</label>
+		      <input type="number" step="0.01" name="monto" class="form-control"  id="mi-t-fraccionamiento" placeholder="0" required>
 		    </div>
 		    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
 		      <center>
@@ -109,3 +117,17 @@
 	  
 	</div>
       </div>
+      <script>
+      	function activar(){
+	    if($('#declaracion').is(":checked")){
+	        $("#orden").show();
+	        $('#reemplazo').hide();
+	    }   
+	    else{
+	        $("#orden").hide();
+	        $('#reemplazo').show();
+	    }
+
+	}
+		activar();
+      </script>

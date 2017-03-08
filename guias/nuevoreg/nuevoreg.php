@@ -6,6 +6,7 @@
   $compras = $_POST['compras'];
   $percepciones = $_POST['percepciones'];
   $codigo = $_POST['codigo'];
+  $codigo = strtoupper($codigo);
   $check = $_POST['check'];
   $compensacion = $_POST['compensacion'];
   
@@ -19,10 +20,10 @@
   $infloat = (float) $ingreso;
   if ($infloat <= 5000.0) {
     $categoria = '1';
-    $total = '20.0';
+    $total = '20.00';
   } else {
     $categoria = '2';
-    $total = '50.0';
+    $total = '50.00';
   }
 
   if ($check == TRUE ){
@@ -42,6 +43,26 @@
     $total = (string)((float)$total - (float)$percepciones);
     if ((float)$total < 0)
       $total = '0.0'; 
+  }
+
+  function strstr_after($haystack, $needle, $case_insensitive = false) {
+    $strpos = ($case_insensitive) ? 'stripos' : 'strpos';
+    $pos = $strpos($haystack, $needle);
+    if (is_int($pos)) {
+        return substr($haystack, $pos + strlen($needle));
+    }
+    // Most likely false or null
+    return $pos;
+}
+  
+
+  function agrega($valor){
+    if( $valor == '')
+      return $valor;
+    $v=strstr_after($valor, '.');
+    if($v=='')
+      return $valor.'.00';
+    return $valor;
   }
 
 $html='
@@ -146,11 +167,11 @@ $html.='
 
   <div id="capa4">
   &nbsp;S/.';
-  $html .= $ingresos;
+  $html .= agrega($ingresos);
   $html .=' 
     <hr style="margin-bottom: 13px;">
   &nbsp;S/.';
-  $html .= $compras;
+  $html .= agrega($compras);
   $html .=' 
    <br>
     <hr style="margin-bottom: 7px;">
@@ -161,7 +182,7 @@ $html.='
     <hr style="margin-bottom: 12px;">
   &nbsp;S/.
   ';
-  $html .= $percepciones;
+  $html .= agrega($percepciones);
   $html .=' 
     <hr style="margin-bottom: 7px;">
   &nbsp;S/.
@@ -183,7 +204,7 @@ $html.='
   <div id="capa5">
   ';
   $html .= $soles;
-  $html .= $compensacion;
+  $html .= agrega($compensacion);
   $html .=' 
   <br>    
   </div>

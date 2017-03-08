@@ -13,25 +13,34 @@
 				           <h4><b>Datos Necesarios de la Boleta</b></h4>
 				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 				              <label ><span class="fa fa-institution" style="font-size:15px"></span> Nombre de Empresa:</label>
-				              <input type="text" class="form-control" name="nombre_empresa" placeholder="Nombre">
+				              <input type="text" class="form-control" name="nombre_empresa" placeholder="Nombre" required>
 				            </div>	
 				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 				              <label ><span class="fa fa-vcard-o" style="font-size: 15px"></span> N° de RUC:</label>
-				              <input type="text" class="form-control" name="ruc" placeholder="XXXXXXXXXXX">
+				              <input type="text" class="form-control" name="ruc" placeholder="XXXXXXXXXXX" required>
 				            </div>
 				          </div>
 				          <div id="row">
-				            <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 				              <label ><span class="fa fa-map-marker" style="font-size:15px"></span> Dirección:</label>
 				              <input type="text" class="form-control" name="direccion" placeholder="Direccion de la empresa">
 				            </div>	
+				            <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+				        		<label ><span class="fa fa-calendar-o"></span> Fecha de Boleta:</label>
+		      					<input class="form-control" name="fecha_e" id="fecha_e" type="date" required>
+				        	</div>
+				        	<div class="col-md-3 col-sm-12 col-xs-12 form-group">
+				              <label ><span class="fa fa-map-marker" style="font-size:15px"></span> Ciudad:</label>
+				              <input type="text" class="form-control" name="ciudad" placeholder="Arequipa" value="Arequipa">
+				            </div>
+
 				          </div>
 							
 				          <div id="row">
 							<h4><b>Datos Necesarios del Trabajador</b></h4>
 				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 				              <label ><span class="fa fa-male" style="font-size:15px"></span> Nombre:</label>
-				              <input type="text" class="form-control"  name="nombre" placeholder="Trabajador">      
+				              <input type="text" class="form-control"  name="nombre" placeholder="Trabajador" required>      
 				            </div>
 
 				            <div class="col-md-3 col-sm-12 col-xs-12 form-group">
@@ -47,7 +56,7 @@
 						<div id="row">
 				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 				              <label ><span class="fa fa-suitcase" style="font-size:15px"></span> Cargo u Ocupación</label>
-				              <input type="text" class="form-control"  name="cargo" placeholder="Gerente" value="Gerente">
+				              <input type="text" class="form-control"  name="cargo" placeholder="Ej. Gerente" required>
 				            </div>
 				      
 							<div class="col-md-3 col-sm-12 col-xs-12 form-group">
@@ -70,7 +79,7 @@
 				        	
 				        	<div class="col-md-6 col-sm-12 col-xs-12 form-group">
 				              <label ><span class="fa fa-address-card" style="font-size:15px"></span> Documento de Identidad:</label>
-				              <input type="text" class="form-control"  name="dni" placeholder="XXXXXXXX">
+				              <input type="text" class="form-control"  name="dni" placeholder="XXXXXXXX" required>
 				            </div>
 				 
 				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
@@ -82,13 +91,14 @@
 				        	 <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 				            </div>
 				        </div>
+
 				        <div id="row">
 				        <h4><b>Remuneraciones del trabajador</b></h4>
 				     
 				        	<div class="col-md-12 col-sm-12 col-xs-12 form-group">
 				        		<div class="col-md-6 col-sm-12 col-xs-12 form-group">
 				              		<label ><span class="fa fa-money" style="font-size:15px"></span> Haber mensual:</label>
-				              		<input type="number" class="form-control" step="0.01" name="mensual" placeholder="En soles S/.">
+				              		<input type="number" class="form-control" step="0.01" name="mensual" placeholder="En soles S/." required>
 				              		</div> 
 							<div class="col-md-6 col-sm-12 col-xs-12 form-group">
 				              		 <label ><span class="fa fa-toggle-off"></span> Remuneraciones opcionales</label><br>
@@ -101,27 +111,27 @@
 							<div id="remuneracion_opcional">
 								<div class="col-md-4 col-sm-12 col-xs-12 form-group">
 				              		<label ><span class="fa fa-male" style="font-size:15px"></span> Horas Extras:</label>
-				              		<input type="number" class="form-control" value=0 name="horas_extras" placeholder="En soles S/.">      
+				              		<input type="number" class="form-control" step="0.01" value=0 name="horas_extras" placeholder="En soles S/.">      
 				            	</div>
 								<div class="col-md-4 col-sm-12 col-xs-12 form-group">
 				              		<label ><span class="fa fa-male" style="font-size:15px"></span> Bonif. Nocturna:</label>
-				              		<input type="number" class="form-control" value=0 name="boni_nocturna" placeholder="En soles S/.">      
+				              		<input type="number" class="form-control" step="0.01" value=0 name="boni_nocturna" placeholder="En soles S/.">      
 				            	</div>
 				            	<div class="col-md-4 col-sm-12 col-xs-12 form-group">
 				              		<label ><span class="fa fa-male" style="font-size:15px"></span> Otras Remunerac.:</label>
-				              		<input type="number" class="form-control" value=0 name="otras_remuneraciones" placeholder="En soles S/.">      
+				              		<input type="number" class="form-control" step="0.01" value=0 name="otras_remuneraciones" placeholder="En soles S/.">      
 				            	</div>
 				            	<div class="col-md-4 col-sm-12 col-xs-12 form-group">
 				              		<label ><span class="fa fa-male" style="font-size:15px"></span> Gratificaciones:</label>
-				              		<input type="number" class="form-control" value=0 name="gratificaciones" placeholder="En soles S/.">      
+				              		<input type="number" class="form-control" step="0.01" value=0 name="gratificaciones" placeholder="En soles S/.">      
 				            	</div>
 				            	<div class="col-md-4 col-sm-12 col-xs-12 form-group">
 				              		<label ><span class="fa fa-male" style="font-size:15px"></span> Reintegros:</label>
-				              		<input type="number" class="form-control" value=0 name="reintegros" placeholder="En soles S/.">      
+				              		<input type="number" class="form-control" step="0.01" value=0 name="reintegros" placeholder="En soles S/.">      
 				            	</div>
 				            	<div class="col-md-4 col-sm-12 col-xs-12 form-group">
 				              		<label ><span class="fa fa-male" style="font-size:15px"></span> Vacaciones:</label>
-				              		<input type="number" class="form-control" value=0 name="vacaciones" placeholder="En soles S/.">    
+				              		<input type="number" class="form-control" step="0.01" value=0 name="vacaciones" placeholder="En soles S/.">    
 				            	</div>
 							</div>
 				        </div>
@@ -135,22 +145,22 @@
 				            	</div>
 								<div class="col-md-3 col-sm-12 col-xs-12 form-group">
 				              		<label ><span class="fa fa-male" style="font-size:15px"></span> SPP. Aporte Obligatorio:</label>
-				              		<input type="number" class="form-control"  name="spp1" placeholder="En porcentaje (%)">      
+				              		<input type="number" class="form-control" step="0.01" name="spp1" placeholder="En porcentaje (%)">      
 				            	</div>
 				            	<div class="col-md-3 col-sm-12 col-xs-12 form-group">
 				              		<label ><span class="fa fa-male" style="font-size:15px"></span> SPP. Com. Variable:</label>
-				              		<input type="number" class="form-control"  name="spp2" placeholder="En porcentaje (%)">      
+				              		<input type="number" class="form-control" step="0.01" name="spp2" placeholder="En porcentaje (%)">      
 				            	</div>
 				            	<div class="col-md-3 col-sm-12 col-xs-12 form-group">
 				              		<label ><span class="fa fa-male" style="font-size:15px"></span> SPP Prima de Seg.:</label>
-				              		<input type="number" class="form-control"  name="spp3" placeholder="En porcentaje (%)">
+				              		<input type="number" class="form-control" step="0.01" name="spp3" placeholder="En porcentaje (%)">
 				            	</div>
 							    </div>
 							    <h5 style="text-align: center;"><b>Opcionales</b> <input style="opacity: 1;" type="checkbox" id="des_opcionales" onchange="Descuentos()"/></h5>
 							    <div id="desc_opcionales">
 							    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
 				              		<label ><span class="fa fa-male" style="font-size:15px"></span> Por inasistencia/tardanza (S/.):</label>
-				              		<input type="number" class="form-control"  name="inasistencia" placeholder="En soles S/.">      
+				              		<input type="number" class="form-control" step="0.01" name="inasistencia" placeholder="En soles S/.">      
 				            	</div>
 				            	</div>
 				          </div>
@@ -169,7 +179,6 @@
 <script>
 	$("#remuneracion_opcional").hide();
 	$("#desc_opcionales").hide();
-
 	function Remuneraciones(){
 	    if($('#remuneracion').is(":checked"))   
 	        $("#remuneracion_opcional").show();
