@@ -1,16 +1,16 @@
     #capa3{ 
+        margin-top: 22px;
 
     }
     #capa1{ 
-
      position:absolute; /*NOMBRE*/
      text-align: center;
      z-index:1;
-     left:230px;
-     width:324px;
+     left: 220px;
+     width: 334px;
      top:-8px;
      height:200px;
-     line-height:6px;
+     line-height:24px;
     }
     #capa4{ /*RUC*/
 	   font-family: Arial, Helvetica, sans-serif;
