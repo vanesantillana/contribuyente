@@ -47,11 +47,23 @@ if ($uploadOk == 0) {
 	</div>
 
 	<div id="capa1" style="">
-	  <h1 style="text-shadow: 0.12em 0.1em 0.1em  gray; text-transform: uppercase;"> <?php echo $nombre_empresa; ?></h1>
+	  <h1 style="text-shadow: 0.12em 0.1em 0.1em  gray; text-transform: uppercase; font-size: 31px;"> <?php echo $nombre_empresa; ?></h1>
 	  
-	  <p style="line-height:10px; font-size: 14px; font-weight: bold; line-height: 12px"><?php echo $rubro; ?></p>
+	  <p style="line-height:10px; font-size: 14px; font-weight: bold; line-height: 12px; margin-top: -14px;"><?php echo $rubro; ?></p>
 	  
-	  <h4 style="line-height: 12px; font-size:15px;font-weight: normal;border:1px; border-top-style: solid;border-bottom-style: solid; height: 20px; padding-top: 12px; margin-top: -5px;"><?php echo $nombre_titular; ?>  </h4>
+	  <h4 style="
+        line-height: 12px;
+    font-size: 15px;
+    font-weight: normal;
+    border: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    height: auto;
+    /* width: 175px; */
+    min-height: 20px;
+    padding-top: 10px;
+    margin-top: -10px;
+    margin-bottom: 14px;"><?php echo $nombre_titular; ?>  </h4>
 	  <p style="font-weight: normal; margin-top: -10px; font-size: 13px; line-height: 12px;"><?php echo $direccion ?> </p>
 	</div>
 
