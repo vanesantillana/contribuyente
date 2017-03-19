@@ -20,13 +20,14 @@
 		      <label ><span class="fa fa-user"></span> Nombre del contribuyente:</label>
 		      <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Juan Salas Perez">
 		    </div>
-
-		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+		    </div>
+		  <div id="row">
+		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-calendar"></span> Periodo:</label>
 		      <input type="text" name="anio" class="form-control"  id="mi-periodo" placeholder="2017" value="2017">
 		    </div>
 
-		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-calendar-o"></span> Mes:</label>
 		      <select class="form-control" name="mes">
 			<option value="01">Enero</option>
@@ -43,9 +44,7 @@
 			<option value="12">Diciembre</option>
 		      </select>
 		    </div>
-		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-		      <hr style="visibility: hidden;"><hr style="visibility: hidden;">
-		    </div>
+		    
 		  </div>
 		  <div id="row">	
 		    <h4><b>Datos Necesarios del Inquilino</b></h4>					    
@@ -94,7 +93,7 @@
 		  
 		  <div id="row">
 		    <h4><b>Monto del Alquiler</b></h4>				         	
-		    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+		    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
 		      <label ></label>
 		      <label ><span class="fa fa-money"></span> Importe (S/.):</label>
 		      <input type="number" step="0.01" name="monto" class="form-control"  id="mi-t-fraccionamiento" placeholder="0" required>

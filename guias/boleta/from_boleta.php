@@ -35,6 +35,31 @@
 				            </div>
 
 				          </div>
+				          <div id="row">
+				           <h4><b>Datos Necesarios de Remuneraciones</b></h4>
+				            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+						      <label ><span class="fa fa-calendar"></span> Año:</label>
+						      <input type="text" name="anio" class="form-control"  id="mi-periodo" placeholder="2017" value="2017">
+						    </div>
+
+						    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+						      <label ><span class="fa fa-calendar-o"></span> Mes:</label>
+						      <select class="form-control" name="mes">
+							<option value="Enero">Enero</option>
+							<option value="Febrero">Febrero</option>
+							<option value="Marzo">Marzo</option>
+							<option value="Abril">Abril</option>
+							<option value="Mayo">Mayo</option>
+							<option value="Junio">Junio</option>
+							<option value="Julio">Julio</option>
+							<option value="Agosto">Agosto</option>
+							<option value="Septiembre">Septiembre</option>
+							<option value="Octubre">Octubre</option>
+							<option value="Noviembre">Noviembre</option>
+							<option value="Diciembre">Diciembre</option>
+						      </select>
+						    </div>
+				          </div>
 							
 				          <div id="row">
 							<h4><b>Datos Necesarios del Trabajador</b></h4>
