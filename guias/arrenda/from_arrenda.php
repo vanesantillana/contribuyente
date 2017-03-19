@@ -16,6 +16,10 @@
 		      <label ><span class="fa fa-user"></span> N° de RUC:</label>
 		      <input type="text" name="ruc" class="form-control" id="mi-ruc" placeholder="XXXXXXXXXXX" required>
 		    </div>
+		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+		      <label ><span class="fa fa-user"></span> Nombre del contribuyente:</label>
+		      <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Juan Salas Perez">
+		    </div>
 
 		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-calendar"></span> Periodo:</label>
@@ -38,6 +42,9 @@
 			<option value="11">Noviembre</option>
 			<option value="12">Diciembre</option>
 		      </select>
+		    </div>
+		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+		      <hr style="visibility: hidden;"><hr style="visibility: hidden;">
 		    </div>
 		  </div>
 		  <div id="row">	
@@ -92,17 +99,7 @@
 		      <label ><span class="fa fa-money"></span> Importe (S/.):</label>
 		      <input type="number" step="0.01" name="monto" class="form-control"  id="mi-t-fraccionamiento" placeholder="0" required>
 		    </div>
-		    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
-		      <center>
-				<div class="captcha">
-				  <img id="captcha_img2" src="http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image"></img>
-				</div>
-		      </center>
-		    </div>
-		    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
-		      <label ><class="fa fa-picture-o" style="font-size:15px"></span> Ingresa la imagen:</label>
-		      <input type="text" name="codigo" class="form-control mayus"  id="mi-t-fraccionamiento" placeholder="XXXX" >
-		    </div>
+		   
 		    
 		  </div>
 		  <div class="row">

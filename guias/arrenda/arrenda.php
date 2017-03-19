@@ -1,5 +1,6 @@
 <?php 
   $ruc = $_POST['ruc'];
+  $nombre = $_POST['nombre'];
   $mes = $_POST['mes'];
   $anio = $_POST['anio'];
   $cod = $_POST['cod'];
@@ -75,12 +76,13 @@ $html='
      width:300px;
      height:12px;
     }
-    #capa1{ position:absolute;
-     z-index:1;
-     top:193px;
-     left:212px;
-     width:300px;
-     height:12px;
+    #capa1{ 
+        position: absolute;
+    z-index: 1;
+    top: 161px;
+    left: 212px;
+    width: 444px;
+    height: 12px;
     }
     #capa2{
      position:absolute;
@@ -89,7 +91,7 @@ $html='
     }
     #capa6{
       position: absolute;
-      top: 1300px;
+          top: 1100px;
       font-weight: normal;
       font-size: 14px;
       letter-spacing: 2px
@@ -97,7 +99,7 @@ $html='
     body {
       position: relative;
       width: 21cm;  
-      height: 26cm; 
+      height: 16cm; 
       margin: 0 auto; 
       color: #001028;
       background: #FFFFFF;
@@ -131,10 +133,11 @@ left: 120px;"></iframe>
 </div>';
 
 $html.='  <div id="capa2"> <img src="arrenda.jpg" /> </div>
-  <div id="capa1">
+  <div id="capa1"> <h6 style="font-size: 13px;
+    margin-bottom: 15px;">
     ';
-  $html .= $ruc;
-  $html .=' 
+  $html .= $ruc.' - '.$nombre;
+  $html .='</h6> 
     <hr style="margin-bottom: 35px;">
   ';
   $html .= $mes;

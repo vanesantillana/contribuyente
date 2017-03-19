@@ -16,6 +16,10 @@
 		      <label ><span class="fa fa-user"></span> N° de RUC:</label>
 		      <input type="text" class="form-control" id="mi-ruc" name="ruc" placeholder="XXXXXXXXXXX" required>
 		    </div>
+		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+		      <label ><span class="fa fa-user"></span> Nombre del contribuyente:</label>
+		      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Juan Salas Perez">
+		    </div>
 
 		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-calendar"></span> Periodo:</label>
@@ -42,12 +46,12 @@
 		  </div>
 
 		  <div id="row">
-		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-list-alt"></span> Código Tributo ó Multa:</label>
 		      <input type="text" class="form-control" id="mi-codigo" placeholder="XXXX" name="codtribu">
 		    </div>
 
-		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-money"></span> Importe a Pagar (S/.):</label>
 		      <input type="number" step="0.01" class="form-control"  id="mi-importe" placeholder="0" name="importe" required>
 		    </div>
@@ -95,17 +99,6 @@
 		      <input type="text" class="form-control"  id="mi-t-fraccionamiento" placeholder="XXXXXXXXXXXXXX" name="fraccionamiento">
 		    </div>
 
-			<div class="col-md-3 col-sm-12 col-xs-12 form-group">
-		      <center>
-				<div class="captcha">
-				  <img id="captcha_img1" src="http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image"></img>
-				</div>
-		      </center>
-		    </div>
-		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
-		      <label ><span class="fa fa-picture-o" style="font-size:15px"></span> Ingresa la imagen:</label>
-		      <input type="text" name="codigo" class="form-control mayus"  id="mi-t-fraccionamiento" placeholder="XXXX" >
-		    </div>
 
 		  </div>
 		  <div class="row">
