@@ -126,7 +126,7 @@ if ($uploadOk == 0) {
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Boleta de Pagos</title>
+    <title>Boleta de Pago del Trabajador</title>
     <!--<link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
     	-->
     <link rel="stylesheet" href="boleta.css">
