@@ -5,13 +5,11 @@
   $ingresos = $_POST['ingresos'];
   $compras = $_POST['compras'];
   $percepciones = $_POST['percepciones'];
-  $codigo = $_POST['codigo'];
-  $codigo = strtoupper($codigo);
+  $nombre = $_POST['nombre'];
   $check = $_POST['check'];
   $compensacion = $_POST['compensacion'];
   
-  $url= "http://www.sunat.gob.pe/cl-ti-itmrconsruc/jcrS00Alias?accion=consPorRuc&nroRuc=$ruc&codigo=$codigo&tipdoc=1?";
-
+  
   $soles ='S/.  ';  
   if ((float)$compras > (float)$ingresos){
     $ingreso = $compras;
@@ -90,7 +88,7 @@ $html='
      z-index:1;
      top:197px;
      left:225px;
-     width:300px;
+     width:600px;
      height:12px;
     }
     #capa4{ position:absolute;
@@ -107,7 +105,7 @@ $html='
     }
     #capa6{
       position: absolute;
-      top: 1300px;
+      top: 1200px;
       font-weight: normal;
       font-size: 14px;
       letter-spacing: 2px
@@ -115,7 +113,7 @@ $html='
     body {
       position: relative;
       width: 21cm;  
-      height: 26cm;  
+      height: 18cm;  
       margin: 0 auto; 
       color: #001028;
       background: #FFFFFF;
@@ -137,23 +135,11 @@ window.onload = function() {
 </head>
 <body>';
 
-   $html .=' <div id="content">
-    <div>
-        <iframe id="optomaFeed" src=';
-     $html .= $url;  
-    $html .='  scrolling="no"
-            frameborder="0" height="180" width="100%" style=" z-index: 1;position:absolute; clip: rect(10px,600px,30px,222px);
-            top: 190px;
-left: 143px;"></iframe>
-    </div>
-</div>';
-
-
 $html.='
   <div id="capa2"> <img src="nuevoreg.png" /> </div>
   <div id="capa1">
   &nbsp;';
-  $html .= $ruc;
+  $html .= $ruc.' - '.$nombre;
   $html .=' 
     <hr style="margin-bottom: 15px;">
   &nbsp;';

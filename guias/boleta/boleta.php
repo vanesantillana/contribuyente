@@ -10,6 +10,9 @@ $direccion = $_POST['direccion'];
 $fecha_e=$_POST['fecha_e'];
 $ciudad=$_POST['ciudad'];
 
+$periodo=$_POST['anio'];
+$mesd=$_POST['mes'];
+
 $nombre = $_POST['nombre'];
 $pension = $_POST['pension'];
 $nacionalidad = $_POST['nacionalidad'];
@@ -320,7 +323,7 @@ if ($uploadOk == 0) {
         <p> <?php echo $ciudad,', ',$dia,' de ',$meses[(int)$mes],' del ',$año; ?></p>
       </div>
       <div id="reu" >
-        <p> <strong>REMUNERACIONES  <?php echo strtoupper($meses[(int)$mes]),' ',$año;?></strong></p>
+        <p> <strong>REMUNERACIONES  <?php echo strtoupper($mesd),' ',$periodo;?></strong></p>
       </div>
 
 </div>

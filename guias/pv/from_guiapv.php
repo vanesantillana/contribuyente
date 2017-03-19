@@ -89,12 +89,12 @@
 		  <div id="row">
 		    
 		    <h4><b>Datos Adicionales Por Tipo de Pago</b></h4>
-		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-external-link"></span> Tributo Asociado:</label>
 		      <input type="text" class="form-control" id="m-t-asociado" placeholder="XXXX" name="trimul">
 		    </div>
 
-		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-vcard-o" style="font-size:15px"></span> N° del Fraccionamiento:</label>
 		      <input type="text" class="form-control"  id="mi-t-fraccionamiento" placeholder="XXXXXXXXXXXXXX" name="fraccionamiento">
 		    </div>

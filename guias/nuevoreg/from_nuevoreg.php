@@ -16,7 +16,30 @@
 		      <label ><span class="fa fa-user"></span> N° de RUC:</label>
 		      <input type="text" name="ruc" class="form-control" id="mi-ruc" placeholder="XXXXXXXXXXX" required>
 		    </div>
+			<div class="col-md-6 col-sm-12 col-xs-12 form-group">
+		      <label ><span class="fa fa-user"></span> Nombre del contribuyente:</label>
+		      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Juan Salas Perez">
+		    </div>
+		    
+		  </div>
 
+		  <div id="row">						    
+		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+		      <label ><span class="fa fa-money"></span> Total Ingresos Brutos del Mes (S/.):</label>
+		      <input type="number" step="0.01" name="ingresos" class="form-control"  id="mi-importe" placeholder="0" required>
+		    </div>
+		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+		      <label ><span class="fa fa-money"></span> Total Compras del Mes (S/.):</label>
+		      <input type="number" step="0.01" name="compras" class="form-control"  id="mi-importe" placeholder="0" required>
+		    </div>	
+		    
+		  </div>	
+
+		  <div id="row">
+		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+		      <label ><span class="fa fa-money"></span> Percepciones (S/.):</label>
+		      <input type="number" step="0.01" name="percepciones" class="form-control"  id="mi-importe" placeholder="0">
+		    </div>				            
 		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
 		      <label ><span class="fa fa-calendar"></span> Periodo:</label>
 		      <input type="text" name="anio" class="form-control"  id="mi-periodo" placeholder="2017">
@@ -38,37 +61,6 @@
 			<option value="11">Noviembre</option>
 			<option value="12">Diciembre</option>
 		      </select>
-		    </div>
-		  </div>
-
-		  <div id="row">						    
-		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-		      <label ><span class="fa fa-money"></span> Total Ingresos Brutos del Mes (S/.):</label>
-		      <input type="number" step="0.01" name="ingresos" class="form-control"  id="mi-importe" placeholder="0" required>
-		    </div>
-		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-		      <label ><span class="fa fa-money"></span> Total Compras del Mes (S/.):</label>
-		      <input type="number" step="0.01" name="compras" class="form-control"  id="mi-importe" placeholder="0" required>
-		    </div>	
-		    
-		  </div>	
-
-		  <div id="row">
-		    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-		      <label ><span class="fa fa-money"></span> Percepciones (S/.):</label>
-		      <input type="number" step="0.01" name="percepciones" class="form-control"  id="mi-importe" placeholder="0">
-		    </div>				            
-		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
-		      <center>
-				<div class="captcha">
-				  <img id="captcha_img3" src="http://e-consultaruc.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image"></img>
-
-				</div>
-		      </center>
-		    </div>
-		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
-		      <label ><span class="fa fa-picture-o" style="font-size:15px"></span> Ingresa la imagen:</label>
-		      <input type="text" name="codigo" class="form-control mayus"  id="mi-t-fraccionamiento" placeholder="XXXX" >
 		    </div>				  
 		  </div>
 		  <div class="row">

@@ -132,16 +132,7 @@ window.onload = function() {
 
 </head>
 <body>';
-   $html .=' <div id="content">
-    <div>
-        <iframe id="optomaFeed" src=';
-     $html .= $url;  
-    $html .='  scrolling="no"
-            frameborder="0" height="180" width="100%" style=" z-index: 1;position:absolute; clip: rect(10px,600px,30px,222px);
-                top: 369px;
-    left: 430px;"></iframe>
-    </div>
-</div>';
+   
 
 $html.='
   <div id="capa2"> <img src="guiapv.jpg" /> </div>
