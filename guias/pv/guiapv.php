@@ -1,5 +1,6 @@
 <?php 
   $ruc = $_POST['ruc'];
+  $nombre = $_POST['nombre'];
   $mes = $_POST['mes'];
   $anio = $_POST['anio'];
   $codtribu = $_POST['codtribu'];
@@ -11,9 +12,6 @@
   $trimul = $_POST['trimul'];
   $fraccionamiento = $_POST['fraccionamiento'];
 
-  $codigo=$_POST['codigo']; 
-  $codigo = strtoupper($codigo);
-  $url= "http://www.sunat.gob.pe/cl-ti-itmrconsruc/jcrS00Alias?accion=consPorRuc&nroRuc=$ruc&codigo=$codigo&tipdoc=1?";
 
   if ($tributo == TRUE ){
       $tributo = 'X';
@@ -67,12 +65,15 @@ $html='
   <meta charset="UTF-8">
   <title>Guia para pagos varios</title>
   <style>
-    #capa1{ position:absolute;
-     z-index:1;
-     top: 377px;
-     left: 355px;
-     width:300px;
-     height:12px;
+    #capa1{ 
+      padding-top: 4px;
+      position: absolute;
+      z-index: 1;
+      top: 373px;
+      left: 353px;
+      width: 553px;
+      height: 26px;
+      background-color: white;
     }
     #capa3{ position:absolute;
      z-index:1;
@@ -107,7 +108,7 @@ $html='
     body {
       position: relative;
       width: 21cm;  
-      height: 26cm;  
+      height: 18cm;  
       margin: 0 auto; 
       margin-left: 0px;
       left: 30px;
@@ -167,7 +168,7 @@ $html.='
   </div>
   <div id="capa1">
   &nbsp;&nbsp;&nbsp;&nbsp;';
-  $html .= $ruc;
+  $html .= $ruc.' - '.$nombre;
   $html .='
     <hr style="margin-bottom: 39px;">
   ';
