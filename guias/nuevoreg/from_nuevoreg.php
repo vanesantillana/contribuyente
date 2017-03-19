@@ -61,7 +61,8 @@
 		    <div class="col-md-3 col-sm-12 col-xs-12 form-group">
 		      <center>
 				<div class="captcha">
-				  <img id="captcha_img3" src="http://www.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image"></img>
+				  <img id="captcha_img3" src="http://e-consultaruc.sunat.gob.pe/cl-ti-itmrconsruc/captcha?accion=image"></img>
+
 				</div>
 		      </center>
 		    </div>
